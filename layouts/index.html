@@ -1,0 +1,31 @@
+{{ partial "header" . }}
+
+<main>
+
+
+<h2>{{ .Title }}</h2>
+
+{{ range (where .Data.Pages "Type" "post").GroupByDate "2006" -}}
+    <section>
+        <h2>{{ .Key }}</h2>
+        <ol class="post-list">
+            {{ range .Pages -}}
+            <div class="row">
+                <li class="post-row">
+                    <span class="text-left">
+                        <a href="{{ .RelPermalink  }}">{{ .Title }}</a>
+                    </span>
+                    &nbsp; &nbsp;
+                    <span class="post-date text-right">
+                        {{ .Date.Format (.Site.Params.dateFormat)}}
+                    </span>
+                </li>
+            </div>
+            {{- end }}
+        </ol>
+    </section>
+{{ end }}
+
+</main>
+
+{{ partial "footer" . }}

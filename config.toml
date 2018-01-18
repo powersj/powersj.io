@@ -1,0 +1,71 @@
+baseURL = "https://powersj.github.io./"
+languageCode = "en-us"
+title = "Joshua Powers"
+theme = "minimal"
+
+[params]
+    author = "Joshua Powers"
+    copyright = "&copy; 2018 Joshua Powers - Powered by [Hugo](https://gohugo.io) and [Minimal](https://github.com/calintat/minimal)"
+    css = ["/css/image.css", "/css/post-list.css"]
+    dateFormat = "02 January 2006"
+    description = "My personal site"
+
+    # Accounts
+    disqusShortname = "powersj" 
+    githubUsername = "powersj"
+    googleAnalytics = "UA-71848258-1"
+
+    # Theme related
+    accent = "#d30c1f"
+    backgroundColor = "#f8f8f8"
+    font = "Raleway"
+    showBorder = true
+
+    # Syntax Highlighting
+    highlight = true
+    highlightStyle = "solarized-dark"
+    highlightLanguages = ["json", "python", "shell", "yaml"]
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/post"
+    name = "Archive"
+    weight = 2
+
+[[menu.main]]
+    url = "/about"
+    name = "About"
+    weight = 3
+
+[[menu.main]]
+    url = "/resume.pdf"
+    name = "Resume"
+    weight = 4
+
+[[menu.main]]
+    url = "/public_gpg.txt"
+    name = "GPG Key"
+    weight = 5
+
+# Social icons to be shown on the right-hand side of the navigation bar
+# The "name" field should match the name of the icon to be used
+# The list of available icons can be found at http://fontawesome.io/icons/
+
+[[menu.icon]]
+    url = "https://github.com/powersj/"
+    name = "github"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/powersj/"
+    name = "linkedin"
+    weight = 3
+    
+[[menu.icon]]
+    url = "https://www.launchpad.net/~powersj/"
+    name = "linux"
+    weight = 1
