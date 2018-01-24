@@ -1,5 +1,6 @@
 ---
 title: About Me
+date: 2018-01-24
 ---
 
 Hi, I'm Josh
