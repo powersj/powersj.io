@@ -7,7 +7,7 @@ draft: false
 
 # Netplan
 
-For this week's [Bionic test blitz]({% post_url 2017-11-30-bionic-test-blitz %}) I am looking at Netplan! [Netplan](https://wiki.ubuntu.com/Netplan) enables easily configuring networking on a system via YAML files. Netplan processes the YAML and generates the required configurations for either NetworkManager or systemd-network the system's renderer.
+For this week's [Bionic test blitz]({{< ref "ubuntu-bionic-test-blitz.md" >}}) I am looking at Netplan! [Netplan](https://wiki.ubuntu.com/Netplan) enables easily configuring networking on a system via YAML files. Netplan processes the YAML and generates the required configurations for either NetworkManager or systemd-network the system's renderer.
 
 Netplan [replaced ifupdown](http://blog.cyphermox.net/2017/06/netplan-by-default-in-1710.html) as the default configuration utility starting with Ubuntu 17.10 Artful.
 

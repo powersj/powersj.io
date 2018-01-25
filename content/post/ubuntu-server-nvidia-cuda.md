@@ -5,7 +5,7 @@ tags: ["ubuntu", "server", "nvidia"]
 draft: false
 ---
 
-In my previous post about [etherium mining on Ubuntu]({% post_url 2017-09-20-etherium-on-ubuntu %}) I ended by stating I wanted to look at what it would take to get nVidia's CUDA drivers. Use of the CUDA drivers unlocks even further performance from my nVidia GTX 1070 graphics card in certain applications and specifically can demonstrate improvements while doing etherium mining.
+In my previous post about [etherium mining on Ubuntu]({{< ref "ubuntu-etherium-nvidia.md" >}}) I ended by stating I wanted to look at what it would take to get nVidia's CUDA drivers. Use of the CUDA drivers unlocks even further performance from my nVidia GTX 1070 graphics card in certain applications and specifically can demonstrate improvements while doing etherium mining.
 
 This post will demonstrate two methods of install for the CUDA drivers:
 

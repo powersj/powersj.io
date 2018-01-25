@@ -13,6 +13,7 @@ As we are on the road to the next Ubuntu LTS, Bionic Beaver, I have decided to s
 
 Here is what is planned thus far:
 
-* [Using Netplan on Ubuntu Bionic]({% post_url 2017-12-01-bionic-netplan %})
+* [Using Netplan on Ubuntu Bionic]({{< ref "ubuntu-bionic-netplan.md" >}})
+* [Ubuntu Bionic Server Live ISO]({{< ref "ubuntu-bionic-subiquity.md" >}})
 * Ubuntu Bionic Server ISO
-* Ubuntu Bionic Server Live ISO
+
