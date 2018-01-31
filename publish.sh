@@ -40,7 +40,7 @@ git submodule update || fail "submodule update failed"
 echo "building site"
 cleanup
 hugo --destination "$BUILD_DIR" || fail "build failed"
-cd "$BUILD_DIR" || fail "could not change to build dir"
+pushd "$BUILD_DIR" || fail "could not change to build dir"
 
 echo "creating git commit"
 git init
@@ -52,4 +52,5 @@ git commit -m "site updated at $(date -u "+%Y-%m-%d %H:%M:%S") UTC"
 echo "publishing site"
 git push --force "$GIT_REMOTE" "$BRANCH_MASTER"
 
+popd
 cleanup
