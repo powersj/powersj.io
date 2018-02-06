@@ -7,6 +7,7 @@ draft: true
 
 # Hosting Hugo Site on GitHub Pages
 
+Like Jekyll, [Hugo](https://gohugo.io/) is a 
 
 ## Two Brancehs
 

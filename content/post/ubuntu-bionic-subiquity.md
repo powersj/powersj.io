@@ -67,5 +67,5 @@ You can get the latest ISO at the download link below and file any bugs you come
 ## Resources
 
 * [Ubuntu Bionic Daily Live ISO Download](http://cdimage.ubuntu.com/ubuntu-server/daily-live/current/)
-* [Subiquity Source Code](https://launchpad.net/subiquity)
+* [Subiquity Source Code](https://github.com/CanonicalLtd/subiquity)
 * [Subiquity Bugs](https://bugs.launchpad.net/subiquity)
