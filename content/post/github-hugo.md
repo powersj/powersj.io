@@ -2,7 +2,7 @@
 title: "Hosting Hugo Site on GitHub Pages"
 date: 2018-02-08
 tags: ["GitHub", "Hugo"]
-draft: true
+draft: false
 ---
 
 # Hosting a Hugo Site on GitHub Pages
