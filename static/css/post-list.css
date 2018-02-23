@@ -1,6 +1,6 @@
 .post-list {
     padding-left: 0em;
-    list-style: decimal;   
+    list-style: decimal;
 }
 
 .post-row {
@@ -14,4 +14,8 @@
 
 .post-date {
     float: right;
+}
+
+table th {
+    padding: 5px;
 }

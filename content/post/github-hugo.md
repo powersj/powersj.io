@@ -31,7 +31,7 @@ though.
 To accomplish the building and publishing of the Hugo site I use a short
 shell script:
 
-``` shell
+``` bash
 #!/bin/bash
 # Deploy hugo site to master branch
 #

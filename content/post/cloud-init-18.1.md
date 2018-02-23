@@ -9,10 +9,10 @@ draft: false
 
 As [announced](https://lists.launchpad.net/cloud-init/msg00144.html), cloud-init 18.1 was released this week. From the announcement, some highlights include:
 
-- tests: Enable AWS EC2 Integration Testing [Joshua Powers]
-- OpenNebula: Improve network configuration support. [Akihiko Ota] (LP: #1719157, #1716397, #1736750)
-- GCE: Improvements and changes to ssh key behavior for default user. [Max Illfelder] (LP: #1670456, #1707033, #1707037, #1707039)
-- OVF: Fix VMware support for 64-bit platforms. [Sankar Tanguturi]
+- tests: Enable AWS EC2 Integration Testing. (Joshua Powers)
+- OpenNebula: Improve network configuration support. (Akihiko Ota)
+- GCE: Improvements and changes to ssh key behavior for default user. (Max Illfelder)
+- OVF: Fix VMware support for 64-bit platforms. (Sankar Tanguturi)
 
 Version 18.1 is already available in Ubuntu Bionic as it also nears release.
 
@@ -20,14 +20,14 @@ Version 18.1 is already available in Ubuntu Bionic as it also nears release.
 
 Below is a breakdown and history of recent releases. It also shows the change in version to the [year.release format](https://lists.launchpad.net/cloud-init/msg00097.html):
 
-| Release | Date | Days of Development |
-| --- | --- | --- |
-| [18.1](https://lists.launchpad.net/cloud-init/msg00144.html) | 2018-02-22 | 68 days |
-| [17.2](https://lists.launchpad.net/cloud-init/msg00117.html) | 2017-12-14 | 83 days |
-| [17.1](https://lists.launchpad.net/cloud-init/msg00106.html) | 2017-09-21 | 271 days |
-| [0.7.9](https://lists.launchpad.net/cloud-init/msg00057.html) | 2016-12-23 | 101 days |
-| [0.7.8](https://lists.launchpad.net/cloud-init/msg00043.html) | 2016-09-12 | 32 days |
-| [0.7.7](https://lists.launchpad.net/cloud-init/msg00041.html) | 2016-08-10 | - |
+| Release | Days | Date |
+|:-------:|:----:|:----:|
+[18.1](https://lists.launchpad.net/cloud-init/msg00144.html) | 68  | 2017-02-34
+[17.2](https://lists.launchpad.net/cloud-init/msg00117.html) | 83  | 2017-12-14
+[17.1](https://lists.launchpad.net/cloud-init/msg00106.html) | 271  | 2017-09-21
+[0.7.9](https://lists.launchpad.net/cloud-init/msg00057.html) | 101  |  2016-12-23
+[0.7.8](https://lists.launchpad.net/cloud-init/msg00043.html) | 32  | 2016-09-12
+[0.7.7](https://lists.launchpad.net/cloud-init/msg00041.html) | - | 2016-08-10
 
 ## Testing
 
