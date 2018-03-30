@@ -7,7 +7,7 @@ draft: false
 
 # cloud-init + Multipass
 
-[Cloud-init](https://cloud-init.io/) is the standard for customizing cloud instances and now multipass can also make use of cloud-init to customize an instance during launch. [Multipass](https://community.ubuntu.com/t/beta-release-multipass/2696) is a quick and easy way to launch virtual machine instances running Ubuntu.
+[Multipass](https://community.ubuntu.com/t/beta-release-multipass/2696) is a quick and easy way to launch virtual machine instances running Ubuntu. [Cloud-init](https://cloud-init.io/) is the standard for customizing cloud instances and now multipass can also make use of cloud-init to customize an instance during launch.
 
 Below is an example of launching a new VM with cloud-init user-data:
 
