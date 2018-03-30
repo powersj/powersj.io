@@ -2,7 +2,7 @@
 title: "Big Data for Health Informatics (CSE 8803)"
 date: 2016-05-14
 tags: ["bigdata", "spark", "hadoop"]
-drafts: false
+draft: false
 ---
 
 # Introduction

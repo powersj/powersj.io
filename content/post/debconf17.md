@@ -2,7 +2,7 @@
 title: "Attending DebConf17 in Montreal, Canada"
 date: 2017-08-14
 tags: ["debian", "debconf17"]
-drafts: false
+draft: false
 ---
 
 ![Banner](/img/sprint/2017-debconf/banner.jpg)

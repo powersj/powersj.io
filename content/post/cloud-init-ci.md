@@ -2,7 +2,7 @@
 title: "cloud-init: Jenkins Pipelines for CI/CD"
 date: 2017-06-20
 tags: ["cloud-init", "jenkins", "pipeline"]
-drafts: false
+draft: false
 ---
 
 # Overview

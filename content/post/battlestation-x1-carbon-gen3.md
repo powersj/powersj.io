@@ -2,7 +2,7 @@
 title: "ThinkPad X1 Carbon Gen 3"
 date: 2016-07-21
 tags: ["thinkpad", "ubuntu", "x1"]
-drafts: false
+draft: false
 ---
 
 # Background

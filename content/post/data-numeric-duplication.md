@@ -2,7 +2,7 @@
 title: "Numeric Data Duplication Detection"
 date: 2017-07-18
 tags: ["python", "numeric data", "vectors"]
-drafts: false
+draft: false
 ---
 
 # The Problem
