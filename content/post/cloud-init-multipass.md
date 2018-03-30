@@ -15,8 +15,6 @@ Below is an example of launching a new VM with cloud-init user-data:
 multipass launch -n my-test-vm --cloud-init cloud-config.yaml
 ```
 
-## Other Notes
-
 ### user-data Format
 
 Currently multipass only supports YAML cloud-config files. Passing a script, a MIME archive, or any of the other [user-data formats](http://cloudinit.readthedocs.io/en/latest/topics/format.html) cloud-init supports will result in an error from the YAML syntax validator. Check out the cloud-init docs for [examples of YAML cloud-config](http://cloudinit.readthedocs.io/en/latest/topics/examples.html).
@@ -30,3 +28,9 @@ Multipass will validate the YAML syntax of the cloud-config file before attempti
 Multipass uses cloud-init to pass in vendor-data to setup the VM for access by the user. If the user overrides any of the required keys (e.g. packages, ssh_authorized_keys, users, etc.) in his or her user-data then multipass will merge its own data so that the end-user will not loose access to the system.
 
 If interested, a user can examine the executed user-data and vendor-data by looking at the files in `/var/lib/cloud/instances/`.
+
+## Got Questions?
+
+As always, you can chat with the cloud-init developers in #cloud-init on Freenode or email the [cloud-init mailing list](https://launchpad.net/~cloud-init).
+
+The multipass team is also on Freenode at #multipass and to view the code and report bugs check them out on [GitHub](https://github.com/CanonicalLtd/multipass).
