@@ -25,7 +25,7 @@ Multipass will validate the YAML syntax of the cloud-config file before attempti
 
 ### vendor-data
 
-Multipass uses cloud-init to pass in vendor-data to setup the VM for access by the user. If the user overrides any of the required keys (e.g. packages, ssh_authorized_keys, users, etc.) in his or her user-data then multipass will merge its own data so that the end-user will not loose access to the system.
+Multipass uses cloud-init to pass in vendor-data to setup the VM for access by the user. If the user overrides any of the required keys (e.g. packages, ssh_authorized_keys, users, etc.) in his or her user-data then multipass will merge its own data so that the end-user will not lose access to the system.
 
 If interested, a user can examine the executed user-data and vendor-data by looking at the files in `/var/lib/cloud/instances/`.
 
