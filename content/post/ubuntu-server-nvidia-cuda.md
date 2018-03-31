@@ -191,7 +191,7 @@ Result = PASS
 NOTE: The CUDA Samples are not meant for performance measurements. Results may vary when GPU Boost is enabled.
 ```
 
-# Refrences
+# References
 
 * [nVidia CUDA Documentation](http://docs.nvidia.com/cuda/index.html)
 * [nVidia CUDA Linux Install Guide](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
