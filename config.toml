@@ -3,17 +3,16 @@ languageCode = "en-us"
 title = "Joshua Powers"
 theme = "minimal"
 
+GoogleAnalytics = "UA-71848258-1"
+disqusShortname = "powersj"
+
 [params]
     author = "Joshua Powers"
     copyright = "&copy; 2018 Joshua Powers - Powered by [Hugo](https://gohugo.io) and [Minimal](https://github.com/calintat/minimal)"
     css = ["/css/image.css", "/css/post-list.css"]
     dateFormat = "02 January 2006"
     description = "My personal site"
-
-    # Accounts
-    disqusShortname = "powersj" 
     githubUsername = "powersj"
-    googleAnalytics = "UA-71848258-1"
 
     # Theme related
     accent = "#d30c1f"
@@ -64,7 +63,7 @@ theme = "minimal"
     url = "https://www.linkedin.com/in/powersj/"
     name = "linkedin"
     weight = 3
-    
+
 [[menu.icon]]
     url = "https://www.launchpad.net/~powersj/"
     name = "linux"
