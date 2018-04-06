@@ -9,7 +9,7 @@ draft: false
 
 # Using chrony to configure NTP
 
-Starting with [Ubuntu Bionic](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes), the choice for fast and accurate time synchronization is [chrony](https://chrony.tuxfamily.org/index.html). If you are interested in features available on chrony and how chrony compares to other time synchronization implementations check out the [comparison](https://chrony.tuxfamily.org/comparison.html) page on the chrony site.
+Starting with [Ubuntu Bionic](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes), the choice for fast and accurate time synchronization is [chrony](https://chrony.tuxfamily.org/index.html). The features available on chrony and how chrony compares to other time synchronization implementations check out the [comparison](https://chrony.tuxfamily.org/comparison.html) page on the chrony site.
 
 This post will demonstrate how to get started, a few helpful commands for end-users, and a couple features of chrony.
 
@@ -167,7 +167,7 @@ Total valid RX  : 38
 
 ## Local Server
 
-If you have multiple systems on a network it is [advisable to setup a single system](https://chrony.tuxfamily.org/faq.html#_i_have_several_computers_on_a_lan_should_be_all_clients_of_an_external_server) to act as the server for all other local systems. This is similar to how cloud providers will run their own NTP pools for instances inside their own data centers. As stated on the chrony site, the benefits of this model include reduced load on external connections, reduced load on the remote NTP servers, and keeps local systems in sync with each other should the external connection or servers go down.
+When having multiple systems on a network it is [advisable to setup a single system](https://chrony.tuxfamily.org/faq.html#_i_have_several_computers_on_a_lan_should_be_all_clients_of_an_external_server) to act as the server for all other local systems. This is similar to how cloud providers will run their own NTP pools for instances inside their own data centers. As stated on the chrony site, the benefits of this model include reduced load on external connections, reduced load on the remote NTP servers, and keeps local systems in sync with each other should the external connection or servers go down.
 
 To enable a local server in the configuration file, specify the network and subnet to allow connections from. When developing the access list, access can be tested on the server by using the `accheck <address>` command. For example, the below lines would allow connections from 192.168.2.0/24 and all of the 10.0.0.0/8 subnet:
 
@@ -186,7 +186,7 @@ server 192.168.2.12
 
 A user can then verify the connection to the specified server with the `cronyc activity` command and the status of the connection using the `cronyc tracking` command.
 
-On the server, you can verify the list of clients using the `clients` command:
+On the server, verify the list of clients using the `clients` command:
 
 ```shell
 $ sudo chronyc clients
@@ -198,17 +198,17 @@ localhost                       0      0   -   -     -       1      0   -     2
 
 ## Hardware Timestamping
 
-To enable even more accurate time synchronization consider using [hardware timestamping](https://chrony.tuxfamily.org/doc/3.3/chrony.conf.html#hwtimestamp) if you are hardware supports it. This features provides incoming and outgoing packets with precise timestamps using the network controller. If this feature is enabled, it is best to enable it on both the host and client.
+To enable even more accurate time synchronization consider using [hardware timestamping](https://chrony.tuxfamily.org/doc/3.3/chrony.conf.html#hwtimestamp) if hardware supports it. This features provides incoming and outgoing packets with precise timestamps using the network controller. If this feature is enabled, it is best to enable it on both the host and client.
 
 ### Hardware Support
 
-To determine if your hardware supports this feature use ethtool. To verify support of timestamping look for ***ALL*** of the following capabilities:
+To determine hardware support of timestamping view ethtool output and first look for ***ALL*** of the following capabilities:
 
 - SOF_TIMESTAMPING_RAW_HARDWARE
 - SOF_TIMESTAMPING_TX_HARDWARE
 - SOF_TIMESTAMPING_RX_HARDWARE
 
-And the NIC must have ***EITHER*** of the following capabilities (at least one):
+And then confirm that the NIC has at least one of the following capabilities:
 
 - HWTSTAMP_FILTER_ALL
 - HWTSTAMP_FILTER_NTP_ALL
