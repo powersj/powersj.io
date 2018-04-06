@@ -1,25 +1,27 @@
 ---
 title: "Ubuntu Bionic: Using chrony to configure NTP"
-date: 2018-04-09
+date: 2018-04-06
 tags: ["ubuntu", "bionic", "chrony"]
 draft: false
 ---
 
+![console chrony](/img/ubuntu/chrony.png#center)
+
 # Using chrony to configure NTP
 
-Starting with [Ubuntu Bionic](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes), [chrony](https://chrony.tuxfamily.org/index.html) will be used for fast and accurate time synchronization. If you are interested in how chrony compares to other implementations check out the [comparison](https://chrony.tuxfamily.org/comparison.html) page.
+Starting with [Ubuntu Bionic](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes), the choice for fast and accurate time synchronization is [chrony](https://chrony.tuxfamily.org/index.html). If you are interested in features available on chrony and how chrony compares to other time synchronization implementations check out the [comparison](https://chrony.tuxfamily.org/comparison.html) page on the chrony site.
 
-This post will demonstrate how to get started with chrony and a few of the common commands that end-users will find helpful.
+This post will demonstrate how to get started, a few helpful commands for end-users, and a couple features of chrony.
 
 ## Getting Started
 
-If chrony is not already installed it is a simple apt install away:
+The package consists of two commands: `chronyc` the client and `chronyd` the daemon. If chrony is not already installed it is a simple apt install away:
 
 ```shell
 sudo apt install chrony
 ```
 
-The package consists of two commands: `chronyc` the client and `chronyd` the daemon. To verify that chrony is successfully installed and the time is now synced check out the `activity` command:
+ To verify that chrony is successfully installed and to see the number of servers and peers that are connected run the `activity` command:
 
 ```shell
 $ chronyc activity
@@ -31,23 +33,23 @@ $ chronyc activity
 0 sources with unknown address
 ```
 
-At this point, most users may be happy with chrony running quickly and accurately synchronizing their system time.
-
 ### Configuration
 
-Configuration of chrony occurs in the `/etc/chrony/chrony.conf` file. For details on all the various arguments see the [configuration file](https://chrony.tuxfamily.org/manual.html#Configuration-file) page on the chrony site.
+Configuration settings for chrony are kept in `/etc/chrony/chrony.conf`. For details on all the numerous possible arguments see the [configuration file](https://chrony.tuxfamily.org/manual.html#Configuration-file) page on the chrony site.
 
-By default, the Ubuntu package will come with the configuration file pointing at `ntp.ubuntu.com` and the `ubuntu.pool.ntp.org` as ntp servers to provide 6 dual-stack NTP sources and 2 additional IPv4-only sources.
+By default, the Ubuntu package will come with the configuration file pointing at `ntp.ubuntu.com` and the `ubuntu.pool.ntp.org` as NTP pools to provide 6 dual-stack NTP sources and 2 additional IPv4-only sources.
 
 The only other item to note is the default configuration is the makestep argument, which will step up the system clock if the adjustment is larger than 1 second, but only for the first three clock updates. All other adjustments will use clock skewing to gradually correct the time by speeding up or slowing down the clock.
 
 ### Commands
 
-Here a few other commands to know when using chrony. A user can run these commands with chronyc or use chronyc to pull up a chrony specific command prompt and run them there.
+Below are a few chronyc subcommands to aid in gathering the status of chrony. A user can run these commands with chronyc or use chronyc to pull up a chrony specific command prompt and run them there.
 
 #### tracking
 
-To check if chrony is tracking with a server and to learn which one view the `tracking` command output:
+To see what server chrony is tracking with and performance metrics from that server execute the `tracking` command:
+
+For additional details on each field view the [tracking documentation](https://chrony.tuxfamily.org/doc/3.3/chronyc.html#tracking)
 
 ```shell
 $ chronyc tracking
@@ -68,7 +70,9 @@ Leap status     : Normal
 
 #### sources
 
-The `sources` command shows a list of servers used and last sample time. I highly suggest using the `-v` flag to get more details on each column meanings. Users should pay attention for servers with a state of '?', 'x', or '~'.
+The `sources` command shows a list of servers available to the system, status, and offsets from teh local clock and the source. I highly suggest using the `-v` flag to get more details on each column meanings. Users should pay attention for servers with a state of '?', 'x', or '~'.
+
+For additional details on each field view the [sources documentation](https://chrony.tuxfamily.org/doc/3.3/chronyc.html#sources)
 
 ```shell
 $ chronyc sources -v
@@ -96,7 +100,9 @@ MS Name/IP address         Stratum Poll Reach LastRx Last sample
 
 #### sourcestats
 
-The `sourcestats` command is used to show additional statistics for each server. Again, I highly suggest using the `-v` flag to get more details on each column.
+The `sourcestats` command is used to show additional statistics for each server including the number of samples from each server and estimated offset from a source. Again, I highly suggest using the `-v` flag to get more details on each column.
+
+For additional details on each field view the [sourcestats documentation](https://chrony.tuxfamily.org/doc/3.3/chronyc.html#sourcestats)
 
 ```shell
 $ chronyc sourcestats -v
@@ -122,28 +128,65 @@ palpatine.steven-mcdonal>   7   3   390     -0.421     15.058  +1776us   742us
 paladin.latt.net           21  14   20m     +1.002      2.846  +1085us  1373us
 ```
 
+#### ntpdata
+
+The `ntpdata` command by provides details on a specified address or for every server the system is currently using if no address is specified. The data includes information about the source and statistics from the last valid measurement. Unlike the other commands this one does require elevated privileges.
+
+For additional details on each field view the [ntpdata documentation](https://chrony.tuxfamily.org/doc/3.3/chronyc.html#ntpdata).
+
+```shell
+$ sudo chronyc ntpdata 91.189.94.4
+
+Remote address  : 91.189.94.4 (5BBD5E04)
+Remote port     : 123
+Local address   : 192.168.1.203 (C0A801CB)
+Leap status     : Normal
+Version         : 4
+Mode            : Server
+Stratum         : 2
+Poll interval   : 9 (512 seconds)
+Precision       : -23 (0.000000119 seconds)
+Root delay      : 0.015991 seconds
+Root dispersion : 0.023285 seconds
+Reference ID    : 8CCBCC4D ()
+Reference time  : Fri Apr 06 15:55:56 2018
+Offset          : +0.004150821 seconds
+Peer delay      : 0.144625142 seconds
+Peer dispersion : 0.000000157 seconds
+Response time   : 0.000040157 seconds
+Jitter asymmetry: -0.50
+NTP tests       : 111 111 1111
+Interleaved     : No
+Authenticated   : No
+TX timestamping : Daemon
+RX timestamping : Kernel
+Total TX        : 38
+Total RX        : 38
+Total valid RX  : 38
+```
+
 ## Local Server
 
-If you have multiple systems on a network it is [advisable to setup a single system](https://chrony.tuxfamily.org/faq.html#_i_have_several_computers_on_a_lan_should_be_all_clients_of_an_external_server) to act as the server for all other local systems. This is similar to how cloud providers will run their own NTP servers for instances inside their data centers. As stated on the chrony site, the benefits of this model include reduced load on external connections, reduced load on the remote ntp server, and keeps local systems in sync with each other should the external connection or servers go down.
+If you have multiple systems on a network it is [advisable to setup a single system](https://chrony.tuxfamily.org/faq.html#_i_have_several_computers_on_a_lan_should_be_all_clients_of_an_external_server) to act as the server for all other local systems. This is similar to how cloud providers will run their own NTP pools for instances inside their own data centers. As stated on the chrony site, the benefits of this model include reduced load on external connections, reduced load on the remote NTP servers, and keeps local systems in sync with each other should the external connection or servers go down.
 
-To enable a local server in the configuration file, specify the network and subnet to allow connections from. For example, the below lines would allow connections from 192.168.2.0/24 and all of the 10.0.0.0/8 subnet:
+To enable a local server in the configuration file, specify the network and subnet to allow connections from. When developing the access list, access can be tested on the server by using the `accheck <address>` command. For example, the below lines would allow connections from 192.168.2.0/24 and all of the 10.0.0.0/8 subnet:
 
 ```conf
 allow 192.168.2
 allow 10.0.0.0/8
 ```
 
-Assuming port 123 is open for connections and the service is restarted local systems should then be able to connect.
+Assuming the system is reachable on port 123 for incoming connections and the service is restarted the server is ready.
 
-On the clients, then update the chrony configuration to point at the new system and restart chrony. For example, my server is at 192.168.2.12 I can update the configuration file to use it to synchronize by adding:
+To setup the clients, update the chrony configuration to point at the new system and restart chrony. For example, my server is at 192.168.2.12 I can update the configuration file to use it to synchronize by adding:
 
 ```conf
-pool 192.168.2.12 iburst
+server 192.168.2.12
 ```
 
-And then verify the service is up with the one server using `cronyc activity` and the status of the server and connection using the `cronyc tracking` command.
+A user can then verify the connection to the specified server with the `cronyc activity` command and the status of the connection using the `cronyc tracking` command.
 
-On the server, you can verify clients using the `clients` command:
+On the server, you can verify the list of clients using the `clients` command:
 
 ```shell
 $ sudo chronyc clients
@@ -153,11 +196,9 @@ viper.maas                    390      0   0   -     0       0      0   -     -
 localhost                       0      0   -   -     -       1      0   -     2
 ```
 
-Access can be tested using the `accheck <address>` command.
-
 ## Hardware Timestamping
 
-To enable even more accurate time synchronization consider using [hardware timestamping](https://chrony.tuxfamily.org/doc/3.3/chrony.conf.html#hwtimestamp) if you are hardware supports it. This features provides incoming and outgoing packets with precise timestamps using the network controller. If this feature is enabled, it is best to enable it on both the host and clients.
+To enable even more accurate time synchronization consider using [hardware timestamping](https://chrony.tuxfamily.org/doc/3.3/chrony.conf.html#hwtimestamp) if you are hardware supports it. This features provides incoming and outgoing packets with precise timestamps using the network controller. If this feature is enabled, it is best to enable it on both the host and client.
 
 ### Hardware Support
 
@@ -172,7 +213,7 @@ And the NIC must have ***EITHER*** of the following capabilities (at least one):
 - HWTSTAMP_FILTER_ALL
 - HWTSTAMP_FILTER_NTP_ALL
 
-Here is an example of a NIC that has all the necessary capabilities for both send and receive:
+For more details on these capabilities see the [kernel timestamping](https://www.kernel.org/doc/Documentation/networking/timestamping.txt) documentation. Below is an example of a NIC that has all the necessary capabilities for both send and receive:
 
 ```shell
 $ ethtool -T enp0s25
@@ -202,14 +243,12 @@ Hardware Receive Filter Modes:
     ptpv2-delay-req       (HWTSTAMP_FILTER_PTP_V2_DELAY_REQ)
 ```
 
-For more details on these capabilities see the [kernel timestamping](https://www.kernel.org/doc/Documentation/networking/timestamping.txt) documentation.
-
 ### Enable Hardware Timestamping
 
 To enable hardware timestamping in the configuration add the `hwtimestamp` option and either specify a single interface or use the wildcard character (*) to enable hardware timestamping on all interfaces that support it:
 
 ```conf
-hwtimestamp eth0
+hwtimestamp enp0s25
 hwtimestamp *
 ```
 
@@ -219,56 +258,61 @@ Once the service is restarted a user can verify if hardware timestamping is used
 Apr  5 21:09:31 nexus chronyd[4104]: Enabled HW timestamping on enp0s25
 ```
 
-And finally, verify using the client as well:
+To verify that the connection to a server is using hardware timestamping view the output of the `ntpdata` command:
 
 ```shell
-$ sudo chronyc ntpdata 192.168.2.12 | grep timestamping
+$ sudo chronyc ntpdata | grep timestamping
 TX timestamping : Hardware
 RX timestamping : Hardware
 ```
 
-### Additional Performance
+## Additional Performance
 
-Per the chrony guide on [improving accuracy](https://chrony.tuxfamily.org/faq.html#_how_can_i_improve_the_accuracy_of_the_system_clock_with_ntp_sources), when connecting to a local system it is suggested to also change the polling interval and to use the interleave mode for additional performance gains:
+It is worth consulting the chrony guide on [improving accuracy](https://chrony.tuxfamily.org/faq.html#_how_can_i_improve_the_accuracy_of_the_system_clock_with_ntp_sources) as depending on the environment additional tuning to server or pool parameters may result in gains in performance.
+
+As an example, when connecting to a local system the guide suggested changing the polling interval and to use the interleave mode for additional performance gains:
 
 ```conf
-server 192.168.2.12 minpoll 0 maxpoll 0 xleave
+server 192.168.2.12 minpoll 2 maxpoll 2 xleave
 ```
 
 ## Authentication
 
 To secure chornyc commands and NTP packets a user can enable authentication.
 
-Keys are stored in the `/etc/chrony/chrony.keys` file (as setup by the chrony.conf file) and the file can take a [variety of hash functions](https://chrony.tuxfamily.org/doc/3.3/chrony.conf.html#keyfile).
+Keys are stored in the `/etc/chrony/chrony.keys` file (as setup by chrony.conf) and the file can take keys in a large [variety of hash functions](https://chrony.tuxfamily.org/doc/3.3/chrony.conf.html#keyfile).
 
 ### keygen
 
-The built in [keygen](https://chrony.tuxfamily.org/doc/3.3/chronyc.html#keygen) command can be used to generate random keys. It takes the following optional arguments:
+The built in [keygen](https://chrony.tuxfamily.org/doc/3.3/chronyc.html#keygen) command is useful to generate random keys. It takes the following optional arguments:
 
-1. The key ID (Default: 1)
-1. The type of has function to use (Default: SHA1 or MD5 if SHA1 is not available)
-1. The number of bits to use between 80 and 4096 (Default: 160)
+1. The key ID (default: 1)
+1. The type of has function to use (default: SHA1 or MD5 if SHA1 is not available)
+1. The number of bits to use between 80 and 4096 (default: 160)
 
-Here are examples:
+Here are a few examples:
 
 ```shell
-# id 1 with a 160-bit SHA1 key
+# generate key id #1 with a 160-bit SHA1 key
 $ chronyc keygen
 1 SHA1 HEX:57545218761536EE5FCBCEF67D9F720DE462FB4B
-# id 3 with a 160-bit SHA1 key
+
+# generate key id #3 with a 160-bit SHA1 key
 $ chronyc keygen 3 SHA1
 3 SHA1 HEX:C47254E85E4FBE1FD2D01FE3BFEA742B32CFB5A2
-# id 16 with a 128-bit SHA256key
+
+# generate key id #16 with a 128-bit SHA256key
 $ chronyc keygen 16 SHA256 128
 16 SHA256 HEX:9001F203D6333523E320864C04259B20
-# id 27 with a 512-bit SHA512
+
+# generate key id #27 with a 512-bit SHA512
 $ chronyc keygen 27 SHA512 512
 27 SHA512 HEX:B08BAAB8DED064D2C2351ED8C9EE5AABE784C80482809C5329187A2BE9D80A0B1E6E18C4164946F6D8E36F1C4A2A966B3B754B1FDE89A0E66FE92CC1E65364E5
 ```
 
 ### Example Authentication
 
-First, the key files of the server and the client need the same key ID entry as the client, otherwise no relationship between the computers will be possible. The server needs to be restarted for the key to take effect.
+First, the key files of the server and the client need the same key ID entry that will be used, otherwise no relationship between the computers will be possible. Both the client and server service need to be restarted to pick up the keys once there.
 
 For example, if the client and server key files had the following entry:
 
@@ -293,7 +337,7 @@ Authenticated   : Yes
 
 ### Status
 
-To determine the synchronizing status, check the values from the tracking command. If the values are all zeros and the reference time is wrong, then the system is not synchronizing correctly. For example an end user would see the following output:
+To determine the synchronizing status, check the values from the tracking command. If the values are all zeros and the reference time is wrong, then the system is not synchronizing correctly. For example if a user sees the following then no valid NTP data was received:
 
 ```shell
 $ chronyc tracking
@@ -312,15 +356,13 @@ Update interval : 0.0 seconds
 Leap status     : Not synchronised
 ```
 
-If output like the above is seen, then checking the connectivity to the defined server or pool would is advised.
-
 ### Logs
 
-By default logs for chrony go to syslog, therefore start by looking through `/var/log/syslog` for the debugging.
+By default logs for chrony go to syslog, therefore start by searching through `/var/log/syslog` for details on the chrony service.
 
 #### Additional Logging
 
-If even more logging is required aid in debugging or tracking of your NTP service, it is possible by uncommenting or adding the line below to the chrony configuration file. This will log additional data and statistics.
+If additional logging is required to aid in debugging or tracking the performance of the NTP service, it is possible by uncommenting or adding the line below to the chrony configuration file. In doing so enables additional data and statistics to be collected on an on-going basis:
 
 ```conf
 # Uncomment the following line to turn additional logging on
@@ -341,5 +383,5 @@ measurements.log  statistics.log  tracking.log
 - [chrony webpage](https://chrony.tuxfamily.org/index.html)
 - [chrony faq](https://chrony.tuxfamily.org/faq.html)
 - [chrony docs](https://chrony.tuxfamily.org/documentation.html)
-- [help and support](https://ubuntuforums.org/forumdisplay.php?f=339)
-- [file a bug](https://bugs.launchpad.net/ubuntu/+source/chrony/+filebug)
+- [Ubuntu Help and Support](https://ubuntuforums.org/forumdisplay.php?f=339)
+- [File a Chrony Bug in Ubuntu](https://bugs.launchpad.net/ubuntu/+source/chrony/+filebug)
