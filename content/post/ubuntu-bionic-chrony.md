@@ -70,7 +70,7 @@ Leap status     : Normal
 
 #### sources
 
-The `sources` command shows a list of servers available to the system, status, and offsets from teh local clock and the source. Using the `-v` flag provides the meanings of each column. Users should pay attention for servers with a state of '?', 'x', or '~'.
+The `sources` command shows a list of servers available to the system, status, and offsets from the local clock and the source. Using the `-v` flag provides the meanings of each column. Users should pay attention for servers with a state of '?', 'x', or '~'.
 
 For additional details on each field view the [sources documentation](https://chrony.tuxfamily.org/doc/3.3/chronyc.html#sources)
 
@@ -320,7 +320,7 @@ For example, if the client and server key files had the following entry:
 27 SHA1 HEX:57545218761536EE5FCBCEF67D9F720DE462FB4B
 ```
 
-On the client, in order to tell Chrony to use key #27 for a particular server add the key option to the cooresponding server entry:
+On the client, in order to tell Chrony to use key #27 for a particular server add the key option to the corresponding server entry:
 
 ```conf
 add server 192.168.1.12 key 27
@@ -362,7 +362,7 @@ By default logs for chrony go to syslog, therefore start by searching through `/
 
 #### Additional Logging
 
-If additional logging is required to aid in debugging or tracking the performance of the NTP service, it is possible by uncommenting or adding the line below to the chrony configuration file. In doing so enables additional data and statistics to be collected on an on-going basis:
+If additional logging is required to aid in debugging or tracking the performance of the NTP service, it is possible by commenting out or adding the line below to the chrony configuration file. In doing so enables additional data and statistics to be collected on an on-going basis:
 
 ```conf
 # Uncomment the following line to turn additional logging on
