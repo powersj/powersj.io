@@ -70,7 +70,7 @@ Leap status     : Normal
 
 #### sources
 
-The `sources` command shows a list of servers available to the system, status, and offsets from teh local clock and the source. I highly suggest using the `-v` flag to get more details on each column meanings. Users should pay attention for servers with a state of '?', 'x', or '~'.
+The `sources` command shows a list of servers available to the system, status, and offsets from teh local clock and the source. Using the `-v` flag provides the meanings of each column. Users should pay attention for servers with a state of '?', 'x', or '~'.
 
 For additional details on each field view the [sources documentation](https://chrony.tuxfamily.org/doc/3.3/chronyc.html#sources)
 
@@ -100,7 +100,7 @@ MS Name/IP address         Stratum Poll Reach LastRx Last sample
 
 #### sourcestats
 
-The `sourcestats` command is used to show additional statistics for each server including the number of samples from each server and estimated offset from a source. Again, I highly suggest using the `-v` flag to get more details on each column.
+The `sourcestats` command is used to show additional statistics for each server including the number of samples from each server and estimated offset from a source. Using the `-v` flag to get more details on each column is helpful initially.
 
 For additional details on each field view the [sourcestats documentation](https://chrony.tuxfamily.org/doc/3.3/chronyc.html#sourcestats)
 
