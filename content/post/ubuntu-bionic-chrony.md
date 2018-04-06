@@ -9,7 +9,7 @@ draft: false
 
 # Using chrony to configure NTP
 
-Starting with [Ubuntu Bionic](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes), the choice for fast and accurate time synchronization is [chrony](https://chrony.tuxfamily.org/index.html). The features available on chrony and how chrony compares to other time synchronization implementations check out the [comparison](https://chrony.tuxfamily.org/comparison.html) page on the chrony site.
+Starting with [Ubuntu Bionic](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes), the choice for fast and accurate time synchronization is [chrony](https://chrony.tuxfamily.org/index.html). For the features available with chrony and how chrony compares to other time synchronization implementations check out the [comparison](https://chrony.tuxfamily.org/comparison.html) page on the chrony site.
 
 This post will demonstrate how to get started, a few helpful commands for end-users, and a couple features of chrony.
 
