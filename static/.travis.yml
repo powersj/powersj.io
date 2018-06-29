@@ -1,4 +1,4 @@
-lanuage: minimal
+language: minimal
 deploy:
   provider: s3
   bucket: powersj.io
