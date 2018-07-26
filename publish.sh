@@ -24,7 +24,7 @@ error() {
     echo "$@" 1>&2
 }
 
-fail() { 
+fail() {
     [ $# -eq 0 ] || error "$@"
     exit 1
 }
@@ -39,7 +39,7 @@ git submodule update || fail "submodule update failed"
 
 echo "building site"
 cleanup
-hugo --destination "$BUILD_DIR" || fail "build failed"
+hugo --buildFuture --destination "$BUILD_DIR" || fail "build failed"
 pushd "$BUILD_DIR" || fail "could not change to build dir"
 
 echo "creating git commit"
