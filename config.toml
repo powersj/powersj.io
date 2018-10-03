@@ -17,12 +17,12 @@ disqusShortname = "powersj"
     # Theme related
     accent = "#d30c1f"
     backgroundColor = "#f8f8f8"
-    font = "Montserrat"
+    font = "Quicksand"
     showBorder = true
 
     # Syntax Highlighting
     highlight = true
-    highlightStyle = "solarized-dark"
+    highlightStyle = "solarized-light"
     highlightLanguages = ["json", "python", "shell", "yaml"]
 
 [[menu.main]]
