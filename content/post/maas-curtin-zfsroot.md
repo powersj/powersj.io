@@ -7,17 +7,17 @@ draft: true
 
 # Deploying Ubuntu root on ZFS with MAAS
 
-With recent updates to [MAAS](https://maas.io/) and [Curtin](https://launchpad.net/curtin), deploying Ubuntu with a ZFS root disk is now possible! Curtin added [zfsroot support](https://git.launchpad.net/curtin/commit/?id=15c15c7d496fe2f20a4f998fe0892fb3834c0a7a) earlier this year and MAAS has now exposed the option.
+With [recent updates](https://docs.maas.io/2.4/en/intro-new) to [MAAS](https://maas.io/) and [Curtin](https://launchpad.net/curtin), deploying Ubuntu with a ZFS root disk is now possible! Curtin added [zfsroot support](https://git.launchpad.net/curtin/commit/?id=15c15c7d496fe2f20a4f998fe0892fb3834c0a7a) earlier this year and MAAS has now exposed the option.
 
-ZFS is known for its amazing list of features:
+ZFS is known for an amazing list of features:
 
 * copy-on-write cloning
-* continuous integrity checking against data corruption
+* continuous integrity checking
 * snapshots
 * automatic repair
 * efficient data compression
 
-The following takes a look at how using ZFS for the root filesystem of an Ubuntu system can take advantage of these features.
+The following article takes a look at how using ZFS for the root filesystem of an Ubuntu system can take advantage of these features.
 
 ## MAAS Configuration
 
@@ -29,26 +29,19 @@ Once applied, the resulting disk setup should then look like the following with 
 
 ![filesystem](/img/maas/zfsroot/partitions.png#center)
 
-### MBR vs GPT
+### MBR Partition Record
 
-ZFS root does require a GPT partition record. This type of partition type is only enabled if a disk is larger than 3TB or if the system is booting via EFI.
+To use ZFS root MAAS requires the disk use a GPT partition record. This type of partition type is only enabled if a disk is larger than 3TB or if the system is booting via EFI.
 
 If a user attempts to install using a ZFS root with MBR they will receive an error message:
 
 ```shell
-curtin: Installation started. (18.1-17-gae48e86f-0ubuntu1~18.04.1)
-third party drivers not installed or necessary.
 zfsroot requires bootdisk with GPT partition table found "msdos" on disk id="sda"
-curtin: Installation failed with exception: Unexpected error while running command.
-Command: ['curtin', 'block-meta', 'custom']
-Exit code: 3
-Reason: -
-Stdout: zfsroot requires bootdisk with GPT partition table found "msdos" on disk id="sda"
 ```
 
 ## Post-Deploy Verification
 
-After the deployment, a user can verify the ZFS root filesystem using `lsblk` and `parted` as well as using ZFS commands:
+After the deployment, a user can verify the ZFS root filesystem using `lsblk`, `parted`, as well as using ZFS commands:
 
 ```shell
 $ lsblk
@@ -78,13 +71,15 @@ NAME    SIZE  ALLOC   FREE  EXPANDSZ   FRAG    CAP  DEDUP  HEALTH  ALTROOT
 rpool   232G  6.19G   226G         -      -     2%  1.00x  ONLINE  -
 ```
 
+The `lsblk` output matches the requested MAAS storage configuration. Parted output shows how the file system is using ZFS and the `zfs` and `zpool` commands show the pool used by the ZFS root.
+
 ## ZFS Snapshots & Rollback
 
-One of the key features of ZFS is the ability to provide snapshots. This demonstrates how to take a snapshot and rollback based on that snapshot.
+One of the key features of ZFS is the ability to provide snapshots. The following demonstrates how to take a snapshot and rollback the entire or part of the filesytem based on that snapshot.
 
 ### Snapshot
 
-To manually take a snapshot, provide the path to the ZFS filesystem and a snapshot name in the format `filesystem@snapshot_name`. Destroying the snapshot is similarly done with the name of the snapshot. Keep in mind that ZFS datasets cannot be destroyed if a snapshot of the dataset exists.
+To manually take a snapshot, provide the path to the ZFS filesystem and a snapshot name in the format `filesystem@snapshot_name`. Destroying the snapshot is similarly done with the name of the snapshot. Note that ZFS datasets cannot be destroyed if a snapshot of the dataset exists.
 
 ```shell
 $ sudo zfs snapshot rpool/ROOT/zfsroot@initial
@@ -96,7 +91,9 @@ $ sudo zfs destroy rpool/ROOT/zfsroot@initial
 
 ### Rollback
 
-To do a full disk rollback, using MAAS to boot into rescue mode, using a LiveCD, or recovery mode is required. Attempting to restore the root filesystem while it is mounted will not be entirely successful. Once in rescue mode, install the ZFS utilities, and run the rollback to that snapshot:
+To do a full disk rollback, first requires that the root file system get unmounted as a mounted filesystem cannot be completely restored and will not be completely successful. The actual mechanism in ZFS will attempt to unmount a mounted filesystem during rollback. The easiest way is to use MAAS to boot into rescue mode. A user could also boot a system using a LiveCD or recovery mode.
+
+Once in rescue mode, all that is required is to install the ZFS utilities and rollback to the specified snapshot:
 
 ```shell
 $ sudo apt update
@@ -107,33 +104,33 @@ rpool/ROOT/zfsroot@initial  3.01M      -  6.18G  -
 $ sudo zfs rollback rpool/ROOT/zfsroot@initial
 ```
 
-#### Mounted Restore
+#### Manual Restore
 
-Even with the mounted root filesystem some minor fixes are possible. Take for example someone deleting `/srv`, an admin can attempt to use the rollback command the initial boot snapshot:
+Even with the mounted root filesystem some fixes are possible. Snapshots are stored on the filesystem under the `/.zfs` directory. A user can find the files under the appropriate snapshot and directory and attempt to restore them.
+
+Take for example someone deleting `/srv`, the admin could have gone under `/.zfs/snapshot/initial` to find the missing data:
 
 ```shell
 $ ls /srv/test
 important
-$ sudo rm -rf /srv/test
+$ sudo rm -rf /srv
 $ ls /srv/test
 ls: cannot access '/srv/test': No such file or directory
-$ sudo zfs rollback rpool/ROOT/zfsroot@initial
-$ ls /srv/test
-important
-```
-
-Snapshots are stored on the filesystem under the `/.zfs` directory and manually find the files to restore. In the case above, the admin could have gone under `/.zfs/snapshot/initial` to find the missing data:
-
-```shell
 $ ls /.zfs/snapshot/initial/srv/test/
 important
 ```
 
 ## zfs-auto-snapshot
 
-For more structured snapshots one option is to use [zfs-auto-snapshot](https://github.com/zfsonlinux/zfs-auto-snapshot), which is available in Ubuntu 18.04 LTS and later releases. zfs-auto-snapshot works with zfs-linux and zfs-fuse to create periodic ZFS snapshots every 15mins (keeps 4), hourly (keeps 24), daily (keeps 31), weekly (keeps 8), and monthly (keeps 12).
+For more structured snapshots one great option is to use [zfs-auto-snapshot](https://github.com/zfsonlinux/zfs-auto-snapshot), which is available in Ubuntu 18.04 LTS and later releases. zfs-auto-snapshot works with zfs-linux and zfs-fuse to create periodic ZFS snapshots at the following intervals:
 
-After an hour, a user will see a set of new snapshots:
+* every 15mins and keeps 4
+* hourly and keeps 24
+* daily and keeps 31
+* weekly and keeps 8
+* monthly and keeps 12
+
+An hour after installing, a user will see a set of new snapshots:
 
 ```shell
 $ zfs list -t snapshot
@@ -175,9 +172,18 @@ Oct  1 23:17:01 nexus zfs-auto-snap: @zfs-auto-snap_hourly-2018-10-01-2317, 1 cr
 
 ## Backup ZFS Snapshots
 
-Of course, taking a snapshot is not a backup and as such keeping snapshots on a different system or location is wise. The following will show how to move a snapshot from a system to a remote system using the ZFS send and receive commands.
+Of course, taking a snapshot is great for rollbacks due to mistakes, snapshots are not to be considered a backup. As a result, keeping snapshots on a different system or location is essential if the data is considered critical.
 
-First, on the remote system create a pool to hold the backup:
+Snapshots can be sent to a file or received from a file to allow for easy backup and restore:
+
+```shell
+sudo zfs send rpool/nexus/frequent@zfs-auto-snap_frequent-2018-10-01-2245 \
+    > /tmp/frequent-2018-10-01-2245.bak
+sudo zfs recv rpool/nexus/frequent@zfs-auto-snap_frequent-2018-10-01-2245 \
+    < /tmp/frequent-2018-10-01-2245.bak
+```
+
+Another option is to send the snapshots to a remote system already setup with ZFS. First, on the remote system that will store our backup of a ZFS snapshot create a pool to store the snapshots:
 
 ```shell
 $ sudo zfs create rpool/nexus
@@ -189,14 +195,14 @@ rpool/ROOT/zfsroot  6.18G   219G  6.18G  /
 rpool/nexus          176K   219G   176K  /nexus
 ```
 
-Assuming the user already has SSH keys in place to allow for passwordless login then it is time to run the backup. This is done using the `send` and `recv` ZFS sub-commands to send a snapshot from the local system and have it received by the remote system:
+Assuming the user already has SSH keys in place to allow for passwordless login then it is time to send the ZFS snapshot. This is done using the `send` and `recv` ZFS sub-commands to send a snapshot from the local system and have it received by the remote system:
 
 ```shell
 sudo zfs send rpool/ROOT/zfsroot@zfs-auto-snap_frequent-2018-10-01-2245 \
     | ssh falcon "sudo zfs recv rpool/nexus/frequent"
 ```
 
-On the remote system, verify the snapshot was received on the remote system by looking at the pool and the snapshot listing:
+On the remote system, verify the snapshot was received by looking at the pool and the snapshot listing:
 
 ```shell
 $ zfs list
