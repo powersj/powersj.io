@@ -122,7 +122,7 @@ important
 
 ## zfs-auto-snapshot
 
-For more structured snapshots one great option is to use [zfs-auto-snapshot](https://github.com/zfsonlinux/zfs-auto-snapshot), which is available in Ubuntu 18.04 LTS and later releases. zfs-auto-snapshot works with zfs-linux and zfs-fuse to create periodic ZFS snapshots at the following intervals:
+Snapshots are cheap, worth having, and [zfs-auto-snapshot](https://github.com/zfsonlinux/zfs-auto-snapshot). makes setting consistent snapshots easily. zfs-auto-snapshot is available in Ubuntu 18.04 LTS and later releases and works with zfs-linux and zfs-fuse to create periodic ZFS snapshots at the following intervals:
 
 * every 15mins and keeps 4
 * hourly and keeps 24
@@ -172,7 +172,7 @@ Oct  1 23:17:01 nexus zfs-auto-snap: @zfs-auto-snap_hourly-2018-10-01-2317, 1 cr
 
 ## Backup ZFS Snapshots
 
-Of course, taking a snapshot is great for rollbacks due to mistakes, snapshots are not to be considered a backup. As a result, keeping snapshots on a different system or location is essential if the data is considered critical.
+Of course, taking a snapshot is great for rollbacks due to mistakes, but snapshots are not to be considered a backup. As a result, keeping snapshots on a different system or location is essential if the data is considered critical.
 
 Snapshots can be sent to a file or received from a file to allow for easy backup and restore:
 
@@ -224,6 +224,87 @@ sudo zfs send rpool/nexus/frequent@zfs-auto-snap_frequent-2018-10-01-2245 \
     | ssh nexus "sudo zfs recv rpool/ROOT/zfsroot
 ```
 
+## Scrub
+
+As mentioned at the beginning ZFS has the ability to silently correct data errors. This is accomplished through the scrub action. A scrub will go through every block of the pool and compare it against the known checksum for that block.
+
+By default zfsutils-linux will come with a crontab entry that will scrub the disks:
+
+```shell
+$ cat /etc/cron.d/zfsutils-linux
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Scrub the second Sunday of every month.
+24 0 8-14 * * root [ $(date +\%w) -eq 0 ] && [ -x /usr/lib/zfs-linux/scrub ] && /usr/lib/zfs-linux/scrub
+```
+
+A user can setup a second crontab to run more periodically if necessary or a scrub can also get executed manually:
+
+```shell
+$ sudo zpool scrub rpool
+$ sudo zpool status rpool
+  pool: rpool
+ state: ONLINE
+  scan: scrub repaired 0B in 0h0m with 0 errors on Thu Oct 11 16:55:14 2018
+config:
+
+	NAME                                                   STATE     READ WRITE CKSUM
+	rpool                                                  ONLINE       0     0     0
+	  ata-Samsung_SSD_850_EVO_250GB_S2R5NX0HB20702T-part3  ONLINE       0     0     0
+
+errors: No known data errors
+```
+
+Be aware that a scrub can impact performance of the disk while run.
+
+## Compression
+
+The first of two ways to save disk space is to enable compression. With ZFS compression is done transparent to the user, as ZFS is compressing and decompression data on the fly. Files that are not already compressed will take advantage of this, while already compressed data will not. The overall cost to enabling compression however is minimal due to modern processors handling the work easily.
+
+The LZ4 algorithm is generally considered the best starting point if a user is uncertain of what type of compression to enable.
+
+```shell
+$ sudo zfs set compression=lz4 rpool/ROOT/zfsroot
+$ zfs get compression rpool/ROOT/zfsroot
+NAME                PROPERTY     VALUE     SOURCE
+rpool/ROOT/zfsroot  compression  lz4       local
+```
+
+A user can judge the overall efficiency of enabling compression by viewing the compression ratio on the pool:
+
+```shell
+$ sudo zfs get compressratio rpool/ROOT/zfsroot
+NAME                PROPERTY       VALUE  SOURCE
+rpool/ROOT/zfsroot  compressratio  1.00x  -
+```
+
+Do note that enabling compression on a dataset is not retroactive. As such the compression will only occur on new and modified data after enabling it.
+
+## Deduplication
+
+A second mechanism of saving disk space is to enable deduplication. ZFS utilizes block level, rather than file or byte level, deduplication as it is a nice trade off in terms of speed and storage.
+
+To achieve sufficient performance to justify deduplication the system is required to have sufficient memory to store deduplicate data. In the event that not enough memory exists the duplication data gets written to disk potentially reducing performance greatly. Therefore, if the system has minimal amounts of memory, deduplication is not recommended.
+
+```shell
+$ sudo zfs set dedup=on rpool/ROOT/zfsroot
+$ sudo zfs get dedup rpool/ROOT/zfsroot
+NAME                PROPERTY  VALUE          SOURCE
+rpool/ROOT/zfsroot  dedup     on             local
+```
+
+## Additional Pools
+
+```shell
+```
+
 ## Conclusion
 
-Hopefully this demonstrates the ease of setting up root ZFS with MAAS and the possible features that can be used as a part of such a configuration. Consider taking root ZFS for a spin with MAAS!
+MAAS enables users to easily deploy ZFS as their root filesystem and explore advanced filesystem features. Consider taking root ZFS for a spin with MAAS!
+
+## References
+
+[MAAS](https://maas.io/)
+[MAAS Docs](https://docs.maas.io/)
+[ZFS on Ubuntu](https://wiki.ubuntu.com/ZFS)
+[OpenZFS Docs](http://open-zfs.org/wiki/System_Administration)
