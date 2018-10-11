@@ -35,7 +35,7 @@ To use ZFS root MAAS requires the disk use a GPT partition record. This type of 
 
 If a user attempts to install using a ZFS root with MBR they will receive an error message:
 
-```shell
+```text
 zfsroot requires bootdisk with GPT partition table found "msdos" on disk id="sda"
 ```
 
@@ -91,7 +91,11 @@ $ sudo zfs destroy rpool/ROOT/zfsroot@initial
 
 ### Rollback
 
-To do a full disk rollback, first requires that the root file system get unmounted as a mounted filesystem cannot be completely restored and will not be completely successful. The actual mechanism in ZFS will attempt to unmount a mounted filesystem during rollback. The easiest way is to use MAAS to boot into rescue mode. A user could also boot a system using a LiveCD or recovery mode.
+To do a full disk rollback, first requires that the root file system get unmounted as a mounted filesystem cannot be completely restored and will not be completely successful. The actual mechanism in ZFS will attempt to unmount a mounted filesystem during rollback.
+
+The easiest way is to use MAAS to boot into rescue mode. This is done by selecting `Rescue mode` from the `Take action` menu of the node:
+
+![rescue mode](/img/maas/zfsroot/rescue_mode.png#center)
 
 Once in rescue mode, all that is required is to install the ZFS utilities and rollback to the specified snapshot:
 
@@ -226,7 +230,7 @@ sudo zfs send rpool/nexus/frequent@zfs-auto-snap_frequent-2018-10-01-2245 \
 
 ## Scrub
 
-As mentioned at the beginning ZFS has the ability to silently correct data errors. This is accomplished through the scrub action. A scrub will go through every block of the pool and compare it against the known checksum for that block.
+As mentioned at the beginning ZFS has the ability to silently correct data errors. This is accomplished through the scrub action. A scrub will go through every block of the pool and compare it against the known checksum for that block. The consequence of which is that a scrub can impact performance of the disk while run.
 
 By default zfsutils-linux will come with a crontab entry that will scrub the disks:
 
@@ -248,14 +252,12 @@ $ sudo zpool status rpool
   scan: scrub repaired 0B in 0h0m with 0 errors on Thu Oct 11 16:55:14 2018
 config:
 
-	NAME                                                   STATE     READ WRITE CKSUM
-	rpool                                                  ONLINE       0     0     0
-	  ata-Samsung_SSD_850_EVO_250GB_S2R5NX0HB20702T-part3  ONLINE       0     0     0
+   NAME                                                   STATE     READ WRITE CKSUM
+   rpool                                                  ONLINE       0     0     0
+     ata-Samsung_SSD_850_EVO_250GB_S2R5NX0HB20702T-part3  ONLINE       0     0     0
 
 errors: No known data errors
 ```
-
-Be aware that a scrub can impact performance of the disk while run.
 
 ## Compression
 
@@ -270,15 +272,13 @@ NAME                PROPERTY     VALUE     SOURCE
 rpool/ROOT/zfsroot  compression  lz4       local
 ```
 
-A user can judge the overall efficiency of enabling compression by viewing the compression ratio on the pool:
+A user can judge the overall efficiency of enabling compression by viewing the compression ratio on the pool. Do note that enabling compression on a dataset is not retroactive. As such the compression will only occur on new and modified data after enabling it.
 
 ```shell
 $ sudo zfs get compressratio rpool/ROOT/zfsroot
 NAME                PROPERTY       VALUE  SOURCE
 rpool/ROOT/zfsroot  compressratio  1.00x  -
 ```
-
-Do note that enabling compression on a dataset is not retroactive. As such the compression will only occur on new and modified data after enabling it.
 
 ## Deduplication
 
@@ -304,7 +304,7 @@ MAAS enables users to easily deploy ZFS as their root filesystem and explore adv
 
 ## References
 
-[MAAS](https://maas.io/)
-[MAAS Docs](https://docs.maas.io/)
-[ZFS on Ubuntu](https://wiki.ubuntu.com/ZFS)
-[OpenZFS Docs](http://open-zfs.org/wiki/System_Administration)
+* [MAAS](https://maas.io/)
+* [MAAS Docs](https://docs.maas.io/)
+* [ZFS on Ubuntu](https://wiki.ubuntu.com/ZFS)
+* [OpenZFS Docs](http://open-zfs.org/wiki/System_Administration)
