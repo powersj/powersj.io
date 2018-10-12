@@ -251,11 +251,11 @@ $ sudo zpool status rpool
   pool: rpool
  state: ONLINE
   scan: scrub repaired 0B in 0h0m with 0 errors on Thu Oct 11 16:55:14 2018
-config:
+ config:
 
-   NAME                                                   STATE     READ WRITE CKSUM
-   rpool                                                  ONLINE       0     0     0
-     ata-Samsung_SSD_850_EVO_250GB_S2R5NX0HB20702T-part3  ONLINE       0     0     0
+  NAME                                                   STATE     READ WRITE CKSUM
+  rpool                                                  ONLINE       0     0     0
+    ata-Samsung_SSD_850_EVO_250GB_S2R5NX0HB20702T-part3  ONLINE       0     0     0
 
 errors: No known data errors
 ```
