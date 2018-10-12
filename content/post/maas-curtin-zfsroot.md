@@ -264,7 +264,7 @@ errors: No known data errors
 
 The most reason versions of ZFS utilize dataset feature flags to specify a property for changes to on-disk formats. The original method was a single version number, but given OpenZFS is developed distributedly rather than by a single company, utilizing feature flags make for easier determination of features supported versus the single number.
 
-If a user attempts to enable a feature that the dataset version does not support a message requesting an upgrade will appear. Upgrading a dataset is as simple as running upgrade on that specific dataset:
+If a user attempts to enable a feature that the dataset version does not support a message requesting an upgrade will appear. Upgrading a dataset is as simple as running upgrade on that specific dataset. However, do note that an upgrade is a one-way path and may make the dataset unavailable to tools which do not support a particular feature.
 
 ```shell
 $ sudo zfs set compression=lz4 rpool
@@ -317,9 +317,13 @@ rpool  compressratio  1.00x  -
 
 ## Deduplication
 
-A second mechanism of saving disk space is to enable deduplication. ZFS utilizes block level, rather than file or byte level, deduplication as it is a nice trade off in terms of speed and storage.
+A second mechanism of saving disk space is to enable deduplication. ZFS utilizes block level deduplication, rather than file or byte level, as it is a nice trade off in terms of speed and storage.
 
-To achieve sufficient performance to justify deduplication the system is required to have sufficient memory to store deduplicate data. In the event that not enough memory exists the duplication data gets written to disk potentially reducing performance greatly. Therefore, if the system has minimal amounts of memory, deduplication is not recommended.
+A user must be extremely careful when enabling deduplication and understand the risks associated with it. To achieve performance to justify deduplication the system is required to have sufficient memory to store deduplicate data. In the event that not enough memory exists the duplication data gets written to disk reducing performance greatly. Turning deduplication off will not solve any scenarios where the duplication table is already getting written to disk.
+
+A general heuristic for system memory is for every TB of pool data the system should have 20GB of system memory. The large number is due to the need to account for the needs of memory for the operating system, workload, other metadata, and to account for the deduplication table to minimize the possibility of writing to disk.
+
+In order to first test if deduplication would have any effect a user can test it by created a test pool, enable deduplication, and copy test data over. A second option is to use the `zdb -S` command to simulate deduplication and get an estimated measure of the effect.
 
 ```shell
 $ sudo zfs set dedup=on rpool
