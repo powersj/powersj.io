@@ -291,7 +291,6 @@ Enabled the following features on 'rpool':
   skein
   edonr
   userobj_accounting
-
 ```
 
 ## Compression
