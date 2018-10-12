@@ -41,7 +41,7 @@ zfsroot requires bootdisk with GPT partition table found "msdos" on disk id="sda
 
 ## Post-Deploy Verification
 
-After the deployment, a user can verify the ZFS root filesystem using `lsblk`, `parted`, as well as using ZFS commands:
+After the deployment, a user can verify the ZFS root filesystem using `lsblk`, `parted`, as well as using ZFS commands.
 
 ```shell
 $ lsblk
@@ -75,7 +75,7 @@ The `lsblk` output matches the requested MAAS storage configuration. Parted outp
 
 ## ZFS Snapshots & Rollback
 
-One of the key features of ZFS is the ability to provide snapshots. The following demonstrates how to take a snapshot and rollback the entire or part of the filesytem based on that snapshot.
+One of the key features of ZFS is the ability to provide snapshots. The following demonstrates how to take a snapshot and rollback the entire or part of the filesystem based on that snapshot.
 
 ### Snapshot
 
@@ -97,7 +97,7 @@ The easiest way is to use MAAS to boot into rescue mode. This is done by selecti
 
 ![rescue mode](/img/maas/zfsroot/rescue_mode.png#center)
 
-Once in rescue mode, all that is required is to install the ZFS utilities and rollback to the specified snapshot:
+Once in rescue mode, all that is required is to install the ZFS utilities and rollback to the specified snapshot. The system then needs to exit rescue mode via MAAS and the user can boot back into the restored system.
 
 ```shell
 $ sudo apt update
@@ -108,11 +108,12 @@ rpool/ROOT/zfsroot@initial  3.01M      -  6.18G  -
 $ sudo zfs rollback rpool/ROOT/zfsroot@initial
 ```
 
+
 #### Manual Restore
 
 Even with the mounted root filesystem some fixes are possible. Snapshots are stored on the filesystem under the `/.zfs` directory. A user can find the files under the appropriate snapshot and directory and attempt to restore them.
 
-Take for example someone deleting `/srv`, the admin could have gone under `/.zfs/snapshot/initial` to find the missing data:
+Take for example someone deleting `/srv`, the admin could have gone under `/.zfs/snapshot/initial` to find the missing data.
 
 ```shell
 $ ls /srv/test
@@ -134,7 +135,7 @@ Snapshots are cheap, worth having, and [zfs-auto-snapshot](https://github.com/zf
 * weekly and keeps 8
 * monthly and keeps 12
 
-An hour after installing, a user will see a set of new snapshots:
+An hour after installing, a user will see a set of new snapshots.
 
 ```shell
 $ zfs list -t snapshot
@@ -159,7 +160,7 @@ rpool/ROOT/zfsroot@zfs-auto-snap_frequent-2018-10-01-2315  4.04M      -  6.18G  
 rpool/ROOT/zfsroot@zfs-auto-snap_hourly-2018-10-01-2317     396K      -  6.18G  -
 ```
 
-Once setup, zfs-auto-snapshot will log messages to syslog when a snapshot is taken:
+Once setup, zfs-auto-snapshot will log messages to syslog when a snapshot is taken.
 
 ```text
 Oct  1 22:17:01 nexus zfs-auto-snap: @zfs-auto-snap_hourly-2018-10-01-2217, 1 created, 0 destroyed, 0 warnings.
@@ -178,7 +179,7 @@ Oct  1 23:17:01 nexus zfs-auto-snap: @zfs-auto-snap_hourly-2018-10-01-2317, 1 cr
 
 Of course, taking a snapshot is great for rollbacks due to mistakes, but snapshots are not to be considered a backup. As a result, keeping snapshots on a different system or location is essential if the data is considered critical.
 
-Snapshots can be sent to a file or received from a file to allow for easy backup and restore:
+Snapshots can be sent to a file or received from a file to allow for simple backup and restore.
 
 ```shell
 sudo zfs send rpool/nexus/frequent@zfs-auto-snap_frequent-2018-10-01-2245 \
@@ -187,7 +188,7 @@ sudo zfs recv rpool/nexus/frequent@zfs-auto-snap_frequent-2018-10-01-2245 \
     < /tmp/frequent-2018-10-01-2245.bak
 ```
 
-Another option is to send the snapshots to a remote system already setup with ZFS. First, on the remote system that will store our backup of a ZFS snapshot create a pool to store the snapshots:
+Another option is to send the snapshots to a remote system already setup with ZFS. First, on the remote system that will store our backup of a ZFS snapshot create a pool to store the snapshots.
 
 ```shell
 $ sudo zfs create rpool/nexus
@@ -199,14 +200,14 @@ rpool/ROOT/zfsroot  6.18G   219G  6.18G  /
 rpool/nexus          176K   219G   176K  /nexus
 ```
 
-Assuming the user already has SSH keys in place to allow for passwordless login then it is time to send the ZFS snapshot. This is done using the `send` and `recv` ZFS sub-commands to send a snapshot from the local system and have it received by the remote system:
+Assuming the user already has SSH keys in place to allow for passwordless login then it is time to send the ZFS snapshot. This is done using the `send` and `recv` ZFS sub-commands to send a snapshot from the local system and have it received by the remote system.
 
 ```shell
 sudo zfs send rpool/ROOT/zfsroot@zfs-auto-snap_frequent-2018-10-01-2245 \
     | ssh falcon "sudo zfs recv rpool/nexus/frequent"
 ```
 
-On the remote system, verify the snapshot was received by looking at the pool and the snapshot listing:
+On the remote system, verify the snapshot was received by looking at the pool and the snapshot listing.
 
 ```shell
 $ zfs list
@@ -221,7 +222,7 @@ NAME                                                          USED  AVAIL  REFER
 rpool/nexus/frequent@zfs-auto-snap_frequent-2018-10-01-2245   232K      -  6.18G  -
 ```
 
-Finally, to pull a snapshot back to the local system use the same `send` and `recv` ZFS sub-commands in the opposite direction:
+Finally, to pull a snapshot back to the local system use the same `send` and `recv` ZFS sub-commands in the opposite direction.
 
 ```shell
 sudo zfs send rpool/nexus/frequent@zfs-auto-snap_frequent-2018-10-01-2245 \
@@ -232,7 +233,7 @@ sudo zfs send rpool/nexus/frequent@zfs-auto-snap_frequent-2018-10-01-2245 \
 
 As mentioned at the beginning ZFS has the ability to silently correct data errors. This is accomplished through the scrub action. A scrub will go through every block of the pool and compare it against the known checksum for that block. The consequence of which is that a scrub can impact performance of the disk while run.
 
-By default zfsutils-linux will come with a crontab entry that will scrub the disks:
+By default zfsutils-linux will come with a crontab entry that will scrub the disks.
 
 ```shell
 $ cat /etc/cron.d/zfsutils-linux
@@ -242,7 +243,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 24 0 8-14 * * root [ $(date +\%w) -eq 0 ] && [ -x /usr/lib/zfs-linux/scrub ] && /usr/lib/zfs-linux/scrub
 ```
 
-A user can setup a second crontab to run more periodically if necessary or a scrub can also get executed manually:
+A user can setup a second crontab to run more periodically if necessary or a scrub can also get executed manually.
 
 ```shell
 $ sudo zpool scrub rpool
@@ -259,25 +260,59 @@ config:
 errors: No known data errors
 ```
 
+## Upgrade
+
+The most reason versions of ZFS utilize dataset feature flags to specify a property for changes to on-disk formats. The original method was a single version number, but given OpenZFS is developed distributedly rather than by a single company, utilizing feature flags make for easier determination of features supported versus the single number.
+
+If a user attempts to enable a feature that the dataset version does not support a message requesting an upgrade will appear. Upgrading a dataset is as simple as running upgrade on that specific dataset:
+
+```shell
+$ sudo zfs set compression=lz4 rpool
+cannot set property for 'rpool': pool and or dataset must be upgraded to set this property or value
+$ sudo zpool upgrade rpool
+This system supports ZFS pool feature flags.
+
+Successfully upgraded 'rpool' from version 28 to feature flags.
+Enabled the following features on 'rpool':
+  async_destroy
+  empty_bpobj
+  lz4_compress
+  multi_vdev_crash_dump
+  spacemap_histogram
+  enabled_txg
+  hole_birth
+  extensible_dataset
+  embedded_data
+  bookmarks
+  filesystem_limits
+  large_blocks
+  large_dnode
+  sha512
+  skein
+  edonr
+  userobj_accounting
+
+```
+
 ## Compression
 
-The first of two ways to save disk space is to enable compression. With ZFS compression is done transparent to the user, as ZFS is compressing and decompression data on the fly. Files that are not already compressed will take advantage of this, while already compressed data will not. The overall cost to enabling compression however is minimal due to modern processors handling the work easily.
+The first of two ways to save disk space is to enable compression. With ZFS compression is done transparent to the user, as ZFS is compressing and decompressing data on the fly. Files that are not already compressed will take advantage of this, while already compressed data will not. The overall cost to enabling compression however is minimal due to modern processors handling the work easily.
 
 The LZ4 algorithm is generally considered the best starting point if a user is uncertain of what type of compression to enable.
 
 ```shell
-$ sudo zfs set compression=lz4 rpool/ROOT/zfsroot
-$ zfs get compression rpool/ROOT/zfsroot
+$ sudo zfs set compression=lz4 rpool
+$ zfs get compression rpool
 NAME                PROPERTY     VALUE     SOURCE
-rpool/ROOT/zfsroot  compression  lz4       local
+rpool  compression  lz4       local
 ```
 
 A user can judge the overall efficiency of enabling compression by viewing the compression ratio on the pool. Do note that enabling compression on a dataset is not retroactive. As such the compression will only occur on new and modified data after enabling it.
 
 ```shell
-$ sudo zfs get compressratio rpool/ROOT/zfsroot
+$ sudo zfs get compressratio rpool
 NAME                PROPERTY       VALUE  SOURCE
-rpool/ROOT/zfsroot  compressratio  1.00x  -
+rpool  compressratio  1.00x  -
 ```
 
 ## Deduplication
@@ -287,15 +322,49 @@ A second mechanism of saving disk space is to enable deduplication. ZFS utilizes
 To achieve sufficient performance to justify deduplication the system is required to have sufficient memory to store deduplicate data. In the event that not enough memory exists the duplication data gets written to disk potentially reducing performance greatly. Therefore, if the system has minimal amounts of memory, deduplication is not recommended.
 
 ```shell
-$ sudo zfs set dedup=on rpool/ROOT/zfsroot
-$ sudo zfs get dedup rpool/ROOT/zfsroot
+$ sudo zfs set dedup=on rpool
+$ sudo zfs get dedup rpool
 NAME                PROPERTY  VALUE          SOURCE
-rpool/ROOT/zfsroot  dedup     on             local
+rpool  dedup     on             local
 ```
 
 ## Additional Pools
 
+Finally, if users have additional disks they can take advantage of the aforementioned ZFS features using additional pools.
+
+In this example, two new disks `/dev/sdb` and `/dev/sdc` were added to the system.
+
 ```shell
+$ lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda      8:0    0 232.9G  0 disk
+├─sda1   8:1    0     1M  0 part
+├─sda2   8:2    0   476M  0 part /boot/efi
+└─sda3   8:3    0 232.4G  0 part
+sdb      8:16   1  14.6G  0 disk
+sdc      8:32   1  14.6G  0 disk
+```
+
+To create a new pool, a user runs using the create command and pointing at the additional disks.
+
+```shell
+$ sudo zpool create tank sdb sdc
+$ zpool list
+NAME    SIZE  ALLOC   FREE  EXPANDSZ   FRAG    CAP  DEDUP  HEALTH  ALTROOT
+rpool   232G  7.97G   224G         -     0%     3%  1.00x  ONLINE  -
+tank     29G    93K  29.0G         -     0%     0%  1.00x  ONLINE  -
+$ zpool status -v tank
+  pool: tank
+ state: ONLINE
+  scan: none requested
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	tank        ONLINE       0     0     0
+	  sdb       ONLINE       0     0     0
+	  sdc       ONLINE       0     0     0
+
+errors: No known data errors
 ```
 
 ## Conclusion
