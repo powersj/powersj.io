@@ -1,8 +1,8 @@
 ---
 title: Ubuntu Bug Triage
-date: 2018-11-01
+date: 2018-10-26
 tags: ["ubuntu", "snap", "bug", "triage"]
-draft: true
+draft: false
 ---
 
 # Ubuntu Bug Triage
@@ -11,9 +11,11 @@ Get involved and help fix Ubuntu bugs! Obtain a list of bugs for an Ubuntu team 
 
 Users can further define the number of days to triage to increase the number of bugs found, the output type to allow machine readable output, or set the behavior to open the bugs in a browser and immediately begin bug triage.
 
+![demo](/img/projects/ubuntu-bug-triage/cli.gif#center)
+
 ## How to Install
 
-As this is a snap it is installed easily via the snap store:
+As this is a snap it is installed easily via the [snap store](https://snapcraft.io/ubuntu-bug-triage):
 
 ```bash
 snap install ubuntu-bug-triage
@@ -27,8 +29,20 @@ Below is usage for the app:
 ubuntu-bug-triage [team|package]
 ```
 
+For example, to find bugs updated in the lsat 30 days for the libvirt package a user would run:
+
+```bash
+ubuntu-bug-triage libvirt 30
+```
+
+![example](/img/projects/ubuntu-bug-triage/example.png#center)
+
 ## Bugs, Feature Requests, Questions
 
-If you encounter an issue, have a feature request or idea for something new, or have questions about the tool feel free to [file a GitHub issue]()!
+If you encounter an issue, have a feature request or idea for something new, or have questions about the tool feel free to [file a GitHub issue](https://github.com/powersj/ubuntu-bug-triage/issues/new)!
 
-If you find the tool useful feel free to [drop me a line as well]().
+## References
+
+* [Snap Store Page](https://snapcraft.io/ubuntu-bug-triage)
+* [Source Code](https://github.com/powersj/ubuntu-bug-triage)
+* [Bug Reporting](https://github.com/powersj/ubuntu-bug-triage/issues/new)

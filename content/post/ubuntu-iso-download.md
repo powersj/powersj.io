@@ -70,3 +70,9 @@ Once the ISO is downloaded, the SHA-256 hash is calculated and compared to the e
 ## Bugs, Feature Requests, Questions
 
 If you encounter an issue, have a feature request or idea for something new, or have questions about the tool feel free to [file a GitHub issue](https://github.com/powersj/ubuntu-iso-download/issues/new)!
+
+## References
+
+* [Snap Store Page](https://snapcraft.io/ubuntu-iso-download)
+* [Source Code](https://github.com/powersj/ubuntu-iso-download)
+* [Bug Reporting](https://github.com/powersj/ubuntu-iso-download/issues/new)

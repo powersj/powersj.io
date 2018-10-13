@@ -5,7 +5,7 @@ tags: ["ubuntu", "bionic"]
 draft: false
 ---
 
-![Banner](/img/ubuntu/cosmic.jpg#center)
+![Banner](/img/ubuntu/bionic.jpg#center)
 
 Almost a month ago, [Ubuntu 18.04 LTS Bionic was released](https://lists.ubuntu.com/archives/ubuntu-announce/2018-April/000231.html). While I have used Bionic on my personal workstation and laptop since the initial beta, after a month of post-release usage I can say I am absolutely thrilled with it. I have found it to be rock stable and plenty fast on both systems. I also went ahead and upgraded my local MAAS server to use Bionic and found that the upgrade occurred very smoothly.
 
