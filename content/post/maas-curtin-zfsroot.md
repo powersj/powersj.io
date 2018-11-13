@@ -9,6 +9,8 @@ draft: false
 
 With [recent updates](https://docs.maas.io/2.4/en/intro-new) to [MAAS](https://maas.io/) and [Curtin](https://launchpad.net/curtin), deploying Ubuntu with a ZFS root disk is now possible! Curtin added [zfsroot support](https://git.launchpad.net/curtin/commit/?id=15c15c7d496fe2f20a4f998fe0892fb3834c0a7a) earlier this year and MAAS has now exposed the option.
 
+However, Ubuntu root on ZFS with MAAS is **experimental**! We encourage users to try this out and report back any issues, but it is not a supported scenario.
+
 ZFS is known for an amazing list of features:
 
 * copy-on-write cloning
@@ -17,7 +19,7 @@ ZFS is known for an amazing list of features:
 * automatic repair
 * efficient data compression
 
-The following article takes a look at how using ZFS for the root filesystem of an Ubuntu system can take advantage of these features.
+The following article takes a look at how using ZFS for the root filesystem of an Ubuntu system can take advantage of these features. Again, this is **experimental** and not supported, but we are encourage users to try this out and let us know if any issues occur.
 
 ## MAAS Configuration
 
