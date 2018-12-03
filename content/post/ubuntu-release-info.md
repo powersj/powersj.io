@@ -7,7 +7,7 @@ draft: false
 
 # Ubuntu Release Info
 
-I recently needed a way to more easily gather a list of supported releases of Ubuntu and preferably installed via PyPI. There exists the distro-info package in Ubuntu that is updated after release. The probably is it needs ot be updated and when embedded inside a snap that means maintenance.
+I recently needed a way to more easily gather a list of supported releases of Ubuntu and preferably installed via PyPI. There exists the distro-info package in Ubuntu that is updated after release. The problem is it needs to be updated after a new release and when embedded inside a snap that means twice a year maintenance.
 
 The solution was to develop a Python app that would query the data found in [changelogs.ubuntu.com](https://changelogs.ubuntu.com/) as that is kept up to date after each release. This does mean making two small file downloads.
 
