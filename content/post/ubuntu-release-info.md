@@ -18,7 +18,7 @@ The solution was to develop a Python app that would query the data found in [cha
 As this is a snap it is installed easily via the snap store:
 
 ```bash
-snap install ubuntu-release-download
+snap install ubuntu-release-info
 ```
 
 You can also use it via PyPI:
