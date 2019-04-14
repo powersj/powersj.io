@@ -3,9 +3,6 @@ languageCode = "en-us"
 title = "Joshua Powers"
 theme = "minimal"
 
-GoogleAnalytics = "UA-71848258-1"
-disqusShortname = "powersj"
-
 [params]
     author = "Joshua Powers"
     copyright = "&copy; 2019 Joshua Powers - Powered by [Hugo](https://gohugo.io) and [Minimal](https://github.com/calintat/minimal)"
