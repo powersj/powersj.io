@@ -8,7 +8,7 @@ disqusShortname = "powersj"
 
 [params]
     author = "Joshua Powers"
-    copyright = "&copy; 2018 Joshua Powers - Powered by [Hugo](https://gohugo.io) and [Minimal](https://github.com/calintat/minimal)"
+    copyright = "&copy; 2019 Joshua Powers - Powered by [Hugo](https://gohugo.io) and [Minimal](https://github.com/calintat/minimal)"
     css = ["/css/custom.css", "/css/image.css", "/css/post-list.css"]
     dateFormat = "02 January 2006"
     description = "My personal site"
@@ -23,7 +23,7 @@ disqusShortname = "powersj"
     # Syntax Highlighting
     highlight = true
     highlightStyle = "solarized-light"
-    highlightLanguages = ["json", "python", "shell", "yaml"]
+    highlightLanguages = ["json", "python", "rust", "shell", "yaml"]
 
 [[menu.main]]
     url = "/"

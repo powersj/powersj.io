@@ -8,8 +8,8 @@
 set -ux
 
 BRANCH_CURRENT=$(git rev-parse --abbrev-ref HEAD)
-BRANCH_MASTER="master"
-BRANCH_SOURCE="source"
+BRANCH_DEPLOY="master"
+BRANCH_BUILD="source"
 BUILD_DIR="build"
 GIT_REMOTE="origin"
 GIT_REMOTE_URL=$(git remote get-url --push "$GIT_REMOTE")
@@ -29,7 +29,7 @@ fail() {
     exit 1
 }
 
-if [ "$BRANCH_CURRENT" != "$BRANCH_SOURCE" ]; then
+if [ "$BRANCH_CURRENT" != "$BRANCH_BUILD" ]; then
     fail "not on source branch"
 fi
 
@@ -46,12 +46,12 @@ pushd "$BUILD_DIR" || fail "could not change to build dir"
 echo "creating git commit"
 git init
 git remote add "$GIT_REMOTE" "$GIT_REMOTE_URL"
-git checkout --orphan "$BRANCH_MASTER"
+git checkout --orphan "$BRANCH_DEPLOY"
 git add .
 git commit -m "site updated at $(date -u "+%Y-%m-%d %H:%M:%S") UTC"
 
 echo "publishing site"
-git push --force "$GIT_REMOTE" "$BRANCH_MASTER"
+git push --force "$GIT_REMOTE" "$BRANCH_DEPLOY"
 
 popd
 cleanup
