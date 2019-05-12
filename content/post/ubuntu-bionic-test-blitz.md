@@ -22,4 +22,4 @@ In addition to the above the following was accomplished:
 * MAAS Upgrade
 * Server ISO testing
 * Boot time testing
-* Focused testing with upgrades with Apache, Nginx, postgresql, mysql, percona, mongodb, libvirt/qemu, and even conjure-up K8s.
+* Focused testing with upgrades with Apache, Nginx, PostgreSQL, MySQL, percona, mongodb, libvirt/qemu, and even conjure-up K8s.

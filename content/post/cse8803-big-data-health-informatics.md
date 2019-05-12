@@ -1,7 +1,7 @@
 ---
 title: "Big Data for Health Informatics (CSE 8803)"
-date: 2016-05-14
-tags: ["bigdata", "spark", "hadoop"]
+date: 2016-05-15
+tags: ["Georgia Tech", "masters", "ai"]
 draft: false
 ---
 

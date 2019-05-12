@@ -1,7 +1,7 @@
 ---
 title: "2012 Battlestation: Quad-Core + 34\" Widescreen"
 date: 2016-06-12
-tags: ["quadcore", "widescreen"]
+tags: ["battlestation"]
 draft: false
 ---
 

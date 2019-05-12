@@ -7,7 +7,7 @@ draft: false
 
 # Overview
 
-[Snaps](https://www.ubuntu.com/desktop/snappy) are a a fast, easy, and safe way of packaging software. While I had some experience earlier in 2016 trying to snap up Weka and a few other projects I wanted to see how snaps have changed since then. Given my work on [cloud-init](https://cloud-init.io/) and the fact that it does not yet have a snpacraft.yaml I wanted to attempt to snap it.
+[Snaps](https://www.ubuntu.com/desktop/snappy) are a fast, easy, and safe way of packaging software. While I had some experience earlier in 2016 trying to snap up Weka and a few other projects I wanted to see how snaps have changed since then. Given my work on [cloud-init](https://cloud-init.io/) and the fact that it does not yet have a snpacraft.yaml I wanted to attempt to snap it.
 
 # Classic Confinement
 

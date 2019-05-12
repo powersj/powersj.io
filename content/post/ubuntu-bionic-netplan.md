@@ -133,7 +133,7 @@ vlans:
 
 I was left with an overall very positive impression of netplan. Having the ability to write YAML configuration files and not have to worry about how the actual configuration was generated or what commands need to be used depending on the backend simplifies the process. I would like to continue to attempt some more complex configurations that I can find as well as attempt additional test cases with the ifupdown-migrate subcommand.
 
-# Links & Refrences
+# Links & References
 
 * [Netplan Wiki](https://wiki.ubuntu.com/Netplan)
 * [Netplan README](https://git.launchpad.net/netplan/tree/doc/netplan.md)

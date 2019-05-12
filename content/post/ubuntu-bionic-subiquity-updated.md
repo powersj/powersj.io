@@ -23,7 +23,7 @@ A user can now specify a different mirror to install from. Some users may have a
 
 ## Networking
 
-New to networking comes the ability to to create bonds using the discovered networking devices and specify VLAN IDs on devices.
+New to networking comes the ability to create bonds using the discovered networking devices and specify VLAN IDs on devices.
 
 ![network connections](/img/ubuntu/subiquity/network_connections.png#center)
 

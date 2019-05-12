@@ -1,7 +1,7 @@
 ---
 title: "Intro to Health Informatics (CS 6440)"
 date: 2016-05-14
-tags: ["gamification", "hl7", "fhir"]
+tags: ["Georgia Tech", "masters"]
 draft: false
 ---
 

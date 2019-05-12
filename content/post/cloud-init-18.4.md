@@ -21,7 +21,7 @@ Version 18.4 is already available in Ubuntu Cosmic and the stable release update
 
 ## Ending Python 2.6 Support
 
-As discussed during the [2018 cloud-init summit]({{< ref "cloud-init-summit18.md" >}}) and [announced](https://lists.launchpad.net/cloud-init/msg00170.html) 18.4 is the the final release with Python 2.6 support.
+As discussed during the [2018 cloud-init summit]({{< ref "cloud-init-summit18.md" >}}) and [announced](https://lists.launchpad.net/cloud-init/msg00170.html) 18.4 is the final release with Python 2.6 support.
 
 Python 2.7 support in cloud-init will end in June of 2020.
 

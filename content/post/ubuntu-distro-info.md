@@ -9,7 +9,7 @@ The command `distro-info` provides information about Debian and Ubuntu releases.
 
 Very commonly the distro-info package will be used in place of hardcoding specific releases in automated scripts. I personally use it in order to avoid needing to update what the latest development release name is or to determine what the latest LTS is.
 
-The data used by the commmand comes from the distro-info-data package. It maintains a CSV file for each Debian and Ubuntu with releases, codenames, and dates. Here is a snip of the Ubuntu file with the latest releases:
+The data used by the command comes from the distro-info-data package. It maintains a CSV file for each Debian and Ubuntu with releases, codenames, and dates. Here is a snip of the Ubuntu file with the latest releases:
 
 ```csv
 version,codename,series,created,release,eol,eol-server

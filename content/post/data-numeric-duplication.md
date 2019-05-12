@@ -1,7 +1,7 @@
 ---
 title: "Numeric Data Duplication Detection"
 date: 2017-07-18
-tags: ["python", "numeric data", "vectors"]
+tags: ["ai", "python", "numeric data", "vectors"]
 draft: false
 ---
 
