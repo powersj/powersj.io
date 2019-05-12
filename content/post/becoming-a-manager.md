@@ -1,6 +1,6 @@
 ---
 title: "On becoming a manager"
-date: 2019-
+date: 2019-12-31
 tags: ["canonical", "manager"]
 draft: true
 ---
