@@ -11,7 +11,7 @@ LXD is an awesome tool in my toolbox that I use everyday. LXD offers a streamlin
 
 [Stephane Graber's LXD 2.0 blog post series](https://stgraber.org/2016/03/11/lxd-2-0-introduction-to-lxd-112/) is required reading. He gives a great introduction and overview of all the major features and functionality of LXD including images, profiles, configuration, and snapshots.
 
-In my use, rather that booting up a VM I can quickly use LXD to boot up a variety of operating systems. I can then use various containers for bug reproduction and triage or to try new deployment scripts and tests in a clean enviornment.
+In my use, rather that booting up a VM I can quickly use LXD to boot up a variety of operating systems. I can then use various containers for bug reproduction and triage or to try new deployment scripts and tests in a clean environment.
 
 # Install
 

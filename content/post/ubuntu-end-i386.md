@@ -35,7 +35,7 @@ Security deserves its own call out for two reasons:
 
 First, the recent Spectre and Meltdown security vulnerabilities demonstrated how hardware can lead to massive security vulnerabilities. Legacy, 32-bit x86 systems will not be getting the same attention from chip makers as recently released, more heavily used processors.
 
-Second, at the start of the Cosmic cycle, Mark called for [rasing the bar on security](https://www.markshuttleworth.com/archives/1521). As Mark put it "we are stewards of a shared platform" due to the extensive use of Ubuntu across the computing spectrum. Passing onto someone else the security of an entire architecture that is not widely used or developed off is unacceptable. Even then it is difficult to find someone actively caring and feeding for 32-bit x86.
+Second, at the start of the Cosmic cycle, Mark called for [raising the bar on security](https://www.markshuttleworth.com/archives/1521). As Mark put it "we are stewards of a shared platform" due to the extensive use of Ubuntu across the computing spectrum. Passing onto someone else the security of an entire architecture that is not widely used or developed off is unacceptable. Even then it is difficult to find someone actively caring and feeding for 32-bit x86.
 
 **Question:** How ethical is it to continue to try to maintain an architecture that receives little to no active development?
 

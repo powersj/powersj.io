@@ -29,7 +29,7 @@ New to networking comes the ability to create bonds using the discovered network
 
 ## Bonding
 
-At the bottom of the network connections screen the new "Create bond" option will prompt a user to select the slave devices, bond mode, and appropriate bond options. All the various types of bond modes are provided as options to the user. If a bond mode also has additional parameters then those can be customizable further down.
+At the bottom of the network connections screen the new "Create bond" option will prompt a user to select the slave devices, bond mode, and appropriate bond options. All the various types of bond modes are provided as options to the user. If a bond mode also has additional parameters then those can be customized further down.
 
 ![create bond](/img/ubuntu/subiquity/create_bond.png#center)
 
@@ -55,7 +55,7 @@ If the user instead chooses to select a manual install method, two new options t
 
 ### Software RAID
 
-The Software RAID screen allows the user to select the RAID level and then the specific drives for the RAID group. The correct minimum number of drives is required before continuing. Finally, the total amount of useable space will be shown at the bottom depending on the type of RAID level as well as the size and number of drives.
+The Software RAID screen allows the user to select the RAID level and then the specific drives for the RAID group. The correct minimum number of drives is required before continuing. Finally, the total amount of usable space will be shown at the bottom depending on the type of RAID level as well as the size and number of drives.
 
 ![raid](/img/ubuntu/subiquity/raid.png#center)
 

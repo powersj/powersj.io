@@ -5,7 +5,7 @@ tags: ["ubuntu", "debian"]
 draft: false
 ---
 
-I commonly rely on rmadison output to give me information about what version of a package is in a specific release. For example, what is the version of qemu in xenial or what version of apt is in Debian. I filtered the below examples on the amd64 architecture to keep the output sane:
+I commonly rely on rmadison output to give me information about what version of a package is in a specific release. For example, what is the version of qemu in Ubutnu Xenial or what version of apt is in Debian. I filtered the below examples on the amd64 architecture to keep the output sane:
 
 ```shell
 $ rmadison qemu -a amd64 | grep xenial

@@ -37,7 +37,7 @@ There was a discussed turning on automatic imports using the [git ubuntu](http:/
 
 ## Change Log Templates
 
-While the changelog follows a specific format, the text for each change log item is free form. The server team is working on developing a set of best practices and formats it expects to use for various scenarios and will enforce these during the git workflow process.
+While the change log follows a specific format, the text for each change log item is free form. The server team is working on developing a set of best practices and formats it expects to use for various scenarios and will enforce these during the git workflow process.
 
 # cloud-init
 

@@ -29,7 +29,7 @@ Below is usage for the app:
 ubuntu-bug-triage [team|package]
 ```
 
-For example, to find bugs updated in the lsat 30 days for the libvirt package a user would run:
+For example, to find bugs updated in the last 30 days for the libvirt package a user would run:
 
 ```bash
 ubuntu-bug-triage libvirt 30

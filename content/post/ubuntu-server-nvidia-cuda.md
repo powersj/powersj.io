@@ -1,16 +1,16 @@
 ---
-title: "nVidia CUDA on Ubuntu Server"
+title: "NVIDA CUDA on Ubuntu Server"
 date: 2017-11-03
 tags: ["ubuntu", "server", "nvidia"]
 draft: false
 ---
 
-In my previous post about [etherium mining on Ubuntu]({{< ref "ubuntu-etherium-nvidia.md" >}}) I ended by stating I wanted to look at what it would take to get nVidia's CUDA drivers. Use of the CUDA drivers unlocks even further performance from my nVidia GTX 1070 graphics card in certain applications and specifically can demonstrate improvements while doing etherium mining.
+In my previous post about [ethereum mining on Ubuntu]({{< ref "ubuntu-ethereum-nvidia.md" >}}) I ended by stating I wanted to look at what it would take to get NVIDIA's CUDA drivers. Use of the CUDA drivers unlocks even further performance from my NVIDIA GTX 1070 graphics card in certain applications and specifically can demonstrate improvements while doing ethereum mining.
 
 This post will demonstrate two methods of install for the CUDA drivers:
 
 1. Ubuntu package archive
-1. nVidia package archive
+1. NVIDIA package archive
 
 # Ubuntu Package Archive
 
@@ -58,11 +58,11 @@ Sat Oct 28 14:17:15 2017
 +-----------------------------------------------------------------------------+
 ```
 
-# nVidia Package Archive
+# NVIDIA Package Archive
 
-This section will look to downloading the library directly from nVidia itself in order to get the latest version of the package. The nVidia repo also contains a [variety of meta packages](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#package-manager-metas) allowing an end-user to limit the install to the libraries, runtime, or the toolkits that are needed versus installing everything.
+This section will look to downloading the library directly from NVIDIA itself in order to get the latest version of the package. The NVIDIA repo also contains a [variety of meta packages](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#package-manager-metas) allowing an end-user to limit the install to the libraries, runtime, or the tool kits that are needed versus installing everything.
 
-nVidia runs a [repo](https://developer.download.nvidia.com/compute/cuda/repos/) which can be added to apt and then install directly from. Using this repo means the install will stay up-to-date. I will use the cuda metapackage, which will install all CUDA toolkit and driver packages and upgrade both as new versions are released:
+NVIDIA runs a [repo](https://developer.download.nvidia.com/compute/cuda/repos/) which can be added to apt and then install directly from. Using this repo means the install will stay up-to-date. I will use the CUDA metapackage, which will install all CUDA toolkit and driver packages and upgrade both as new versions are released:
 
 ```shell
 echo "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/ /" | sudo tee /etc/apt/sources.list.d/cuda.list
@@ -193,6 +193,6 @@ NOTE: The CUDA Samples are not meant for performance measurements. Results may v
 
 # References
 
-* [nVidia CUDA Documentation](http://docs.nvidia.com/cuda/index.html)
-* [nVidia CUDA Linux Install Guide](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
+* [NVIDIA CUDA Documentation](http://docs.nvidia.com/cuda/index.html)
+* [NVIDIA CUDA Linux Install Guide](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
 * [How to do LXD GPU Passthrough](https://insights.ubuntu.com/2017/03/28/nvidia-cuda-inside-a-lxd-container/)

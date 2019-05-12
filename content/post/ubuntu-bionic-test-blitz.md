@@ -7,7 +7,7 @@ draft: false
 
 # Ubuntu Server Testing Blitz
 
-As we are on the road to the next Ubuntu LTS, Bionic Beaver, I have decided to start doing what I am referring to as a testing blitz: a semi-weekly test deep dive into a particular topic, functionality, component, or software that is relevant to Ubuntu Server. This will involve quickly learning about the item under test, using, testing, filing bugs, and at the conclusion of the blitz document my learnings in as a post here.
+As we are on the road to the next Ubuntu LTS, Bionic Beaver, I have decided to start doing what I am referring to as a testing blitz: a semi-weekly test deep dive into a particular topic, functionality, component, or software that is relevant to Ubuntu Server. This will involve quickly learning about the item under test, using, testing, filing bugs, and at the conclusion of the blitz document my learning's in as a post here.
 
 Here are a few of the larger test blitz that I did:
 
@@ -22,4 +22,4 @@ In addition to the above the following was accomplished:
 * MAAS Upgrade
 * Server ISO testing
 * Boot time testing
-* Focused testing with upgrades with Apache, Nginx, PostgreSQL, MySQL, percona, mongodb, libvirt/qemu, and even conjure-up K8s.
+* Focused testing with upgrades with Apache, Nginx, PostgreSQL, MySQL, percona, MongoDB, libvirt/qemu, and even conjure-up K8s.

@@ -7,7 +7,7 @@ draft: false
 
 The command `distro-info` provides information about Debian and Ubuntu releases. It can tell you what the current stable, supported, or under development releases are for both Debian and Ubuntu. The command itself is actually a symlink to either `debian-distro-info` or `ubuntu-distro-info` of course depending on what distribution you are running.
 
-Very commonly the distro-info package will be used in place of hardcoding specific releases in automated scripts. I personally use it in order to avoid needing to update what the latest development release name is or to determine what the latest LTS is.
+Very commonly the distro-info package will be used in place of hard coding specific releases in automated scripts. I personally use it in order to avoid needing to update what the latest development release name is or to determine what the latest LTS is.
 
 The data used by the command comes from the distro-info-data package. It maintains a CSV file for each Debian and Ubuntu with releases, codenames, and dates. Here is a snip of the Ubuntu file with the latest releases:
 
