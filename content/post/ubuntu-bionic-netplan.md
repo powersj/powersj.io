@@ -23,7 +23,7 @@ When you install Bionic or use a cloud image of Bionic a file will appear in `/e
 | Cloud Image  | systemd-networkd | `/etc/netplan/50-cloud-init.yaml` |
 | Desktop ISO  | NetworkManager   | `/etc/netplan/01-network-manager-all.yaml` |
 
-Do note that configuration files can exist in three different locations with the precidence from most important to least as follows:
+Do note that configuration files can exist in three different locations with the precedence from most important to least as follows:
 
 * `/run/netplan/*.yaml`
 * `/etc/netplan/*.yaml`

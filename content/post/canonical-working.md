@@ -1,6 +1,6 @@
 ---
 title: "Working Remotely at Canonical"
-date: 2018-11-01
+date: 2019-12-31
 tags: ["canonical", "ubuntu", "remote"]
 draft: true
 ---
