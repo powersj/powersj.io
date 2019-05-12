@@ -1,7 +1,7 @@
 ---
 title: Mining Ethereum on Ubuntu with a GTX 1070
 date: 2017-09-20
-tags: ["ubuntu", "etherem", "nvidia", "cuda"]
+tags: ["ubuntu", "ethereum", "nvidia", "cuda"]
 draft: false
 ---
 
@@ -16,7 +16,7 @@ I thought it would be interesting to see what it takes to mine Ethereum. Ethereu
 
 # Ethereum Software
 
-Currently there does not appear to be any Ethereum packages in the Ubuntu archive. However, there is a PPA for Ethereum that is available for all supported releases of Ubuntu. Inside is a package called 'etherum', which is a metapackage to install all the relevant software. Both the PPA and package can be installed via the following:
+Currently there does not appear to be any Ethereum packages in the Ubuntu archive. However, there is a PPA for Ethereum that is available for all supported releases of Ubuntu. Inside is a package called 'ethereum', which is a metapackage to install all the relevant software. Both the PPA and package can be installed via the following:
 
 ```shell
 sudo add-apt-repository ppa:ethereum/ethereum -y

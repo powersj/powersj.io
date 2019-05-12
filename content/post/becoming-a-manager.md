@@ -17,9 +17,9 @@ As an individual contributor at Canonical, I got to work on all sorts of new thi
 
 After thinking about this long and hard I decided I would take up the new role. I was ready for a new challenge, it was an absolute pleasure to even be asked to take up this role, and I wanted to help guide the distribution I loved so much.
 
-## Learnings
+## Learning's
 
-While only nine months in, here are some learnings so far:
+While only nine months in, here are some learning's so far:
 
 * My victories are when the team wins. People will tell you that you cannot have anything you deliver in a cycle or program be dependent solely on you. What I don't hear is people remind others that there is a shift in when you are successful. It isn't when you personally knock action items out.
 
