@@ -1,19 +1,19 @@
 ---
-title: "Ubuntu Bionic: nVidia CUDA Setup"
+title: "Ubuntu Bionic: NVIDIA CUDA Setup"
 date: 2018-08-14
 tags: ["ubuntu", "server", "nvidia"]
 draft: false
 ---
 
-In a previous post, I described how to setup a system with nVidia's CUDA software with Ubuntu 16.04 LTS. With the recent release of Ubuntu 18.04 LTS, Bionic Beaver, I wanted to update that post for the new LTS release.
+In a previous post, I described how to setup a system with NVIDIA's CUDA software with Ubuntu 16.04 LTS. With the recent release of Ubuntu 18.04 LTS, Bionic Beaver, I wanted to update that post for the new LTS release.
 
-# nVidia Package Archive
+# NVIDIA Package Archive
 
-As of today, the [nVidia repo](https://developer.download.nvidia.com/compute/cuda/repos/) does not have software packages for the Bionic release. At some point in the near future, an 18.04 entry will appear and have the software. I can update this post when that happens.
+As of today, the [NVIDIA repo](https://developer.download.nvidia.com/compute/cuda/repos/) does not have software packages for the Bionic release. At some point in the near future, an 18.04 entry will appear and have the software. I can update this post when that happens.
 
 # Ubuntu Package Archive
 
-However, until the nVidia archive is updated, the best method is to install directly from the Ubuntu Bionic repo:
+However, until the NVIDIA archive is updated, the best method is to install directly from the Ubuntu Bionic repo:
 
 ```shell
 $ sudo apt update

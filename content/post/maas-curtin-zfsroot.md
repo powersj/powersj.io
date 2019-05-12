@@ -264,7 +264,7 @@ errors: No known data errors
 
 ## Upgrade
 
-The most reason versions of ZFS utilize dataset feature flags to specify a property for changes to on-disk formats. The original method was a single version number, but given OpenZFS is developed distributedly rather than by a single company, utilizing feature flags make for easier determination of features supported versus the single number.
+The most reason versions of ZFS utilize dataset feature flags to specify a property for changes to on-disk formats. The original method was a single version number, but given OpenZFS is developed distributed rather than by a single company, utilizing feature flags make for easier determination of features supported versus the single number.
 
 If a user attempts to enable a feature that the dataset version does not support a message requesting an upgrade will appear. Upgrading a dataset is as simple as running upgrade on that specific dataset. However, do note that an upgrade is a one-way path and may make the dataset unavailable to tools which do not support a particular feature.
 

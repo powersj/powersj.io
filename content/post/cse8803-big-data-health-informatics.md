@@ -62,7 +62,7 @@ Finally, the page rank algorithm was used to compute for a specific patient vert
 
 # Project
 
-For my project I took the Observational Health Data Sciences and Informatics (OHDSI) open source analytics tool's data queries and rewrote them to demonstrate Apache Spark's ability to more quickly process data in comparison to the use of traditional relational databases such as PostgreSQL.
+For my project I took the Observational Health Data Sciences and Informatics (OHDSI) open source analytic tool's data queries and rewrote them to demonstrate Apache Spark's ability to more quickly process data in comparison to the use of traditional relational databases such as PostgreSQL.
 
 The OHDSI Automated Characterization of Health Information at Large-scale Longitudinal Evidence Systems (ACHILLES) tool was built using R and is built to connect to a traditional database, like PostgreSQL.
 
@@ -72,7 +72,7 @@ You can check out a video of my results on [YouTube](https://www.youtube.com/wat
 
 # CITI Certification
 
-Another aspect of this course was the need to get our CITI certifications in order to use the health data. Because this data was real we were trained on the various security and ethical handling of health data. This required over 20 hours of trainings.
+Another aspect of this course was the need to get our CITI certifications in order to use the health data. Because this data was real we were trained on the various security and ethical handling of health data. This required over 20 hours of training.
 
 Data used from MIMIC health care data set, which required CITI Biomedical (Group 1) and Social/Behavior (Group 2) Research and Investigators and Key Personnel certified and Health Information Privacy and Security (HIPS) for Biomedical Research certifications. My certifications are all valid till 2019.
 

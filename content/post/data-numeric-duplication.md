@@ -7,7 +7,7 @@ draft: false
 
 # The Problem
 
-I recently had a friend ask for help going through a very large data set of his. After getting an overview of the data, both he and I agree that there are some interesting data points, statistics, and learnings that can be found from the data set.
+I recently had a friend ask for help going through a very large data set of his. After getting an overview of the data, both he and I agree that there are some interesting data points, statistics, and learning's that can be found from the data set.
 
 While working on my masters, a key learning was understanding how the workflow of tackling a data science problem was essential. It can be very tempting to take data and a data science library or framework and start crunching. It is, however, required to start with framing the problem or question that needs to be answered. In doing so you give yourself direction, avoid 'boiling the ocean', and understand what you are trying to do in the first place. I assert this is similar to the hypothesis generation step found in the scientific method.
 

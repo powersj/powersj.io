@@ -27,7 +27,7 @@ The cloud-init development team came with a number of prepared demos and talks t
 * __Ending Python 2.6 Support__: Scott announced the end of Python 2.6 support and there was a discussion on ending Python 2.7 support as well. An announcement to the mailing list is coming soon.
 * __Instance-data.json support and cloud-init cli__: Chad demoed a standard way of querying instance data keys to enable scripting, templating, and access across all clouds.
 * __Multipass__: Alberto from the Canonical Multipass team joined us to demo the [Multipass](https://github.com/CanonicalLtd/multipass) project. Multipass is the fastest way to get a virtual machine launched with the latest Ubuntu images.
-* __Integration Testing and CI__: Josh gave an update on the new CI processes, autolanding merge requests, and demoed the integration tests. He went through what it takes to add additional clouds and his wishlist for additional testing.
+* __Integration Testing and CI__: Josh gave an update on the new CI processes, auto-landing merge requests, and demoed the integration tests. He went through what it takes to add additional clouds and his wish-list for additional testing.
 * __Pre-Network Detection for Clouds__: Chad ran a discussion on collecting pre-networking detection for clouds in order to speed up instance initialization and decrease boot time.
 
 # Breakout Sessions

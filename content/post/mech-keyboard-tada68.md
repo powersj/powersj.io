@@ -13,7 +13,7 @@ As a developer, a well working, solid keyboard is essential for my day-to-day. I
 
 The following post described my experience in building the TADA68.
 
-## TADA 68
+## TADA68
 
 ![box](/img/projects/tada68/tada68.png#center)
 
@@ -21,13 +21,13 @@ The TADA68 as the name suggests is a 68 key keyboard. This type of keyboard is t
 
 ![layout](/img/projects/tada68/layout.png#center)
 
-I purchased the [TADA 68 kit](https://kbdfans.myshopify.com/products/tada68-keyboard-diy-kit) from [KBDfans](https://kbdfans.myshopify.com/). I choose to purchased the aluminum red case over the standard plastic case after reviews demonstrated the solid structure; and cool colors. I am glad I did as he aluminum is incredible sturdy, is a wonderful base to build on top of and the red looks fantastic as well.
+I purchased the [TADA68 kit](https://kbdfans.myshopify.com/products/tada68-keyboard-diy-kit) from [KBDfans](https://kbdfans.myshopify.com/). I choose to purchased the aluminum red case over the standard plastic case after reviews demonstrated the solid structure; and cool colors. I am glad I did as he aluminum is incredible sturdy, is a wonderful base to build on top of and the red looks fantastic as well.
 
 ![kit](/img/projects/tada68/kit.jpg#center)
 
 To build a complete keyboard I also picked up a set of [Gateron Green](https://kbdfans.cn/collections/swtich/products/switch-68-cherry-gateron-zealio?variant=40117058957) keys and a pack of [100 white LEDs](https://kbdfans.cn/collections/keyboard-part/products/f1-8mm-led-100pcs). I went with the clicky, heavy green keys after getting a key sampler and using browns for the past few years. I am also very happy I went clicky and heavier keys. I enjoy hearing the sound and the extra weight has not been too noticeable.
 
-For my build, I also purchased a set of [DSA Dolch](https://pimpmykeyboard.com/dsa-dolch-keyset/) keys from [Pimp My Keyboard](https://pimpmykeyboard.com/), whom I would highly recommend and glady purchase from again. I wanted a darker set of keys than the standard light grey and I also really liked the bright red set of keys for the escape and arrow keys.
+For my build, I also purchased a set of [DSA Dolch](https://pimpmykeyboard.com/dsa-dolch-keyset/) keys from [Pimp My Keyboard](https://pimpmykeyboard.com/), whom I would highly recommend and gladly purchase from again. I wanted a darker set of keys than the standard light gray and I also really liked the bright red set of keys for the escape and arrow keys.
 
 ## Assembly
 
@@ -45,7 +45,7 @@ After the keys were installed I turned to installing the LEDs. Each LED is pulle
 
 ![box](/img/projects/tada68/solder.png#center)
 
-The moment of truth and everything lit up! I did find that I had one orange LED out of the batch I installed, so I had to remove that one and resolder a new one.
+The moment of truth and everything lit up! I did find that I had one orange LED out of the batch I installed, so I had to remove that one and re-solder a new one.
 
 ![box](/img/projects/tada68/light.png#center)
 
@@ -63,7 +63,7 @@ Once assembly was complete I connected it to my system and ran through each key 
 
 ## Programming
 
-The keyboard is fully programable to allow changing each key. However, it requires going to a [custom site](http://123.57.250.164:3000/tada68) that requires Flash. The process is fairly simple: click the key you want to change, select the new key, save the file. To upload requires pressing the button under the keyboard, the keyboard will appear as a device on your system, and you have to replace the current keymap file with the new keymap file you downloaded.
+The keyboard is fully programmable to allow changing each key. However, it requires going to a [custom site](http://123.57.250.164:3000/tada68) that requires Flash. The process is fairly simple: click the key you want to change, select the new key, save the file. To upload requires pressing the button under the keyboard, the keyboard will appear as a device on your system, and you have to replace the current keymap file with the new keymap file you downloaded.
 
 I used the above method since I had access to a Windows system with Flash and found it worked fairly smoothly. I did try to do the replacement of the file on my Ubuntu system and it did not work, leaving the keyboard nonfunctional.
 

@@ -17,7 +17,7 @@ Cloud-init is a perfect example of a software package needing access to the grea
 
 # Snapcraft
 
-The final snpacraft.yaml was merged into the [repo](https://github.com/cloud-init/cloud-init/blob/master/snapcraft.yaml) in mid-April 2017 and is below. Read through it and then read below for a greater description of each part:
+The final snapcraft.yaml was merged into the [repo](https://github.com/cloud-init/cloud-init/blob/master/snapcraft.yaml) in mid-April 2017 and is below. Read through it and then read below for a greater description of each part:
 
 ```yaml
 name: cloud-init

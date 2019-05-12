@@ -49,13 +49,13 @@ Here is how it lines up with the criteria above:
 * It had a very long battery life for long plane trips. It has been with me to Germany and various trips inside the US and being able to use it an entire travel day without recharging is amazing.
 * Solid Linux support out of the box with Ubuntu.
 * High res screen is beautiful at various brightness levels.
-* Amazing keyboard - when I moved to the MacBook Pro it was ok, but nothing like the T42. This reminds me why I liked the T42 and ThinkPad keyboards.
+* Amazing keyboard - when I moved to the MacBook Pro it was OK, but nothing like the T42. This reminds me why I liked the T42 and ThinkPad keyboards.
 
 ![Mobile Battlestation](/img/projects/mobile-battlestation/x1-mbp-side.jpg "IBM X1 Carbon vs MacBook Pro")
 
 Here are the specs on my system:
 
-* Intel Core i5-5300U Processor (3MB Cache, up to 2.90 Ghz)
+* Intel Core i5-5300U Processor (3MB Cache, up to 2.90 GHz)
 * 8GB DDR3L-12800 1600MHz RAM
 * Samsung SM951 M.2 PCI-Express 256GB SSD
 * 14" WQHD+ (2560x1440) (300 nit) screen

@@ -65,7 +65,7 @@ sbuild --nolog --verbose --dist=xenial cloud-init_*.dsc
 
 ## Ubuntu LTS: Integration
 
-As [announced](https://lists.launchpad.net/cloud-init/msg00058.html), cloud-init now contains an [integration test framework](https://cloudinit.readthedocs.io/en/latest/topics/tests.html). Running a few more tests helps provide additional coverage and assurance that nothing major broke. As of this writing, the tests cover an apt sources, ntp servers, password list, and user/group cloud-config scenarios.
+As [announced](https://lists.launchpad.net/cloud-init/msg00058.html), cloud-init now contains an [integration test framework](https://cloudinit.readthedocs.io/en/latest/topics/tests.html). Running a few more tests helps provide additional coverage and assurance that nothing major broke. As of this writing, the tests cover an apt sources, NTP servers, password list, and user/group cloud-config scenarios.
 
 However, my desire is to write up a series of more complex integration tests that touch many areas at once to maximize the coverage, while minimizing execution time. This is an open item.
 

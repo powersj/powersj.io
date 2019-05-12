@@ -27,7 +27,7 @@ In terms of gamification we wanted to add an element above and beyond making a s
 
 ## HL7 FHIR
 
-The final component was the interaction with the HL7 FHIR server. FHIR stands for Fast Healthcare Interoperability Resources and is a specification for exchanging health care information electronically. It has grown in use over the past few years due to various helath care laws that have been put in place.
+The final component was the interaction with the HL7 FHIR server. FHIR stands for Fast Healthcare Interoperability Resources and is a specification for exchanging health care information electronically. It has grown in use over the past few years due to various health care laws that have been put in place.
 
 Our gamification project would take our questionnaires and the responses and upload them directly to the server we were utilizing.
 
@@ -36,8 +36,8 @@ Our gamification project would take our questionnaires and the responses and upl
 * [FHIR Website](http://hl7.org/fhir/)
 * [SMART on FHIR Spec](http://docs.smarthealthit.org/)
 * [HAPI FHIR Java API](http://jamesagnew.github.io/hapi-fhir/)
-* [FHIR Server - Michigan Health ](http://52.72.172.54:8080/fhir/home?encoding=null&pretty=null)
-* [FHIR Server - Georiga Tech ](http://polaris.i3l.gatech.edu:8080/gt-fhir-webapp/home?encoding=null&pretty=null)
+* [FHIR Server - Michigan Health](http://52.72.172.54:8080/fhir/home?encoding=null&pretty=null)
+* [FHIR Server - Georgia Tech](http://polaris.i3l.gatech.edu:8080/gt-fhir-webapp/home?encoding=null&pretty=null)
 
 # Summary
 

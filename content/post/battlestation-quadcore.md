@@ -49,7 +49,7 @@ I have had a rather lengthy and mixed history of LCD monitors. From earliest to 
 * 2x HP 24" Widescreen LCDs LP2465 (2013-2014)
 * LG 34" Widescreen LCD 34UM95 (2014-current)
 
-## Learnings
+## Learning's
 
 Things I have learned with all these setups:
 

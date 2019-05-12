@@ -31,7 +31,7 @@ In addition to the prepared demos, the summit had numerous sessions that were re
 * Netplan (v2 YAML) as primary format
 * How to query metadata
 * Version numbering
-* Device hotplug
+* Device hot-plug
 * Python 3
 * And more...
 

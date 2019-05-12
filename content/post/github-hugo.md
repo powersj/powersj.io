@@ -36,7 +36,7 @@ shell script:
 # Deploy hugo site to master branch
 #
 # Assumes you are on a branch called 'source' for storing the
-# source and buildling. Builds and pushes to 'master' branch.
+# source and building. Builds and pushes to 'master' branch.
 #
 # Joshua Powers <mrpowersj@gmail.com>
 set -ux
