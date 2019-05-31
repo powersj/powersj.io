@@ -1,6 +1,6 @@
 ---
 title: "A Year of Blogging in Review"
-date: 2019-05-13
+date: 2019-05-27
 tags: ["blog"]
 draft: false
 ---

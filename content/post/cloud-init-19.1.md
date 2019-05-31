@@ -1,13 +1,13 @@
 ---
 title: "cloud-init 19.1 Released"
-date: 2019-05-24
+date: 2019-05-31
 tags: ["cloud-init", "ubuntu"]
-draft: true
+draft: false
 ---
 
 ![Banner](/img/cloud-init/cloud-init.png#center)
 
-As [announced](TODO),
+As [announced](https://lists.launchpad.net/cloud-init/msg00209.html),
 cloud-init 19.1 was released last Friday! From the announcement, some
 highlights include:
 
@@ -22,21 +22,21 @@ highlights include:
 It was really exciting to see that we had a large number of community
 commits this release cycle as well!
 
-Version 19.1 is already available in Ubuntu Eoan and a stable release
-updated (SRU) to Ubuntu 18.04 LTS (Bionic) and Ubuntu 16.04 LTS
-(Xenial) are in progress.
+Version 19.1 is already available in Ubuntu Eoan and stable release
+updateds (SRU) to Ubuntu 18.04 LTS (Bionic) and Ubuntu 16.04 LTS
+(Xenial) are also complete.
 
 ## Release History
 
-This release took a bit longer than we have in the past. We plan to
-quickly release 19.2 early this summer.
+This release took longer than we have in the past. We plan to quickly
+release 19.2 early this summer.
 
 Below is a breakdown and history of recent releases. It also shows the change in version to the [year.release format](https://lists.launchpad.net/cloud-init/msg00097.html):
 
 | Release | Days | Date |
 |:-------:|:----:|:----:|
-[19.1](TODO) | TODO | 2018-05-10
-[18.5](https://lists.launchpad.net/cloud-init/msg00180.html) | 70 | 2018-12-13
+[19.1](https://lists.launchpad.net/cloud-init/msg00209.html) | 147 | 2019-05-10
+[18.5](https://lists.launchpad.net/cloud-init/msg00180.html) | 70  | 2018-12-13
 [18.4](https://lists.launchpad.net/cloud-init/msg00180.html) | 104 | 2018-10-03
 [18.3](https://lists.launchpad.net/cloud-init/msg00164.html) | 83  | 2018-06-20
 [18.2](https://lists.launchpad.net/cloud-init/msg00145.html) | 34  | 2018-03-28
@@ -51,4 +51,4 @@ Below is a breakdown and history of recent releases. It also shows the change in
 
 - Chat with us in #cloud-init on Freenode
 - Join and email the [cloud-init mailing list](https://launchpad.net/~cloud-init)
-- Checkout the [HACKING](TODO) document to get started on cloud-init development
+- Checkout the [HACKING](https://cloudinit.readthedocs.io/en/latest/topics/hacking.html) document to get started on cloud-init development
