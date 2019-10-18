@@ -37,3 +37,10 @@ body table, p, ol, ul {
 .post-list {
     line-height: 32px;
 }
+
+/* Font for code areas */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+code, kbd, pre, samp {
+    font-family: 'Ubuntu Mono', monospace !important;
+}
