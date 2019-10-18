@@ -1,11 +1,39 @@
+/* A better table */
 table {
-    margin: 0px auto;
+    margin-left:auto;
+    margin-right:auto
 }
 
 table th {
-    padding: 5px;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #f2f0e6;
 }
 
-body table, ul {
-    line-height: 1.7;
+table th,
+table td {
+    padding: 6px 12px;
+    border: 1px solid #d9d7ce;
+}
+
+/* Increase content font size and spacing */
+body table, p, ol, ul {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+/* Left align all content */
+.content {
+    text-align: justify;
+}
+
+/* Center primary headers */
+.content h1, h2 {
+    text-align: center;
+}
+
+/* Front page, increase spacing */
+.post-list {
+    line-height: 32px;
 }
