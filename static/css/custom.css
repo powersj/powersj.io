@@ -39,8 +39,8 @@ body table, p, ol, ul {
 }
 
 /* Font for code areas */
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 code, kbd, pre, samp {
-    font-family: 'Ubuntu Mono', monospace !important;
+    font-family: 'Inconsolata', monospace !important;
 }
