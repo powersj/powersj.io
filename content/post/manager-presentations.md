@@ -8,6 +8,9 @@ draft: true
 # Everything I've learned about Presentations
 
 have a point, use pictures, prepare
+https://presentationpatterns.com/
+
+
 
 ## Slides
 
