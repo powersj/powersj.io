@@ -18,13 +18,13 @@ Some highlights include:
 * Experimental ZFS on root support in the desktop installer
 * OpenStack Train support
 
-See the [release notes](https://wiki.ubuntu.com/EoanErmine/ReleaseNotes) for even more details.
+See the [release notes](https://wiki.ubuntu.com/EoanErmine/ReleaseNotes) for more details.
 
 ## Ubuntu Server
 
 Ubuntu Server comes refreshed with new major versions of the virtualization stack with qemu 4.0 and libvirt 5.6. We also were able to move mysql 8.0 and PHP up to 7.3. There are of course numerous other packages that received bug fixes, new features and versions as well thanks to the great work by the Canonical team, countless community members and partners.
 
-The subiquity based Server installer continues to see improvements made. As more users are able to try out and even adopt the new installer new bugs are getting found and fixed. Due to the ability to update the installer before actually doing an install, we are able to keep users going with new fixes rather than needing to wait for point releases.
+The subiquity based Server installer continues to see improvements made. As more users are able to try out and even adopt the new installer new bugs are found and fixed. This is done quickly due to the ability to update the installer before actually doing an install. We are able to keep users going with new fixes rather than needing to wait for point releases to provide new ISOs.
 
 We also announced formal support for the arm64 and ppc64el architectures with the subiquity installer. The last architecture, s390x, will come next cycle.
 
@@ -34,7 +34,7 @@ The release comes with support for latest release of OpenStack codenamed Train a
 
 This has been one of the fastest, clean looking Ubuntu releases that I can remember. The yaru theme is one of my all time favorite for how responsive and polished it has come out looking.
 
-The overall performance of GNOME seems to have improved greatly and provides a very smooth and sleek experience. I have been enjoyed watching our GNOME desktop evolve and improve over the past few releases. So much so that I have not even looked at any of the other desktop environments in a while.
+The overall performance of GNOME seems to have improved greatly and provides a very smooth and sleek experience. I have enjoyed watching our GNOME desktop evolve and improve over the past few releases. So much so that I have not even looked at any of the other desktop environments in a while.
 
 I have yet to try out the ZFS on root support, but I am very interested in doing so. When I saw a demo of the power that comes with snapshot and rollback support it is easy to see how exciting this is.
 
