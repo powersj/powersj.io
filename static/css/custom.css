@@ -5,7 +5,6 @@ table {
 }
 
 table th {
-    font-size: 11px;
     text-align: center;
     text-transform: uppercase;
     background: #f2f0e6;
@@ -19,8 +18,8 @@ table td {
 
 /* Increase content font size and spacing */
 body table, p, ol, ul {
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 29px;
 }
 
 /* Left align all content */
@@ -31,11 +30,6 @@ body table, p, ol, ul {
 /* Center primary headers */
 .content h1, h2 {
     text-align: center;
-}
-
-/* Front page, increase spacing */
-.post-list {
-    line-height: 32px;
 }
 
 /* Font for code areas */

@@ -1,13 +1,13 @@
 {{ partial "header" . }}
 
-<main>
+<main class="post-list">
 
 <h2>{{ .Title }}</h2>
 
 {{ range (where .Site.Pages "Type" "post").GroupByDate "2006" }}
     <section>
         <h2>{{ .Key }}</h2>
-        <ol class="post-list">
+        <ol>
             {{ range .Pages }}
                 {{ if not (eq .Title "Posts") }}
                     <div class="row">
