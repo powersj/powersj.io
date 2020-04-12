@@ -13,7 +13,7 @@ theme = "minimal"
 
     # Theme related
     accent = "#d30c1f"
-    font = "Catamaran"
+    font = "Muli"
     showBorder = true
 
     # Syntax Highlighting
