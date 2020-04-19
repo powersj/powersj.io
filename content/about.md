@@ -1,5 +1,6 @@
 ---
 title: About Me
+type: about
 date: 2018-01-24
 ---
 

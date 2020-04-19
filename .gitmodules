@@ -1,3 +1,6 @@
 [submodule "themes/minimal"]
 	path = themes/minimal
 	url = https://github.com/calintat/minimal.git
+[submodule "themes/minimal-local"]
+	path = themes/minimal-local
+	url = https://github.com/powersj/minimal-local.git
