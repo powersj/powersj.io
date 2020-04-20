@@ -7,17 +7,17 @@ draft: false
 
 In a previous post, I described how to setup a system with NVIDIA's CUDA software with Ubuntu 16.04 LTS. With the recent release of Ubuntu 18.04 LTS, Bionic Beaver, I wanted to update that post for the new LTS release.
 
-# NVIDIA Package Archive
+## NVIDIA Package Archive
 
 As of today, the [NVIDIA repo](https://developer.download.nvidia.com/compute/cuda/repos/) does not have software packages for the Bionic release. At some point in the near future, an 18.04 entry will appear and have the software. I can update this post when that happens.
 
-# Ubuntu Package Archive
+## Ubuntu Package Archive
 
 However, until the NVIDIA archive is updated, the best method is to install directly from the Ubuntu Bionic repo:
 
 ```shell
-$ sudo apt update
-$ sudo apt install -y nvidia-headless-390 nvidia-utils-390 nvidia-cuda-toolkit
+sudo apt update
+sudo apt install -y nvidia-headless-390 nvidia-utils-390 nvidia-cuda-toolkit
 ```
 
 After rebooting the system the user can then verify that CUDA is setup correctly by verifying the devices show up and nvidia-smi output.

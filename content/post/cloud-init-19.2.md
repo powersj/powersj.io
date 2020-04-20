@@ -11,12 +11,12 @@ As [announced](https://lists.launchpad.net/cloud-init/msg00219.html),
 cloud-init 19.2 was released last Wednesday! From the announcement, some
 highlights include:
 
- - FreeBSD enhancements
-   - Added NoCloud datasource support.
-   - Added growfs support for rootfs.
-   - Updated tools/build-on-freebsd for python3
- - Arch distro added netplan rendering support.
- - cloud-init analyze reporting on boot events.
+- FreeBSD enhancements
+  - Added NoCloud datasource support.
+  - Added growfs support for rootfs.
+  - Updated tools/build-on-freebsd for python3
+- Arch distro added netplan rendering support.
+- cloud-init analyze reporting on boot events.
 
 And of course numerous bug fixes and other enhancements.
 

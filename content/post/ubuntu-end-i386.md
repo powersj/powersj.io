@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# End 32-bit x86 Support in Ubuntu
-
 With the recent release of the latest LTS of Ubuntu Bionic Beaver now is the perfect time to end support for the i386 architecture. The amount of time, effort, and resources to maintain an architecture that is not under active development, heavily utilized, or in demand should end.
 
 Recently there was a post to ubuntu-devel-discuss proposing to [end i386 support](https://lists.ubuntu.com/archives/ubuntu-devel-discuss/2018-May/018004.html) and I have not seen a final conclusion. However, I wanted to document my own opinion based on seeing this discussion get brought up numerous times in the past.

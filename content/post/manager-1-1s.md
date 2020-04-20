@@ -5,6 +5,4 @@ tags: ["manager"]
 draft: true
 ---
 
-# Managing: 1-1s
-
 TODO

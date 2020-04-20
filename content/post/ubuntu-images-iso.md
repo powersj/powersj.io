@@ -5,7 +5,5 @@ tags: ["ubuntu"]
 draft: true
 ---
 
-# Ubuntu and Images: Server ISOs
-
 a. technologies: subiquity vs d-i
 b. release, point release, daily

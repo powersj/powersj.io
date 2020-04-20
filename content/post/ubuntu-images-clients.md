@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: true
 ---
 
-# Ubuntu and Images: Clients
-
 a. cloud --> marketplace or ubuntu-cloud-image
 b. physical Server: ISO --> Website or ubuntu-iso-download
 c. VM --> multipass

@@ -7,8 +7,6 @@ draft: false
 
 ![Banner](/img/sprint/2017-debconf/banner.jpg)
 
-# DebConf 2017
-
 Last week I had the pleasure of not only attending, but also presenting at
 DebConf 2017 in Montreal, Canada.
 
@@ -16,7 +14,7 @@ All talks and recordings can be found on the [DebConf17 Schedule](https://debcon
 
 ![Olympic Stadium](/img/sprint/2017-debconf/olympic-stadium.jpg)
 
-# Sessions
+## Sessions
 
 Below is a list of a few interesting sessions that I attended. I will work on a
 separate post on the content of the presentation.

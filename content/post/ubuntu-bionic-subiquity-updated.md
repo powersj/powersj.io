@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# Ubuntu Server Install ISO Updated
-
 The [subiquity](https://github.com/CanonicalLtd/subiquity) based Ubuntu Server install ISO was [recently updated](https://lists.ubuntu.com/archives/ubuntu-server/2018-July/007725.html) with many new features and options. Among the most requested features included new storage install options (e.g. LVM and software RAID) and network bonding. These features and a couple more are now included in the [Ubuntu Bionic Server ISO](https://www.ubuntu.com/download/server).
 
 ## Proxy

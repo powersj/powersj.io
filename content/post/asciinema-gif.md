@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# GIF Production from asciinema
-
 [asciinema](https://asciinema.org/) is a fantastic application for recording terminal sessions and posting them to the web. I have used these as backups to presentations at conferences and as a way to quickly share with co-workers what I am seeing when reporting issues.
 
 I recently wanted to embed a gif demo of an application I wrote. This post documents the tooling and methods I used.
@@ -99,7 +97,7 @@ asciinema-edit quantize --range 2 app_demo.cast
 
 Now that the cast is captured and post-production is complete it is time to create the gif! For this I use [asciicast2gif](https://github.com/asciinema/asciicast2gif), which is a product of the asciinema team themselves.
 
-### Install
+### Install via npm
 
 Install occurs via npm and on my Xenial container I needed a newer version of npm, so I grabbed node.js 8.x the current LTS code named "Carbon". This is one of the main reasons why I run this in a container:
 

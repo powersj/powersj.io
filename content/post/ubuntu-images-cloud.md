@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: true
 ---
 
-# Ubuntu and Images: Clouds
-
 a. release vs daily
 b. full vs minimal
 c. clouds - AWS

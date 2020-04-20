@@ -5,8 +5,6 @@ tags: ["battlestation"]
 draft: false
 ---
 
-# Background
-
 As I described in my [battlestation](2016-01-05-battlestation) post, someone's *"battlestation"* is how his or her desktop is setup and configured. In this post I discuss my *"mobile battlestation"* or my laptop that I take with me when traveling or leaving home.
 
 ![Mobile Battlestation](/img/projects/mobile-battlestation/x1-900x450.jpg "IBM X1 Carbon")
@@ -37,7 +35,7 @@ To move away from the MacBook Pro was back with Lenovo. After a very short time 
 
 The only other option I considered was the Lenovo ThinkPad T450. While a bit cheaper and had the ability to expand, but that was not something I needed. I wanted light and fast. If I needed to have lots of memory or storage I would be using my desktop or a remote system in the first place.
 
-# Laptop
+## Laptop
 
 For me, the Carbon X1 is brilliant.
 
@@ -66,6 +64,6 @@ My only complaint about the system is the trackpad. There are times where my han
 
 ![Mobile Battlestation](/img/projects/mobile-battlestation/x1-right-900x450.jpg "IBM X1 Carbon Right Side")
 
-# Linux
+## Linux
 
 On my laptop I run the latest Ubuntu development release.

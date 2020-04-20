@@ -5,15 +5,13 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# Netplan
-
 For this week's [Bionic test blitz]({{< ref "ubuntu-bionic-test-blitz.md" >}}) I am looking at Netplan! [Netplan](https://wiki.ubuntu.com/Netplan) enables easily configuring networking on a system via YAML files. Netplan processes the YAML and generates the required configurations for either NetworkManager or systemd-network the system's renderer.
 
 Netplan [replaced ifupdown](http://blog.cyphermox.net/2017/06/netplan-by-default-in-1710.html) as the default configuration utility starting with Ubuntu 17.10 Artful.
 
-# Configuration
+## Configuration
 
-## Initial Setup in Bionic
+### Initial Setup in Bionic
 
 When you install Bionic or use a cloud image of Bionic a file will appear in `/etc/netplan` depending on the renderer in use. Here is a breakdown of the various types:
 
@@ -31,11 +29,11 @@ Do note that configuration files can exist in three different locations with the
 
 Alphabetically later files, no matter what directory they are in, will amend keys if the key does not already exist and override previous keys if they do.
 
-## Examples
+### Examples
 
 The best method for demonstrating what netplan can do is by showing some examples. Keep in mind that these are very simple examples that do not demonstrate complex situations that netplan can handle.
 
-## Static and DHCP Addressing
+### Static and DHCP Addressing
 
 The following configures four devices:
 
@@ -71,7 +69,7 @@ ethernets:
         mtu: 9000
 ```
 
-## Bonding
+### Bonding
 
 Bonding can easily be configured with the required interfaces list and by specifying the mode. The mode can be any of the valid types: balance-rr, active-backup, balance-xor, broadcast, 802.3ad, balance-tlb, balance-alb. See the [bonding wiki page](https://help.ubuntu.com/community/UbuntuBonding#Descriptions_of_bonding_modes) for more details.
 
@@ -87,7 +85,7 @@ bonds:
             primary: enp3s0
 ```
 
-## Bridges
+### Bridges
 
 Here is a very simple example of a bridge using DHCP:
 
@@ -101,7 +99,7 @@ bridges:
 
 Additional parameters can be passed in to turn off STP for example or set priorities.
 
-## Vlans
+### Vlans
 
 Similarly, vlans only require a name as the key and then an id and link to use for the vlan:
 
@@ -129,11 +127,11 @@ vlans:
             - 10.0.4.10/24
 ```
 
-# Next Steps
+## Next Steps
 
 I was left with an overall very positive impression of netplan. Having the ability to write YAML configuration files and not have to worry about how the actual configuration was generated or what commands need to be used depending on the backend simplifies the process. I would like to continue to attempt some more complex configurations that I can find as well as attempt additional test cases with the ifupdown-migrate subcommand.
 
-# Links & References
+## Links & References
 
 * [Netplan Wiki](https://wiki.ubuntu.com/Netplan)
 * [Netplan README](https://git.launchpad.net/netplan/tree/doc/netplan.md)

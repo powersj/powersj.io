@@ -22,13 +22,13 @@ apt        | 1.5            | unstable     | amd64
 
 There are times where I need additional details about the package. Maybe I need to grep the control file for something or I am interested in additional details about the source package, like what binaries it produces. In these cases, my reliance on rmadison is insufficient and I have relied upon using LXD  machine containers to have a container of each release up and running.
 
-# chdist
+## chdist
 
 chdist is a "script to easily play with several distributions" per its' own man page. It is an incredibly powerful tool for querying package information and status across many distributions and one that I wish I knew about long ago.
 
 chdist essentially keeps a directory where the apt files for the distribution that you specify to be kept. Then you can use tell chdist to use these files when running typical commands.
 
-## Install
+### Install
 
 To get started with chdist install the devscripts package:
 
@@ -39,7 +39,7 @@ $ which chdist
 /usr/bin/chdist
 ```
 
-## Setup
+### Setup
 
 To create a chdist it follows the following format:
 
@@ -47,11 +47,11 @@ To create a chdist it follows the following format:
 create <DIST> [<URL> <RELEASE> <SECTIONS>]
 ```
 
-The first part, '<DIST>', is the name of the chdist you will use later to refer to it, normally the release name.
+The first part, `<DIST>`, is the name of the chdist you will use later to refer to it, normally the release name.
 
 The next part is optional as without it chdist creates an empty sources.list file, but if you include the information now, you can get started with your chdist right away. This part is essentially the line in a sources.list file where:
 
-* 'URL' is the URL of the archive (e.g. http://archive.ubuntu.com/ubuntu)
+* 'URL' is the URL of the archive (e.g. `http://archive.ubuntu.com/ubuntu`)
 * 'RELEASE' is the release you are interested in (e.g. xenial, artful, stretch)
 * 'SECTIONS' are the specific sections you want (e.g. main, non-free, universe)
 
@@ -124,7 +124,7 @@ Now that the chdist is setup and updated the files and structure of the chdist a
             └── status
 ```
 
-### Older Distros
+#### Older Distros
 
 A quick note about creating a chdist for older distro's like precise. Some older releases were not signed or the signature cannot be checked due to a missing GPG key, which results in the following error message:
 
@@ -148,7 +148,7 @@ deb [trusted=yes] http://archive.ubuntu.com....
 deb-src [trusted=yes] http://archive.ubuntu.com....
 ```
 
-## Query Information
+### Query Information
 
 To now use the chdist take a look at the list of available commands on the [man page](http://manpages.ubuntu.com/manpages/xenial/man1/chdist.1.html).
 
@@ -210,7 +210,7 @@ libgcc1
 gcc-7-base
 ```
 
-## Compare Distributions
+### Compare Distributions
 
 Another useful feature of using chdist is the ability to compare between releases. Here are snips of output from each command:
 
@@ -235,6 +235,6 @@ zzuf 0.15-1 0.15-1  same_version
 zzz-to-char 0.1.1-1 0.1.2-1  newer_in_artful
 ```
 
-# Next Steps
+## Next Steps
 
 chdist is an amazingly simple tool that to quickly get packages, binary or source, information in Debian and Ubuntu. In the little bit of time I spent searching for more information of chdist I found very little, which was disappointing. I hope this post is able to get other using the tool and shed a little light on its usefulness.

@@ -5,8 +5,6 @@ tags: ["battlestation"]
 draft: true
 ---
 
-# Background
-
 This is an update to my [previous battlestation](TODO) post with what has changed since 2016. This update comes with a few major upgrades: a 4K screen, latest graphics, and NVMe storage.
 
 Ones 'battlestation' is how someone's desktop is setup and configured. One of the most interesting things I like to ask other developers is what his or her workstation is and how it is setup. My curiosity stems from wanting to know what hardware and tools people have found useful and how they have found ways to or not to develop faster and better.
@@ -62,7 +60,7 @@ Things I have learned with all these setups:
 * I dislike boarders on LCDs
 * Having to turn my head too far to the left or right is annoying
 
-# Ubuntu
+## Ubuntu
 
 Of course no battlestation is complete without an operating system to make the hardware work. My choice of OS is of course Ubuntu. Generally I try to run the latest development release on my desktop. Driver support is usually not a problem and I like to try to use the latest software and file bugs for issues I run across.
 

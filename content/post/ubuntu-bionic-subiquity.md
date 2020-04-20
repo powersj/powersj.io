@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# Subiquity
-
 For this week's [test blitz]({{< ref "ubuntu-bionic-test-blitz.md" >}}), I took the new server installer based on [subiquity](https://launchpad.net/subiquity) for a spin.
 
 ## Get Subiquity

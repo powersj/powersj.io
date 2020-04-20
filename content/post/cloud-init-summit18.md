@@ -7,8 +7,6 @@ draft: false
 
 ![waterfront](/img/sprint/2018-cloud-init/waterfront.jpg)
 
-# Introduction
-
 Last week the cloud-init development team from Canonical ran our second annual two-day summit. Attendees included cloud developers from Amazon, Microsoft, Google, VMWare, and Oracle, as well as the maintainer of cloud-init from Amazon Linux, SUSE, and Ubuntu.
 
 The purpose of this two-day event is to meet with contributors, demo recent developments, present future plans, resolve outstanding issues, and collect additional feedback on the past year.
@@ -17,7 +15,7 @@ Like last year, the even was held in Seattle, Washington. A special thanks goes 
 
 ![roadmap talk](/img/sprint/2018-cloud-init/roadmap.jpg)
 
-# Talks, Demos, and Discussions
+## Talks, Demos, and Discussions
 
 The cloud-init development team came with a number of prepared demos and talks that they gave as a part of the summit:
 
@@ -30,7 +28,7 @@ The cloud-init development team came with a number of prepared demos and talks t
 * __Integration Testing and CI__: Josh gave an update on the new CI processes, auto-landing merge requests, and demoed the integration tests. He went through what it takes to add additional clouds and his wish-list for additional testing.
 * __Pre-Network Detection for Clouds__: Chad ran a discussion on collecting pre-networking detection for clouds in order to speed up instance initialization and decrease boot time.
 
-# Breakout Sessions
+## Breakout Sessions
 
 In addition to the prepared demos and discussions, the summit had numerous sessions that were requested by the attendees as additional topics for discussion.
 
@@ -40,7 +38,7 @@ During the summit, we took time to have merge review and bug squashing time. Dur
 
 ![another talk](/img/sprint/2018-cloud-init/talk.jpg)
 
-# Conclusions
+## Conclusions
 
 As always a huge thank you to the community for attending! The summit was a great time to see many contributors face-to-face as well as collect feedback for cloud-init development.
 

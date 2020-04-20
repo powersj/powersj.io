@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# Launchpad Git Project Automation
-
 This post describes executing a CI test job on merge requests that need review and then autoland jobs that are approved on Launchpad hosted git based projects. The primary tool used is jenkins-launchpad-plugin.
 
 The workflows are currently in use by a number of projects the Canonical Server team manages, including:

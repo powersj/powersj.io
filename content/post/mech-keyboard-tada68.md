@@ -4,8 +4,6 @@ date: 2018-04-01
 draft: false
 ---
 
-# Building a Mechanical Keyboard: TADA68
-
 ![box](/img/projects/tada68/side.png#center)
 
 As a developer, a well working, solid keyboard is essential for my day-to-day. I recently learned of how many people now build their own keyboards and decided to give it a shot after seeing the wide range of possibilities that exist.

@@ -12,7 +12,7 @@ This post will demonstrate two methods of install for the CUDA drivers:
 1. Ubuntu package archive
 1. NVIDIA package archive
 
-# Ubuntu Package Archive
+## Ubuntu Package Archive
 
 Install from the archive is extremely simple and quick. All that is required is to install the nvidia-cuda-toolkit package and it will also get all the required CUDA libraries and tools:
 
@@ -58,7 +58,7 @@ Sat Oct 28 14:17:15 2017
 +-----------------------------------------------------------------------------+
 ```
 
-# NVIDIA Package Archive
+## NVIDIA Package Archive
 
 This section will look to downloading the library directly from NVIDIA itself in order to get the latest version of the package. The NVIDIA repo also contains a [variety of meta packages](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#package-manager-metas) allowing an end-user to limit the install to the libraries, runtime, or the tool kits that are needed versus installing everything.
 
@@ -78,7 +78,7 @@ The final step, which is required is to modify your path to point at the binarie
 export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
 ```
 
-# Test CUDA
+## Test CUDA
 
 Similar to installs from the archive below is output from /dev, nvcc, and nvidia-smi:
 
@@ -112,7 +112,7 @@ Sat Oct 28 15:57:59 2017
 
 Additionally, the package comes with some additional scripts that are interesting to play with, found under `/usr/local/cuda/extras/demo_suite`.
 
-# Device Query
+## Device Query
 
 ```shell
 $ /usr/local/cuda/extras/demo_suite/deviceQuery
@@ -161,7 +161,7 @@ deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 9.0, CUDA Runtime Versi
 Result = PASS
 ```
 
-# Bandwidth Test
+## Bandwidth Test
 
 ```shell
 $ /usr/local/cuda/extras/demo_suite/bandwidthTest
@@ -191,7 +191,7 @@ Result = PASS
 NOTE: The CUDA Samples are not meant for performance measurements. Results may vary when GPU Boost is enabled.
 ```
 
-# References
+## References
 
 * [NVIDIA CUDA Documentation](http://docs.nvidia.com/cuda/index.html)
 * [NVIDIA CUDA Linux Install Guide](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)

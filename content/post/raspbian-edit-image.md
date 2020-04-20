@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# Editing a Raspbian Image on Ubuntu
-
 I have spent a lot of time recently playing with a variety of Raspberry Pi models. A large part of that time was spent moving a micro-SD card between a system to edit the image and my computer to clone it to other systems.
 
 This post describes how to mount a Raspbian image on your local system so you can make edits to the image without needing to move it back and forth.

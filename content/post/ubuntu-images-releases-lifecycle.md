@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: true
 ---
 
-# Ubuntu and Images: Releases and Lifecycle
-
 a. LTS vs devel
 b. LTS point releases
 c. ESM

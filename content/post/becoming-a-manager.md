@@ -5,6 +5,8 @@ tags: ["manager"]
 draft: true
 ---
 
+TODO: Introduction here
+
 ## The Road to Manager
 
 Nine months ago I had the honor of becoming the manager of the Ubuntu Server team at Canonical. When I was in College I feel in love with Ubuntu. It just worked. It was simple to use. My first conference was in 2014 at the OpenStack conference in Atlanta. When Mark Shuttleworth came across the stage and gave his [keynote]() I will admit I was pretty amazed of the cool work Canonical was doing.

@@ -5,6 +5,4 @@ tags: ["manager"]
 draft: true
 ---
 
-# Managing: Planning for the Cycle
-
 TODO

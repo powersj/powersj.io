@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# Overview
-
 At the beginning of March, the engineering teams of Canonical met in Budapest, Hungary to work out the final open items for Bionic and begin laying out what comes in the months after the release. As a member of the server team, the below summary describes some of the major areas that I took part in over the week:
 
 ![Team](/img/sprint/2018-budapest/team.jpg)

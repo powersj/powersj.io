@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# Ubuntu ISO Download
-
 I recently published a CLI based snap, which allows user's to easily download the latest Ubuntu ISOs. Various flavors and types of ISOs are supported across the supported releases of Ubuntu. Downloaded ISO's SHA-256 hash sum is verified after downloading to ensure the authenticity of the download.
 
 Read on to learn how to install and use Ubuntu ISO Download!

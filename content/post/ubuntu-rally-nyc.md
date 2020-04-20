@@ -11,15 +11,15 @@ Below are notes on a few items last week's event:
 
 ![server team](/img/sprint/2017-nyc/team.jpg#center)
 
-# Artful Final Beta
+## Artful Final Beta
 
 We saw the release of the [final beta of Artful](https://lists.ubuntu.com/archives/ubuntu-announce/2017-September/000225.html)! If you are able, please give the Artful [server images](http://releases.ubuntu.com/17.10/) a test as we approach the release. Give your favorite software stack a test, install to baremetal or in a VM, or if you have not already try out the latest version of LXD. Any and all bugs and input are appreciated as they help us make another quality release.
 
-# Merges
+## Merges
 
 There were, of course, numerous topics related to packaging merges. Here are a few of the topic areas:
 
-## Server Team Merge Success
+### Server Team Merge Success
 
 The server team has spent considerable effort over the past few release cycles getting the package delta under control and is able to stay very current with packages in Debian. The status of which is tracked using the [merge-o-matic report](https://merges.ubuntu.com/main.html).
 
@@ -27,19 +27,19 @@ The primary reasons for this success are two-fold: 1) expecting the last person 
 
 [git ubuntu](http://www.justgohome.co.uk/blog/2017/07/developing-ubuntu-using-git.html) enables merge reviews allowing another developer on the server team to check and validate the upcoming changes. As a result of having this peer review done and the need to justify changes with that peer confirmed deltas with Debian are minimized and the number of uploads are kept to a minimum.
 
-## Merge-o-Matic Status
+### Merge-o-Matic Status
 
 As a part of the above discussion, there was also a side topic about updating the [merge-o-matic report](https://merges.ubuntu.com/main.html) to allow for better filtering and reporting. This would allow teams to get a more clear idea of the status of packages.
 
-## git ubuntu
+### git ubuntu
 
 There was a discussed turning on automatic imports using the [git ubuntu](http://www.justgohome.co.uk/blog/2017/07/developing-ubuntu-using-git.html) with the Launchpad team. This requires some development so Robbie Basak is learning how to set up a development environment to make these additional changes. This will enable the usage of [git ubuntu](http://www.justgohome.co.uk/blog/2017/07/developing-ubuntu-using-git.html) to even more packages.
 
-## Change Log Templates
+### Change Log Templates
 
 While the change log follows a specific format, the text for each change log item is free form. The server team is working on developing a set of best practices and formats it expects to use for various scenarios and will enforce these during the git workflow process.
 
-# cloud-init
+## cloud-init
 
 The cloud-init team sat down to go over the state of testing in the project and plan out the next focus areas for QA. Here is a brief list of areas the integration tests are set to receive over the coming months:
 
@@ -55,11 +55,11 @@ The cloud-init team sat down to go over the state of testing in the project and 
 
 The team also spent time going through new features and bugs around netplan, revamping cloud-config snap support, and timesyncd.
 
-# Server Team QA
+## Server Team QA
 
 As the QA developer for the Server team I took advantage of having all the engineering teams on hand and met to work through methods of improving testing:
 
-## Unexpected FTBFS
+### Unexpected FTBFS
 
 A current pain point is when doing a stable release update (SRU) and discovering that suddenly the source fails to build (FTBFS). In order to prevent these surprises, I would like to rebuild the server team's owned packages, if not all of main, on supported releases periodically to report FTBFS issues.
 
@@ -67,29 +67,29 @@ The foundations team, not only agreed with the importance of doing this, but fur
 
 By discovering and resolving these types of failures the archive is kept in a healthier state allowing others to build the source when necessary problem-free and gives yet another opportunity to contribute to Ubuntu.
 
-## Testing on Clouds
+### Testing on Clouds
 
 I recently added [KVM backed testing](https://lists.launchpad.net/cloud-init/msg00101.html) to the cloud-init integration tests. My next step is to begin added support for the cloud providers. I talked to both the Foundations and Kernel teams to see how they currently deploy to their tests to [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us/), and [GCE](https://cloud.google.com/compute/) and was given access to their code repositories to begin working through the details.
 
-## Solution Testing
+### Solution Testing
 
 The Solutions QA team and I discussed how to test proposed versions of cloud-init and curtin. The solutions QA team has a massive integration test effort across many products, including Ubuntu Server, Juju, MAAS, LXD, and more. This effort will lead to even great coverage in testing proposed versions of cloud-init and curtin.
 
-## Proposed MAAS Testing
+### Proposed MAAS Testing
 
 A quick sync with the MAAS team occurred to verify we can get the logs required for our [curtin SRU execption](https://wiki.ubuntu.com/CurtinUpdates) and planned [cloud-init SRU exception](https://wiki.ubuntu.com/CloudinitUpdates). This testing occurs when cloud-init and curtin our in the proposed bucket. We are working to get a substantial increase in test coverage during this time.
 
-## Desktop Team
+### Desktop Team
 
 For the first time ever I was able to discussion QA with the Desktop Team face-to-face. It was great to learn what areas and issues the team is working through and provided a good opportunity for us to work through common areas of testing, tools, and metrics.
 
 We also decided to work to get our daily LTS and development release ISO results publicly available. These tests gate the release of new daily ISOs, run a smoke install, and then execute dozens of various pressed installs.
 
-## Certification Team
+### Certification Team
 
 Also for the first time, I met with the hardware enablement (HWE) and certification (cert) teams. I now have a better understanding of the testing that occurs on hardware before a release and how hardware vendors obtain certification. The team's testing provides great coverage of the kernel and drivers.
 
-# Server IRC Meeting
+## Server IRC Meeting
 
 The server team is considering revamping the current [server team IRC meeting](https://wiki.ubuntu.com/ServerTeam/Meeting). The current format does not appear to engage the community effectively and we would like that to change.
 
@@ -97,7 +97,7 @@ The current proposal involves changing the format away from a meeting format to 
 
 We also would like to use this time as an opportunity to tackle bugs, as we have done with our [bug triage days](https://lists.ubuntu.com/archives/ubuntu-server/2017-March/007502.html) in the past. These days have been hugely helpful and well received by many and is something the server team would like to continue to do.
 
-# s390x Training
+## s390x Training
 
 Finally, the server team spent time getting training on managing an [s390x](https://wiki.ubuntu.com/S390X), getting access and using the system console, how to boot and add hardware, as well as learning how to debug common issues. It was great knowledge to have given Ubuntu server's continued support of s390x.
 

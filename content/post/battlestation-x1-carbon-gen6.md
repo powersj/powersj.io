@@ -11,4 +11,3 @@ My laptop history is fairly short:
 * Apple MacBook Pro Mid-2010 MC373LL/A (2010-2015)
 * Lenovo ThinkPad Carbon X1 Gen 3 (2015-2019)
 * Lenovo ThinkPad Carbon X1 Gen 6 (2019-current)
-

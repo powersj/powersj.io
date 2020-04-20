@@ -5,8 +5,6 @@ tags: ["blog"]
 draft: false
 ---
 
-# Hosting a Hugo Site on GitHub Pages
-
 Like Jekyll, [Hugo](https://gohugo.io/) is a static site generator. I have
 personally found Hugo to be faster for development, more flexible, and
 more simple to use. As a result, I switched my blog to using it.

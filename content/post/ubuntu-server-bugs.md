@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# Ubuntu Server Bugs
-
 ![server](/img/ubuntu/server.png#center)
 
 Ever wanted to help out in the development of Ubuntu Server, but did not know how? One of the best ways to get started is by working on bugs. Not only does it improve the distribution for millions of users, but also gives you an opportunity to see how the distribution is made.

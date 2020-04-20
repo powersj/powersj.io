@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# Ubuntu Bug Triage
-
 Get involved and help fix Ubuntu bugs! Obtain a list of bugs for an Ubuntu team or package that were created or updated yesterday.
 
 Users can further define the number of days to triage to increase the number of bugs found, the output type to allow machine readable output, or set the behavior to open the bugs in a browser and immediately begin bug triage.

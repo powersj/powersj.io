@@ -5,13 +5,11 @@ tags: ["battlestation"]
 draft: false
 ---
 
-# Background
-
 Ones 'battlestation' is how someone's desktop is setup and configured. One of the most interesting things I like to ask other developers is what his or her workstation is and how it is setup. My curiosity stems from wanting to know what tools people have found useful and how they have found ways to or not to develop faster and better.
 
 ![Battlestation](/img/projects/battlestation/battlestation-900x450.jpg "battlestation")
 
-# Desktop
+## Desktop
 
 Since 1999 I have built my own desktop systems. Building systems is how I really got interested in computing. Researching and understanding what each component does and then picking things that work well together was fascinating when I was younger. I still do the same when building a new system, but I do not stay anywhere near as informed as I did when I first started.
 
@@ -33,11 +31,11 @@ I have also done a good deal of gaming, including D3, CS:GO, Elite: Dangerous, S
 
 Unless I have a part failure, I do not see a need to update the system until sometime in 2017.
 
-# Monitor
+## Monitor
 
 Of course without a monitor to interface with the battlestation is useless.
 
-## History
+### History
 
 I have had a rather lengthy and mixed history of LCD monitors. From earliest to most recent:
 
@@ -49,7 +47,7 @@ I have had a rather lengthy and mixed history of LCD monitors. From earliest to 
 * 2x HP 24" Widescreen LCDs LP2465 (2013-2014)
 * LG 34" Widescreen LCD 34UM95 (2014-current)
 
-## Learning's
+### Learning's
 
 Things I have learned with all these setups:
 
@@ -61,7 +59,7 @@ Things I have learned with all these setups:
 
 As a result when I saw the 34" widescreen and various reviews of it I wanted to get one ASAP. It seemed like a perfect fit.
 
-## The Monitor
+### The Monitor
 
 In June of 2014 I purchased an LG 34UM95 34" WQHD IPS LCD. 34 inches of beautiful LCD monitor. Besides the sheer size it is also the first monitor that I have owned that has a ratio of 21:9, as opposed to the more traditional 16:9 or 16:10. This is the same ratio that is used in modern cinema. It took very little time to get used to it. Coming from the 30" monitor it provides a much better experience when having two or three windows open side by side.
 
@@ -69,7 +67,7 @@ In June of 2014 I purchased an LG 34UM95 34" WQHD IPS LCD. 34 inches of beautifu
 
 I plan on keeping this format for sometime to come. It is by far my favorite and most productive setup I have ever had. There were a number of purchases that I made above that I regretted shortly after, but not this.
 
-# Linux
+## Linux
 
 Of course no battlestation is complete without an operating system to make the hardware work. My choice of OS is of course Ubuntu. Generally I try to run the latest development release on my desktop. Driver support is usually not a problem and I like to try to use the latest software and file bugs for issues I run across.
 

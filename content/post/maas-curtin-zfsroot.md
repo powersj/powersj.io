@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# Deploying Ubuntu root on ZFS with MAAS
-
 With [recent updates](https://docs.maas.io/2.4/en/intro-new) to [MAAS](https://maas.io/) and [Curtin](https://launchpad.net/curtin), deploying Ubuntu with a ZFS root disk is now possible! Curtin added [zfsroot support](https://git.launchpad.net/curtin/commit/?id=15c15c7d496fe2f20a4f998fe0892fb3834c0a7a) earlier this year and MAAS has now exposed the option.
 
 However, Ubuntu root on ZFS with MAAS is **experimental**! We encourage users to try this out and report back any issues, but it is not a supported scenario.
@@ -109,7 +107,6 @@ NAME                         USED  AVAIL  REFER  MOUNTPOINT
 rpool/ROOT/zfsroot@initial  3.01M      -  6.18G  -
 $ sudo zfs rollback rpool/ROOT/zfsroot@initial
 ```
-
 
 #### Manual Restore
 
@@ -364,10 +361,10 @@ $ zpool status -v tank
   scan: none requested
 config:
 
-	NAME        STATE     READ WRITE CKSUM
-	tank        ONLINE       0     0     0
-	  sdb       ONLINE       0     0     0
-	  sdc       ONLINE       0     0     0
+  NAME        STATE     READ WRITE CKSUM
+  tank        ONLINE       0     0     0
+    sdb       ONLINE       0     0     0
+    sdc       ONLINE       0     0     0
 
 errors: No known data errors
 ```

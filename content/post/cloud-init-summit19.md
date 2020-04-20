@@ -23,13 +23,13 @@ Here are summary of some of the topics discussed during the sprint:
 - __Python Support__: The last release of cloud-init in 2019 is the final version to support python 2.7. We will cut a branch for future bug fixes. After that master will now support Python 3.4 going forward. A future discussion around how to move the Python 3 version is needed. See the [mailing list post](https://lists.launchpad.net/cloud-init/msg00227.html) for more details.
 - __Red Hat Support__: Edwardo gave a presentation on Red Hat's process around cloud-init. He showed the versions they are on and what they do when a new release comes out.
 
-# Working Sessions
+## Working Sessions
 
 During the summit, we took time to have merge review and bug squashing time. During this time, attendees came with outstanding bugs to discuss possible fixes as well as go through outstanding merge requests and get live reviews.
 
 ![another talk](/img/sprint/2019-cloud-init/amazon.jpg)
 
-# Thank you!
+## Thank you
 
 As always a huge thank you to the community for attending! The summit was a great time to see many contributors face-to-face as well as collect feedback for cloud-init development.
 

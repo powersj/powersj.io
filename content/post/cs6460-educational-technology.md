@@ -5,15 +5,13 @@ tags: ["georgia tech"]
 draft: false
 ---
 
-# Introduction
-
 Technology and education. A huge and very interesting topic, but what could a course like this entail? As I read more about the topics and the work that would go into the course I felt it was a perfect opportunity to help me dig in a little deeper into my personal observations and experiences with technology in education.
 
-# Research
+## Research
 
 The first few weeks of the class involved researching and investigating the various topics and areas of educational. Note the lack of technology in that statement. We started understanding what problems, from either our own experience or others, face the education sector. My interest was around Bloom's Taxonomy for learning as each level is rich for educational technology and more importantly how we learn and retain information is essential to empowering students to succeed.
 
-# Project
+## Project
 
 As the semester went on, I honed in my proposal with the following goal:
 

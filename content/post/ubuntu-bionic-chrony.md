@@ -7,8 +7,6 @@ draft: false
 
 ![console chrony](/img/ubuntu/chrony.png#center)
 
-# Using chrony to configure NTP
-
 Starting with [Ubuntu Bionic](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes), the choice for fast and accurate time synchronization is [chrony](https://chrony.tuxfamily.org/index.html). For the features available with chrony and how chrony compares to other time synchronization implementations check out the [comparison](https://chrony.tuxfamily.org/comparison.html) page on the chrony site.
 
 This post will demonstrate how to get started, a few helpful commands for end-users, and a couple features of chrony.
@@ -378,7 +376,7 @@ $ ls /var/log/chrony/
 measurements.log  statistics.log  tracking.log
 ```
 
-# Resources
+## Resources
 
 - [chrony webpage](https://chrony.tuxfamily.org/index.html)
 - [chrony faq](https://chrony.tuxfamily.org/faq.html)

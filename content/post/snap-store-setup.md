@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# Beautify a Snap Store Page
-
 I recently pushed three new confined snaps to the snap store and wanted to get the pages looking a little nicer. I first read through Martin Wimpress's blog to [Make your Snap store page pop](https://snapcraft.io/blog/make-your-snap-store-page-pop).
 
 It gave some good suggestions, but I was not quite sure how to create the graphical components. This post describes how I found accomplished each of those.

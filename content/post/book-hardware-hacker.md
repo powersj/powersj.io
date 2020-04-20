@@ -4,8 +4,6 @@ date: 2018-07-31
 draft: false
 ---
 
-# The Hardware Hacker
-
 I was recently suggested the book [The Hardware Hacker: Adventures in Making and Breaking Hardware](https://www.amazon.com/Hardware-Hacker-Adventures-Making-Breaking/dp/159327758X) written by [Andrew "bunnie" Huang](https://en.wikipedia.org/wiki/Andrew_Huang_(hacker)), an electrical engineering PhD graduate of MIT. Andrew has lead numerous hardware projects and spent plenty of time reverse engineering and hacking on electronics.
 
 The book is a fantastic collection of Andrew's blog posts, interviews, and stories put together as an insight into the business of hardware production and hacking of hardware. This book is not a textbook or manual into how to accomplish hardware hacking. Instead it is a compendium of insights from Andrew's extensive knowledge and experience. While technically deep about electronics in parts the book is an easy read.

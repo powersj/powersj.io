@@ -5,8 +5,6 @@ tags: ["ubuntu"]
 draft: false
 ---
 
-# Ethereum
-
 Ethereum has appeared more and more in the news and rightfully so. Ethereum recently set another transaction record of [400,000 transactions in a single day](https://venturebeat.com/2017/08/15/ethereum-sets-new-transaction-record-outperforms-bitcoin/). Then the recent drama of the [Bitcoin split](https://www.forbes.com/sites/haroldstark/2017/08/17/chaos-ensues-as-bitcoin-splits-into-two-separate-cryptocurrencies/#1d3d1b7464fc) has caused even more attention to Ethereum as an alternative. If you are unfamiliar with other Blockchain or Ethereum check out the following articles:
 
 * [Blockchain](https://thenextweb.com/evergreen/2017/07/04/ultimate-3500-word-plain-english-guide-blockchain/)
@@ -14,7 +12,7 @@ Ethereum has appeared more and more in the news and rightfully so. Ethereum rece
 
 I thought it would be interesting to see what it takes to mine Ethereum. Ethereum is another crypto currency, similar to bitcoin. Before starting if you are unfamiliar with either cryptocurrencies in general or ethereum consider reading the articles below. My post is not meant to be an overview of either, but rather how I got mining Ethereum going on Ubuntu.
 
-# Ethereum Software
+## Ethereum Software
 
 Currently there does not appear to be any Ethereum packages in the Ubuntu archive. However, there is a PPA for Ethereum that is available for all supported releases of Ubuntu. Inside is a package called 'ethereum', which is a metapackage to install all the relevant software. Both the PPA and package can be installed via the following:
 
@@ -24,7 +22,7 @@ sudo apt update
 sudo apt install ethereum -y
 ```
 
-# Wallet Address
+## Wallet Address
 
 Once installed the next step is to get a wallet address. You can create this by using `geth`, which is a go-lang based ethereum command line interface. Geth will ask you to create a passphrase, which you must use and not forget.
 
@@ -39,7 +37,7 @@ $ geth account new
 
 The value printed as the address is your personal wallet address.
 
-# Mining Software
+## Mining Software
 
 The next step is to find software to mine ethereum. There are plenty of options to choose from:
 
@@ -51,13 +49,13 @@ The next step is to find software to mine ethereum. There are plenty of options 
 
 I choose to go with ethminer because I found it was well documented, had GPU support, and seemed simple, and easy to setup.
 
-# Nodes
+## Nodes
 
 You can choose to [mine solo or with a pool](https://forum.ethereum.org/discussion/4559/solo-vs-pool). I did not want to get geth setup to act as a node, so I instead choose to mine in a pool. Therefore, before mining we need to find a node to determine where to push our store.
 
 I found the [ethermine.org](https://ethermine.org/) site to be straightforward and decided to mine using it.
 
-# Mining
+## Mining
 
 Finally, it was time to get mining! I got ethminer setup with the instructions found on [ethermine.org](https://ethermine.org/):
 
@@ -87,7 +85,7 @@ And finally, I could see the possible income from the mining:
 
 ![ethermine income](/img/ethereum/income.png)
 
-# Next Steps
+## Next Steps
 
 The most obvious thing to try next is getting CUDA setup on this system and run using the `--cuda` option.
 

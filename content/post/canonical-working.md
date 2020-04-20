@@ -5,8 +5,6 @@ tags: ["manager"]
 draft: true
 ---
 
-# Working Remotely at Canonical
-
 open source, foundation used by millions of end-users and other projects
     impact wide-spred
     direct
