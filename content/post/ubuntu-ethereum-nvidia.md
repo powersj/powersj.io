@@ -1,7 +1,7 @@
 ---
 title: Mining Ethereum on Ubuntu with a GTX 1070
 date: 2017-09-20
-tags: ["ubuntu", "ethereum", "nvidia", "cuda"]
+tags: ["ubuntu"]
 draft: false
 ---
 

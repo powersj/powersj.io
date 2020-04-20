@@ -1,7 +1,7 @@
 ---
 title: "Working Remotely at Canonical"
 date: 2019-12-31
-tags: ["canonical", "ubuntu", "remote"]
+tags: ["manager"]
 draft: true
 ---
 

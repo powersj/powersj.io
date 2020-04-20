@@ -1,7 +1,7 @@
 ---
 title: Ubuntu Bug Triage
 date: 2018-10-26
-tags: ["ubuntu", "snap", "bug", "triage"]
+tags: ["ubuntu"]
 draft: false
 ---
 

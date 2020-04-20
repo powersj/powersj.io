@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning for Trading (CS 7646)"
 date: 2015-12-23
-tags: ["Georgia Tech", "masters", "machine learning", "trading", "python"]
+tags: ["georgia tech"]
 draft: false
 ---
 

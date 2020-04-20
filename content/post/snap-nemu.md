@@ -1,7 +1,7 @@
 ---
 title: "Creating a snap of Intel's NEMU"
 date: 2019-12-31
-tags: ["snap", "store", "nemu"]
+tags: ["ubuntu"]
 draft: true
 ---
 

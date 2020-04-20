@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu 20.04 LTS Beta"
 date: 2020-04-03
-tags: ["ubuntu", "focal"]
+tags: ["ubuntu"]
 draft: false
 ---
 

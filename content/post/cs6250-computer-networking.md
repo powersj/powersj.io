@@ -1,7 +1,7 @@
 ---
 title: "Computer Networking (CS 6250)"
 date: 2014-05-28
-tags: ["georgia tech", "masters", "networking"]
+tags: ["georgia tech"]
 draft: true
 ---
 

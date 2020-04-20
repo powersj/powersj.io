@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Bionic: Using chrony to configure NTP"
 date: 2018-04-06
-tags: ["ubuntu", "bionic", "chrony"]
+tags: ["ubuntu"]
 draft: false
 ---
 

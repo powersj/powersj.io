@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu and Images: Clients"
 date: 2019-12-31
-tags: ["ubuntu", "images"]
+tags: ["ubuntu"]
 draft: true
 ---
 

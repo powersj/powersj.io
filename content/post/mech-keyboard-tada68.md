@@ -1,7 +1,6 @@
 ---
 title: "Building a Mechanical Keyboard: TADA68"
 date: 2018-04-01
-tags: ["keyboard", "mechanical", "tada68"]
 draft: false
 ---
 

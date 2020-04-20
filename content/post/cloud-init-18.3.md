@@ -1,7 +1,7 @@
 ---
 title: "cloud-init 18.3 Released"
 date: 2018-06-20
-tags: ["cloud-init", "ubuntu"]
+tags: ["cloud-init"]
 draft: false
 ---
 

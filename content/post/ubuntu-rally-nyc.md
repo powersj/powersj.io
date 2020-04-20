@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Server: Ubuntu Rally in NYC"
 date: 2017-10-02
-tags: ["ubuntu", "server", "rally"]
+tags: ["ubuntu"]
 draft: false
 ---
 

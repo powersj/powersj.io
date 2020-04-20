@@ -1,7 +1,7 @@
 ---
 title: "Intro to Health Informatics (CS 6440)"
 date: 2016-05-14
-tags: ["Georgia Tech", "masters"]
+tags: ["georgia tech"]
 draft: false
 ---
 

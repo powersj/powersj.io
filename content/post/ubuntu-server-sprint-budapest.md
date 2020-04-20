@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Server: Team Sprint in Budapest"
 date: 2018-03-16
-tags: ["ubuntu", "server", "sprint"]
+tags: ["ubuntu"]
 draft: false
 ---
 

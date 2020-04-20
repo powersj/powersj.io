@@ -1,7 +1,7 @@
 ---
 title: "LXD: Machine containers for Development"
 date: 2017-04-18
-tags: ["lxd", "lxc", "containers", "ubuntu"]
+tags: ["ubuntu"]
 draft: false
 ---
 

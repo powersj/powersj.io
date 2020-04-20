@@ -1,7 +1,7 @@
 ---
 title: "NVIDA CUDA on Ubuntu Server"
 date: 2017-11-03
-tags: ["ubuntu", "server", "nvidia"]
+tags: ["ubuntu"]
 draft: false
 ---
 

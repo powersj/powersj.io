@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu 19.10 Released"
 date: 2019-10-24
-tags: ["ubuntu", "eoan"]
+tags: ["ubuntu"]
 draft: false
 ---
 

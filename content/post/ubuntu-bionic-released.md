@@ -1,7 +1,7 @@
 ---
 title: "A month with Ubuntu 18.04 LTS Bionic"
 date: 2018-05-25
-tags: ["ubuntu", "bionic"]
+tags: ["ubuntu"]
 draft: false
 ---
 

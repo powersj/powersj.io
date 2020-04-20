@@ -1,7 +1,7 @@
 ---
 title: "Deploying Ubuntu root on ZFS with MAAS"
 date: 2018-10-12
-tags: ["ubuntu", "maas", "zfs"]
+tags: ["ubuntu"]
 draft: false
 ---
 

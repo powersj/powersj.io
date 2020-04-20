@@ -1,7 +1,7 @@
 ---
 title: Ubuntu ISO Download
 date: 2018-09-28
-tags: ["ubuntu", "snap", "iso"]
+tags: ["ubuntu"]
 draft: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Bionic: NVIDIA CUDA Setup"
 date: 2018-08-14
-tags: ["ubuntu", "server", "nvidia"]
+tags: ["ubuntu"]
 draft: false
 ---
 

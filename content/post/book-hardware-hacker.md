@@ -1,7 +1,6 @@
 ---
 title: "Review: The Hardware Hacker"
 date: 2018-07-31
-tags: ["book", "hardware", "hacker"]
 draft: false
 ---
 

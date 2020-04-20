@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Server: How to find Bugs to Fix"
 date: 2017-10-12
-tags: ["ubuntu", "server", "bugs"]
+tags: ["ubuntu"]
 draft: false
 ---
 

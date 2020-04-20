@@ -1,7 +1,7 @@
 ---
 title: "Editing a Raspbian Image on Ubuntu"
 date: 2018-04-13
-tags: ["ubuntu", "raspbian"]
+tags: ["ubuntu"]
 draft: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Artificial Intelligence for Robotics (CS 8803)"
 date: 2015-05-22
-tags: ["georgia tech", "masters", "ai"]
+tags: ["georgia tech"]
 draft: true
 ---
 

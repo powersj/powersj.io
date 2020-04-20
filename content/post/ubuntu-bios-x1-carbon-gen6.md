@@ -1,7 +1,7 @@
 ---
 title: "Update ThinkPad X1 Firmware with Ubuntu"
 date: 2019-05-31
-tags: ["thinkpad", "ubuntu", "x1"]
+tags: ["battlestation"]
 draft: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Knowledge-Based AI Cognitive Systems (CS 7637)"
 date: 2015-05-23
-tags: ["georgia tech", "masters", "ai"]
+tags: ["georgia tech"]
 draft: true
 ---
 

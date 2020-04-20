@@ -1,7 +1,7 @@
 ---
 title: Ubuntu Release Info
 date: 2018-11-02
-tags: ["ubuntu", "snap", "release"]
+tags: ["ubuntu"]
 draft: false
 ---
 

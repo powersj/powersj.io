@@ -1,7 +1,7 @@
 ---
 title: "Beautify a Snap Store Page"
 date: 2018-09-12
-tags: ["snap", "store"]
+tags: ["ubuntu"]
 draft: false
 ---
 

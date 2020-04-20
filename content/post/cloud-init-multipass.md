@@ -1,7 +1,7 @@
 ---
 title: "Using cloud-init with Multipass"
 date: 2018-03-30
-tags: ["cloud-init", "multipass", "user-data"]
+tags: ["cloud-init"]
 draft: false
 ---
 

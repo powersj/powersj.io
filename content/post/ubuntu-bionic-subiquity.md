@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Bionic: Subiquity Server ISO"
 date: 2018-01-25
-tags: ["ubuntu", "bionic", "subiquity", "iso"]
+tags: ["ubuntu"]
 draft: false
 ---
 

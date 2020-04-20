@@ -1,7 +1,7 @@
 ---
 title: "GIF Production from asciinema"
 date: 2018-09-10
-tags: ["asciinema", "gif", "ubuntu", "lxc"]
+tags: ["ubuntu"]
 draft: false
 ---
 

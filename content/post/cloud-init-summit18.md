@@ -1,7 +1,7 @@
 ---
 title: "cloud-init Summit 2018"
 date: 2018-08-27
-tags: ["cloud-init", "summit"]
+tags: ["cloud-init"]
 draft: false
 ---
 

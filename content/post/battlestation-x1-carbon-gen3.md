@@ -1,7 +1,7 @@
 ---
 title: "ThinkPad X1 Carbon Gen 3"
 date: 2016-07-21
-tags: ["battlestation", "thinkpad", "ubuntu", "x1"]
+tags: ["battlestation"]
 draft: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Software Development Process (CS 6300)"
 date: 2014-05-29
-tags: ["georgia tech", "masters"]
+tags: ["georgia tech"]
 draft: true
 ---
 

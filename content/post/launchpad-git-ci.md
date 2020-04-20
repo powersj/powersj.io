@@ -1,7 +1,7 @@
 ---
 title: "Launchpad Git Project Automation"
 date: 2018-06-29
-tags: ["launchpad", "git", "ci"]
+tags: ["ubuntu"]
 draft: false
 ---
 

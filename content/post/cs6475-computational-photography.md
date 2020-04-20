@@ -1,7 +1,7 @@
 ---
 title: "Computational Photography (CS 6475)"
 date: 2015-09-03
-tags: ["georgia tech", "masters", "photography"]
+tags: ["georgia tech"]
 draft: true
 ---
 

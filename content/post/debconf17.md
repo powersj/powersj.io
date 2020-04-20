@@ -1,7 +1,7 @@
 ---
 title: "Attending DebConf17 in Montreal, Canada"
 date: 2017-08-14
-tags: ["debian", "debconf17"]
+tags: ["debian"]
 draft: false
 ---
 

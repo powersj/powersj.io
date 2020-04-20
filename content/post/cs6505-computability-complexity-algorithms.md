@@ -1,7 +1,7 @@
 ---
 title: "Computability, Complexity, and Algorithms (CS 6505)"
 date: 2014-12-20
-tags: ["georgia tech", "masters", "networking"]
+tags: ["georgia tech"]
 draft: true
 ---
 

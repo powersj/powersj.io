@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning (CS 7641)"
 date: 2014-12-21
-tags: ["georgia tech", "masters", "ai"]
+tags: ["georgia tech"]
 draft: true
 ---
 

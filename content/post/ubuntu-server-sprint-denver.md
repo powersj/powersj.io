@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Server: Team Sprint in Denver"
 date: 2017-06-16
-tags: ["ubuntu", "server", "sprint"]
+tags: ["ubuntu"]
 draft: false
 ---
 

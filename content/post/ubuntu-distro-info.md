@@ -1,7 +1,7 @@
 ---
 title: "distro-info: Debian and Ubuntu Release Info"
 date: "2017-10-26"
-tags: ["ubuntu", "distro", "python"]
+tags: ["ubuntu", "python"]
 draft: false
 ---
 

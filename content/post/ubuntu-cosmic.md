@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu 18.10 Released"
 date: 2018-10-19
-tags: ["ubuntu", "cosmic"]
+tags: ["ubuntu"]
 draft: false
 ---
 

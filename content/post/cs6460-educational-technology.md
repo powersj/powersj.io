@@ -1,7 +1,7 @@
 ---
 title: "Educational Technology (CS 6460)"
 date: 2015-12-22
-tags: ["Georgia Tech", "masters", "visualization"]
+tags: ["georgia tech"]
 draft: false
 ---
 

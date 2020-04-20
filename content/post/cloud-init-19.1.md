@@ -1,7 +1,7 @@
 ---
 title: "cloud-init 19.1 Released"
 date: 2019-05-31
-tags: ["cloud-init", "ubuntu"]
+tags: ["cloud-init"]
 draft: false
 ---
 

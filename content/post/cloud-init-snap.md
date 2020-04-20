@@ -1,7 +1,7 @@
 ---
 title: "cloud-init: Creating a Classic Snap"
 date: 2017-04-21
-tags: ["cloud-init", "snap", "classic"]
+tags: ["cloud-init"]
 draft: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "cloud-init: Summit in Seattle, Washington"
 date: 2017-08-31
-tags: ["cloud-init", "summit"]
+tags: ["cloud-init"]
 draft: false
 ---
 

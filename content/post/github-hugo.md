@@ -1,7 +1,7 @@
 ---
 title: "Hosting Hugo Site on GitHub Pages"
 date: 2018-02-08
-tags: ["GitHub", "Hugo"]
+tags: ["blog"]
 draft: false
 ---
 

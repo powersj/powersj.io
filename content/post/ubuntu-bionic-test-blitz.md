@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Bionic Test Blitz"
 date: 2017-11-30
-tags: ["ubuntu", "bionic", "testing"]
+tags: ["ubuntu"]
 draft: false
 ---
 

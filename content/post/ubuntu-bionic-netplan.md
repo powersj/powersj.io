@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Bionic: Netplan"
 date: 2017-12-01
-tags: ["ubuntu", "netplan", "blitz"]
+tags: ["ubuntu"]
 draft: false
 ---
 

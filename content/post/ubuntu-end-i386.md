@@ -1,7 +1,7 @@
 ---
 title: "End 32-bit x86 Support in Ubuntu"
 date: 2018-05-18
-tags: ["ubuntu", "32-bit", "bionic", "cosmic"]
+tags: ["ubuntu"]
 draft: false
 ---
 
