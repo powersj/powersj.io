@@ -35,7 +35,7 @@ fi
 
 echo "updating git submodules"
 git submodule init || fail "submodule init failed"
-git submodule update || fail "submodule update failed"
+git submodule update --remote || fail "submodule update failed"
 
 echo "building site"
 cleanup
