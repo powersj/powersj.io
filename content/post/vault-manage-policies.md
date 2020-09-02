@@ -11,6 +11,8 @@ draft: false
 [Getting Started](/post/vault-getting-started) and
 [Secrets Engines](/post/vault-secrets-engine).*
 
+## Overview
+
 Vault uses [policies](https://www.vaultproject.io/docs/concepts/policies)
 to determine which secrets a client can see and what the user can
 do with them. Policies are deny by default in Vault and are evaluated as needed

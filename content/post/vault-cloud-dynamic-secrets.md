@@ -14,6 +14,8 @@ draft: false
 [Access Secrets](/post/vault-access-secrets), and
 [Database Dynamic Secrets](/post/vault-database-dynamic-secrets).*
 
+## Overview
+
 One of the key powerful features of Vault is the ability to dynamically generate
 credentials. The previous post on [Secrets Engines](/post/vault-secrets-engine)
 discussed the possible cloud options Vault provides for dynamic
@@ -25,6 +27,13 @@ The sequence of steps is similar for
 [AliCloud](https://www.vaultproject.io/docs/secrets/alicloud),
 [Google Cloud](https://www.vaultproject.io/docs/secrets/gcp), and
 [Microsoft Azure](https://www.vaultproject.io/docs/secrets/azure).
+
+The general workflow is:
+
+1. Enable cloud specific secrets engine
+1. Connect to cloud with credentials
+1. Create necessary roles
+1. Generate cloud role credentials as needed
 
 ## Connect to the Cloud
 
@@ -108,7 +117,6 @@ In the AWS Console these users will show up with the user name of
 
 ## Other Clouds
 
-Again the basic workflow of: 1) connect to the cloud, 2) create roles, and
-3) generate credentials for a specific role are the same for any of the other
-clouds that Vault can connect to. The differences are in specifying the role
-policies, which are cloud-specific.
+Again the basic workflow show above is similar on other clouds that Vault can
+connect to. The differences are in specifying the role policies, which are
+cloud-specific.

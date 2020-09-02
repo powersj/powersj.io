@@ -10,6 +10,8 @@ draft: false
 *This is the second post in a series on Vault. For the previous post see the
 [Getting Started](/post/vault-getting-started).*
 
+## Overview
+
 Vault has a variety of [secrets engines](https://www.vaultproject.io/docs/secrets)
 that store, generate, or encrypt data. Basic engines will simply store and read
 data, while more complex engines will connect to external services and have the

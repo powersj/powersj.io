@@ -13,6 +13,8 @@ draft: false
 [Manage Policies](/post/vault-manage-policies), and
 [Access Secrets](/post/vault-access-secrets).*
 
+## Overview
+
 One of the key powerful features of Vault is the ability to dynamically generate
 credentials. The previous post on [Secrets Engines](/post/vault-secrets-engine)
 discussed the possible database options Vault provides for dynamic
@@ -27,7 +29,7 @@ The general workflow is:
 1. Enable database secrets engine
 1. Create connection string to database with specific database plugin
 1. Create necessary roles
-1. Generate credentials as needed
+1. Generate database role credentials as needed
 
 ## Database Connection
 

@@ -12,6 +12,8 @@ draft: false
 [Secrets Engines](/post/vault-secrets-engine), and
 [Manage Policies](/post/vault-manage-policies).*
 
+## Overview
+
 [Authentication](https://www.vaultproject.io/docs/concepts/auth) is the process
 where users or automation provide credentials to gain a
 [token](https://www.vaultproject.io/docs/concepts/tokens). The tokens,
