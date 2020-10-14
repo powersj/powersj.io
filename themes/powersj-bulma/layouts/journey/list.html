@@ -1,0 +1,37 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">Journey</h1>
+            <h2 class="subtitle">Read about the path of my journey or download my resume</h2>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container content">
+        <p class="has-text-centered">
+            Click here for my <a href="{{ "resume.pdf" | absURL }}"><i class="mdi mdi-file-pdf-outline"></i> resume
+            </a> or connect with me on <a href="https://www.linkedin.com/in/powersj/"><i class="mdi mdi-linkedin"></i> LinkedIn</a>
+        </p>
+        <hr />
+        {{ range sort (where (where .Site.Pages ".Section" "journey") "Kind" "page") ".Weight" }}
+            <div class="columns is-variable is-12">
+                <div class="column is-4 is-vertical-center">
+                    <img src="{{ .Params.Image | absURL }}" >
+                </div>
+                <div class="column is-8">
+                    <h2 class="title">{{ .Params.Title }}</h2>
+                    <h3 class="subtitle">{{ .Params.Subtitle }}</h3>
+                    <p><strong>{{ .Params.Date_Start }}</strong> - <strong>{{ .Params.Date_End }}</strong></p>
+                    {{ .Content }}
+                </div>
+            </div>
+            <hr />
+        {{ end }}
+    </div>
+</section>
+
+{{ partial "footer" . }}

@@ -1,0 +1,10 @@
+name = "powersj-bulma"
+license = "MIT"
+description = "Personal blog theme powered by Hugo + Bulma"
+tags = ["blog", "minimal", "personal", "responsive", "local"]
+features = ["responsive"]
+min_version = "0.24.1"
+
+[author]
+  name = "Joshua Powers"
+  homepage = "https://powersj.io/"

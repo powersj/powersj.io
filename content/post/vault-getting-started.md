@@ -5,8 +5,6 @@ tags: ["vault"]
 draft: false
 ---
 
-# Getting Started with HashiCorp Vault
-
 [Vault](https://www.vaultproject.io/) provides a feature-rich method of secure
 storage of secrets. Vault is more than an API server to handle requests for
 secrets. It provides a secure and encrypted mechanism for the storage of

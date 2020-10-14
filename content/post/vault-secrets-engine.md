@@ -5,8 +5,6 @@ tags: ["vault"]
 draft: false
 ---
 
-# Storing Secrets in HashiCorp Vault
-
 *This is the second post in a series on Vault. For the previous post see the
 [Getting Started](/post/vault-getting-started).*
 

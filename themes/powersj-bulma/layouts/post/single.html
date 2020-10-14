@@ -1,0 +1,73 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+
+<section class="hero is-primary is-small">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">{{ .Title }}</h1>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container content">
+        <p>
+            <a href='{{ "/blog/" | absURL }}'>
+                <span class="icon"><i class="mdi mdi-arrow-left-bold"></i></span>Back to all posts
+            </a>
+        </p>
+        <br />
+
+        <!-- TOC only if large article -->
+        {{ if gt (len .TableOfContents) 80}}
+            <div class="columns is-12 is-variable">
+                <div class="column is-8">
+                    <p>
+                        <strong>{{ .Date.Format ("January 02, 2006") }}</strong>
+                        &ndash;
+                        {{ partial "tags" . }}
+                    </p>
+                    {{ .Content }}
+                </div>
+                <div class="column is-4">
+                    <div id="toc">
+                        <hr class="is-hidden-touch" />
+                        <div class="field is-size-5">
+                            <strong>Table of Contents</strong>
+                        </div>
+                        <div class="field">
+                            {{ .TableOfContents }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{ else }}
+            <p>
+                <strong>{{ .Date.Format ("January 02, 2006") }}</strong>
+                &ndash;
+                {{ partial "tags" . }}
+            </p>
+            {{ .Content }}
+        {{ end }}
+
+        <br />
+        <p>
+            <a href='{{ "/blog/" | absURL }}'>
+                <span class="icon"><i class="mdi mdi-arrow-left-bold"></i></span>Back to all posts
+            </a>
+        </p>
+
+        <!-- Related Posts -->
+        {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+        {{ if $related }}
+            <h4 class="title is-4">Related Posts</h4>
+            <ul>
+            {{ range $related }}
+                {{ partial "list-item" . }}
+            {{ end }}
+            </ul>
+        {{ end }}
+    </div>
+</section>
+
+{{ partial "footer" . }}

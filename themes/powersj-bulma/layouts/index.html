@@ -1,0 +1,48 @@
+{{ partial "header" . }}
+
+<section class="hero is-fullheight is-primary">
+    <div class="hero-body ">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column">
+                    <h6 class="is-6">Welcome, I am</h6>
+                    <h1 class="title is-1">Joshua Powers</h1>
+                    <h3 class="subtitle is-3">
+                        <span class="icon"><i class="mdi mdi-ship-wheel"></i></span>&nbsp;Seek out and explore
+                    </h3>
+                </div>
+                <div class="column">
+                    <a href="{{ "blog" | absURL }}" class="has-background-white">
+                        <div class="content">
+                            <div class="box">
+                                <h3><span class="icon"><i class="mdi mdi-text-box-multiple-outline"></i></span>&nbsp;Blog</h3>
+                                <p>Posts about technologies I have worked with</p>
+                            </div>
+                        </div>
+                    </a>
+                    <br />
+                    <a href="{{ "projects" | absURL }}" class="has-background-white">
+                        <div class="content">
+                            <div class="box">
+                                <h3><span class="icon"><i class="mdi mdi-bulletin-board"></i></span>&nbsp;Projects</h3>
+                                <p>Check out some of the applications and sites I have built</p>
+                            </div>
+                        </div>
+                    </a>
+                    <br />
+                    <a href="{{ "journey" | absURL }}" class="has-background-white">
+                        <div class="content">
+                            <div class="box">
+                                <h3><span class="icon"><i class="mdi mdi-map-outline"></i></span>&nbsp;Journey</h3>
+                                <p>Read about the path of my journey or download my resume</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

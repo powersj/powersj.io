@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ if .Params.Description }}{{ .Params.Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+{{ hugo.Generator }}
+
+<title>{{ .Title }}</title>
+{{ partial "head-open" . }}
+{{ partial "css" . }}
+{{ partial "js" . }}
+
+{{ with .OutputFormats.Get "RSS" }}
+<link href="{{ .RelPermalink }}" rel="feed" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
+<link href="{{ .RelPermalink }}" rel="alternate" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
+{{ end }}
+
+{{ if .Site.Params.favicon }}
+<link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
+{{ end }}
+{{ partial "head-close" . }}
+</head>
+
+<body>
+
+{{ partial "body-open" . }}

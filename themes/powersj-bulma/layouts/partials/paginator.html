@@ -1,0 +1,20 @@
+{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+<br />
+
+<div class="columns">
+    <div class="column is-4">
+    {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}">
+            <span class="icon"><i class="mdi mdi-arrow-left-bold"></i></span>&nbsp;previous
+        </a>
+    {{ end }}
+    </div>
+    <div class="column is-4">
+    {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}">
+            next&nbsp;<span class="icon"><i class="mdi mdi-arrow-right-bold"></i></span>
+        </a>
+    {{ end }}
+    </div>
+</div>
+{{ end }}

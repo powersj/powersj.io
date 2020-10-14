@@ -1,0 +1,35 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+
+<section class="hero is-primary is-small">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">Blog</h1>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container content">
+        <p>
+            <a href='{{ "/blog/" | absURL }}'>
+                <span class="icon"><i class="mdi mdi-arrow-left-bold"></i></span>Back to all posts
+            </a>
+        </p>
+
+        <h2 class="subtitle">{{ .Title }}</h2>
+        <div class="columns is-multiline">
+        {{ range sort $.Site.Taxonomies.tags.Alphabetical }}
+            <div class="column is-one-third">
+                <a href="{{ .Name | urlize }}">
+                    <div class="box has-text-centered">{{ .Name }}</div>
+                </a>
+            </div>
+        {{ end }}
+        </div>
+
+        {{ partial "paginator" . }}
+    </div>
+</section>
+
+{{ partial "footer" . }}

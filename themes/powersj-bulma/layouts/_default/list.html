@@ -1,0 +1,36 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+
+<section class="hero is-primary is-small">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">Blog</h1>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container content">
+        <p>
+            <a href='{{ "/tags/" | absURL }}'>
+                <span class="icon"><i class="mdi mdi-arrow-left-bold"></i></span>Back to all tags
+            </a>
+        </p>
+
+        <h2 class="subtitle">{{ .Title }} Tagged Posts</h2>
+        <p>
+            If you have a compatible reader, be sure to check out my <a href='{{ "/tags/index.xml" | absURL }}'>RSS Feed</a>
+            for automatic updates or use this <a href='/tags/{{ .Title }}/index.xml'>"{{ .Title }}" tag-specific RSS feed</a>.
+        </p>
+
+        <ul>
+        {{ range (.Paginator 12).Pages }}
+            {{ partial "list-item" . }}
+        {{ end }}
+        </ul>
+
+        {{ partial "paginator" . }}
+    </div>
+</section>
+
+{{ partial "footer" . }}

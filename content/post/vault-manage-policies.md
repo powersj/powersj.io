@@ -5,8 +5,6 @@ tags: ["vault"]
 draft: false
 ---
 
-# Managing HashiCorp Vault Access Policies
-
 *This is the third post in a series on Vault. For previous posts see,
 [Getting Started](/post/vault-getting-started) and
 [Secrets Engines](/post/vault-secrets-engine).*

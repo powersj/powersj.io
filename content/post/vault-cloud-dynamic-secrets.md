@@ -5,8 +5,6 @@ tags: ["vault"]
 draft: false
 ---
 
-# Cloud Dynamic Secrets with HashiCorp Vault
-
 *This is the sixth post in a series on Vault. For previous posts see,
 [Getting Started](/post/vault-getting-started),
 [Secrets Engines](/post/vault-secrets-engine),

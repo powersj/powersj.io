@@ -5,8 +5,6 @@ tags: ["vault"]
 draft: false
 ---
 
-# Access HashiCorp Vault Secrets
-
 *This is the fourth post in a series on Vault. For previous posts see,
 [Getting Started](/post/vault-getting-started),
 [Secrets Engines](/post/vault-secrets-engine), and

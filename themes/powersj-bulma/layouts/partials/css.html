@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="{{ "css/bulma.min.css" | absURL }}">
+<link rel="stylesheet" href="{{ "css/materialdesignicons.min.css" | absURL }}">
+
+<style>
+    @font-face {
+        font-family: 'Work Sans';
+        src: url("{{ "fonts/WorkSans.woff2" | absURL }}") format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url("{{ "fonts/Inter.woff2" | absURL }}") format('woff2');
+    }
+
+    @font-face {
+        font-family: 'JetBrains Mono';
+        src: url("{{ "fonts/JetBrainsMono.woff2" | absURL }}") format('woff2');
+    }
+</style>
+
+{{ range .Site.Params.css }}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{ end }}

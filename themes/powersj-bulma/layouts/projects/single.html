@@ -1,0 +1,58 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+
+<section class="hero is-primary is-small">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">{{ .Title }}</h1>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container content">
+        <p>
+            <a href='{{ "/projects/" | absURL }}'>
+                <span class="icon"><i class="mdi mdi-arrow-left-bold"></i></span>Back to all projects
+            </a>
+        </p>
+        <br />
+
+        <!-- TOC only if large article -->
+        {{ if gt (len .TableOfContents) 80}}
+            <div class="columns is-12 is-variable">
+                <div class="column is-8">
+                    <p>
+                        <strong>{{ .Date.Format ("January 02, 2006") }}</strong>
+                    </p>
+                    {{ .Content }}
+                </div>
+                <div class="column is-4">
+                    <div id="toc">
+                        <hr class="is-hidden-touch" />
+                            <div class="field is-size-5">
+                                <strong>Table of Contents</strong>
+                            </div>
+                            <div class="field">
+                                {{ .TableOfContents }}
+                            </div>
+                        </div>
+                </div>
+            </div>
+        {{ else }}
+                <p>
+                    <strong>{{ .Date.Format ("January 02, 2006") }}</strong>
+                </p>
+                {{ .Content }}
+        {{ end }}
+
+        <br />
+        <p>
+            <a href='{{ "/projects/" | absURL }}'>
+                <span class="icon"><i class="mdi mdi-arrow-left-bold"></i></span>Back to all projects
+            </a>
+        </p>
+    </div>
+</section>
+
+{{ partial "footer" . }}
