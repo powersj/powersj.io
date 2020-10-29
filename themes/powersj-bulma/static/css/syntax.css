@@ -1,4 +1,9 @@
 
+#TableOfContents ul {
+    list-style-type: none;
+    margin-left: 1em;
+}
+
 #TableOfContents ul ul {
     list-style-type: disc;
 }
