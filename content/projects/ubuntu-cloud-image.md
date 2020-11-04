@@ -6,7 +6,11 @@ date: 2020-10-14
 image: img/projects/cloud.png
 ---
 
-This is used to find the latest Ubuntu image information for clouds. The following clouds are supported:
+Finding the latest Ubuntu image on your favorite cloud can be difficult. Each
+cloud has a unique method for finding the latest images. The
+[Ubuntu Cloud Image](https://snapcraft.io/ubuntu-cloud-image) CLI tool was
+created to find the latest Ubuntu images on clouds. The following clouds are
+supported:
 
 - Amazon Web Services (aws)
 - Amazon Web Services China (aws-cn)
@@ -18,13 +22,19 @@ This is used to find the latest Ubuntu image information for clouds. The followi
 - Metal as a Service (MAAS) Version 2 (maasv2)
 - Metal as a Service (MAAS) Version 3 (maas)
 
-The program uses the streams output provided by various clouds to determine the latest images available on clouds. Where they are supported this includes the latest daily, minimal, and daily minimal images as well. Daily and minimal images are enabled with the `--daily` and `--minimal` flags.
+The program uses the streams output provided by various clouds to determine
+the latest images available on clouds. Where they are supported this includes
+the latest daily, minimal, and daily minimal images as well. Daily and minimal
+images are enabled with the `--daily` and `--minimal` flags.
 
-The output is the full JSON output from streams providing details about the requested image. If no image matches the specific filter then an empty JSON array is printed.
+The output is the full JSON output from streams providing details about the
+requested image. If no image matches the specific filter then an empty JSON
+array is printed.
 
 ## How to Install
 
-As this is a snap it is installed easily via the [snap store](https://snapcraft.io/ubuntu-cloud-image):
+As this is a snap it is installed easily via the
+[snap store](https://snapcraft.io/ubuntu-cloud-image):
 
 ```bash
 snap install ubuntu-cloud-image
@@ -38,7 +48,8 @@ Below is usage for the app:
 ubuntu-cloud-image {cloud} {release} [--daily] [--minimal]
 ```
 
-For example, to find bugs updated in the last 30 days for the libvirt package a user would run:
+For example, to find bugs updated in the last 30 days for the libvirt package
+a user would run:
 
 ```bash
 ubuntu-cloud-image kvm bionic
@@ -46,10 +57,12 @@ ubuntu-cloud-image kvm bionic
 
 ## Bugs, Feature Requests, Questions
 
-If you encounter an issue, have a feature request or idea for something new, or have questions about the tool feel free to [file a GitHub issue](https://github.com/powersj/ubuntu-cloud-image/issues/new)!
+If you encounter an issue, have a feature request or idea for something new,
+or have questions about the tool feel free to
+[file a GitHub issue](https://github.com/powersj/ubuntu-cloud-image/issues/new)!
 
 ## References
 
-* [Snap Store Page](https://snapcraft.io/ubuntu-cloud-image)
-* [Source Code](https://github.com/powersj/ubuntu-cloud-image)
-* [Bug Reporting](https://github.com/powersj/ubuntu-cloud-image/issues/new)
+- [Snap Store Page](https://snapcraft.io/ubuntu-cloud-image)
+- [Source Code](https://github.com/powersj/ubuntu-cloud-image)
+- [Bug Reporting](https://github.com/powersj/ubuntu-cloud-image/issues/new)
