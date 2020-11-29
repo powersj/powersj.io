@@ -48,8 +48,7 @@ Below is usage for the app:
 ubuntu-cloud-image {cloud} {release} [--daily] [--minimal]
 ```
 
-For example, to find bugs updated in the last 30 days for the libvirt package
-a user would run:
+For example, to find the latest bionic KVM image run the following:
 
 ```bash
 ubuntu-cloud-image kvm bionic
