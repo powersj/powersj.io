@@ -1,8 +1,0 @@
-{{ $.Scratch.Set "link" .RelPermalink }}
-{{ with .Params.link }} {{ $.Scratch.Set "link" . }} {{ end }}
-
-<li>
-    <a class='blog-link' href='{{ .Scratch.Get "link" }}'>
-        <code>{{ .Date.Format "2006-01-02"}}</code> &mdash; {{ .Title }}
-    </a>
-</li>

@@ -1,0 +1,45 @@
+<section class="container page">
+    <div class="about">
+      {{ if and (isset .Site.Params "avatarurl") (not (isset .Site.Params "gravatar")) }}
+        {{ with .Site.Params.avatarURL }}
+          <div class="avatar centered"><img src="{{ . | relURL }}" alt="avatar"></div>
+        {{ end }}
+      {{ end }}
+      {{ with .Site.Params.gravatar }}
+        <div class="avatar centered"><img src="https://www.gravatar.com/avatar/{{md5 .}}?s=240&d=mp" alt="gravatar"></div>
+      {{ end }}
+
+      <h1 class="centered">{{ .Site.Params.author }}</h1>
+      <h3 class="centered">{{ .Site.Params.info }}</h3>
+    </div>
+
+
+    <h2>Latest Blog Posts</h2>
+    <div class="posts">
+      {{ range first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "posts" ) }}
+      <div class="post-link">
+        <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">
+          <div class="post-content">
+            <time>{{ .Date.Format ("Jan 02") }}</time>
+            <h3>{{ .Title }}</h3>
+          </div>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+
+    <h2>Projects</h2>
+    <div class="projects">
+      {{ range where .Site.RegularPages.ByDate.Reverse "Section" "projects" }}
+      <div class="project">
+        <div>
+          <a href="{{ .Params.link | default .RelPermalink }}">
+            <div class="icon">{{ .Params.icon | emojify }}</div>
+            <h3>{{ .Title }}</h3>
+          </a>
+          <div class="description"><p>{{ .Description }}</p></div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+</section>

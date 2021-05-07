@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap);
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h3, h4, h5, h6, p, a, .container {
+    font-family: 'DM Sans', sans-serif;
+}
+
+code, kbd, pre {
+    font-family: 'DM Mono', monospace;
+}
+
+p, li {
+
+    font-size: 2.1rem;
+    line-height: 1.75em;
+    margin-top: 0rem;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.33rem solid;
+    color: #1b1d25;
+    letter-spacing: -0.1rem;
+    font-family: 'DM Mono', monospace;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+
+img[src$='#center'] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+time {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.6rem;
+    color: #858b93;
+}
+
+code {
+    padding: 5px;
+    border-radius: .35rem;
+}
+
+/* Links */
+
+.title-link {
+    font-family: 'DM Mono', monospace;
+}
+
+p a, li a {
+    color: #212121;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 3px solid #42a5f5;
+}
+
+p a:hover, li a:hover {
+    text-decoration: none;
+    border-radius: 0.35rem;
+    background: #42a5f5;
+}
+
+body.colorscheme-dark a {
+    color: #dadada;
+}
+
+.navigation-link {
+    border-bottom: none;
+}
+
+.navigation-link:hover {
+    border-radius: none;
+    background: none;
+}
+
+.navigation-title:hover {
+    text-decoration: none;
+}
+
+.tags.a {
+    padding: 5px;
+    border-radius: .35rem;
+}
+
+/* Posts */
+
+.post-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.post-content time {
+    display: block;
+    align-items: center;
+    flex: 0 0 10%;
+}
+
+.post-link a {
+    display: flex;
+    padding: 1rem 0rem 1rem 1rem;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.post-link a:hover {
+    border-radius: 0.35rem;
+    background: #42a5f5;
+}
+
+.post-link h3 {
+    margin-top: 0.1rem;
+    margin-bottom: 0;
+}
+
+/* Projects */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0.75rem 0;
+    grid-gap: 1.5rem;
+}
+
+.project .icon {
+    font-size: 2.5rem;
+    width: 3.5rem;
+}
+
+.project a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+    border-width: 0;
+    text-decoration: none;
+}
+
+.project a:hover h3 {
+    border-radius: 0.35rem;
+    background: #42a5f5;
+}
+
+.project h3 {
+    margin: 0;
+    text-decoration: underline;
+}
+
+.project .description {
+    color: #858b93;
+}

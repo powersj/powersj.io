@@ -1,0 +1,35 @@
+{{ define "title" }}
+  {{ title (i18n (lower .Title)) | default .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+<section class="container list">
+    <h1 class="title">
+      <a class="title-link" href="{{ .Permalink | safeURL }}"> Journey</a>
+    </h1>
+
+    {{ .Content }}
+
+    <p>
+        Click here for my <a href="{{ "resume.pdf" | absURL }}"><i class="mdi mdi-file-pdf-outline"></i> resume
+        </a> or connect with me on <a href="https://www.linkedin.com/in/powersj/"><i class="mdi mdi-linkedin"></i> LinkedIn</a>
+    </p>
+
+    <div class="journey">
+    {{ range sort (where (where .Site.Pages ".Section" "journey") "Kind" "page") ".Weight" }}
+    <hr />
+        <div class="journey-entry">
+            <div class="journey-img">
+                <img src="{{ .Params.Image | absURL }}" >
+            </div>
+            <div class="journey-date">
+                <p><strong>{{ .Params.Date_Start }}</strong> - <strong>{{ .Params.Date_End }}</strong></p>
+            </div>
+            <div class="journey-content">
+                {{ .Content }}
+            </div>
+        </div>
+    {{ end }}
+    </div>
+
+</section>
+{{ end }}

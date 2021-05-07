@@ -1,9 +1,8 @@
 ---
 title: DebtCalc
+icon: 🧮
 description: Simple iOS app for debt calculations
-weight: 5
 date: 2012-08-22
-image: img/projects/debtcalc.png
 ---
 
 [DebtCalc](https://web.archive.org/web/20130822201207/http://ncontrol.co/) was

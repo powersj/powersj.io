@@ -1,10 +1,10 @@
 all: server
 
-publish:
-	./publish.sh
-
 server:
 	hugo server --watch
 
-.PHONY: all publish server
+update:
+	git submodule init
+	git submodule update --remote
 
+.PHONY: all server update

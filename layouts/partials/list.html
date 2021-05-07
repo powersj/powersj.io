@@ -1,0 +1,36 @@
+<section class="container list">
+    <h1 class="title">
+        <a class="title-link" href="{{ .Permalink | safeURL }}">
+            {{- if eq .Kind "term" -}}
+                {{- i18n .Data.Singular | title -}}
+                {{- print ": " -}}
+            {{- end -}}
+
+            {{- i18n (lower .Title) | default .Title | title -}}
+        </a>
+    </h1>
+
+    {{ .Content }}
+
+    {{ range (.Paginator.Pages.GroupByDate "2006") }}
+    <section>
+        <h2>{{ .Key }}</h2>
+        <div class="posts">
+        {{ range .Pages }}
+            {{ if not (eq .Title "Posts") }}
+            <div class="post-link">
+                <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">
+                    <div class="post-content">
+                        <time>{{ .Date.Format ("Jan 02") }}</time>
+                        <h3>{{ .Title }}</h3>
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+        {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    {{ partial "pagination.html" . }}
+</section>
