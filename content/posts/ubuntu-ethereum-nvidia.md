@@ -4,6 +4,7 @@ date: 2017-09-20
 tags: ["ubuntu"]
 draft: false
 aliases:
+  - /post/ubuntu-etherium-nvidia/
   - /post/ubuntu-ethereum-nvidia/
 ---
 
