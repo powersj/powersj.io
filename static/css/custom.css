@@ -191,6 +191,14 @@ body.colorscheme-dark a {
         font-size: 1.2rem
     }
 
+    .content {
+        margin-top: 0rem;
+    }
+
+    .content article header {
+        margin-top: 0rem;
+    }
+
     .projects {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
