@@ -164,3 +164,33 @@ body.colorscheme-dark a {
 .project .description {
     color: #858b93;
 }
+
+@media screen and (max-width: 768px) {
+    h1 {
+        line-height: 5rem;
+        font-size: 3.0rem;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    p, li {
+        font-size: 1.0em;
+        line-height: 1.75em;
+        margin-top: 0rem;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0.75rem 0;
+        grid-gap: 1.5rem;
+    }
+}
