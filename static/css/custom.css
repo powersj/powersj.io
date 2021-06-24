@@ -5,7 +5,7 @@ html {
     scroll-behavior: smooth;
 }
 
-h1, h3, h4, h5, h6, p, a, .container {
+h1, h3, h4, h5, h6, p, a, .container, .navigation a {
     font-family: 'DM Sans', sans-serif;
 }
 

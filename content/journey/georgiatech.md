@@ -7,9 +7,10 @@ date_end: May 2016
 image: img/masters/gt.png
 ---
 
-Received my in Masters in Computer Science in Computer Science. Graduated with a 3.90/4.00.
+Completed my Master in Computer Science in Computer Science. Graduated with a
+3.90/4.00.
 
-Coursework included in Artificial Intelligence include:
+Coursework included in Artificial Intelligence included:
 
 * Knowledge-Based AI: Cognitive Systems
 * Machine Learning
@@ -17,10 +18,3 @@ Coursework included in Artificial Intelligence include:
 * Big Data for Health Informatics
 * Artificial Intelligence for Robotics
 * Intro to Health Informatics
-
-Additional coursework:
-
-* Computer Networks
-* Software Development Process
-* Computational Photography
-* Educational Technology

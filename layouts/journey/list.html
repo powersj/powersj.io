@@ -16,7 +16,7 @@
 
     <div class="journey">
     {{ range sort (where (where .Site.Pages ".Section" "journey") "Kind" "page") ".Weight" }}
-    <hr />
+        <br />
         <div class="journey-entry">
             <div class="journey-img">
                 <img src="{{ .Params.Image | absURL }}" >
@@ -28,6 +28,7 @@
                 {{ .Content }}
             </div>
         </div>
+        <hr />
     {{ end }}
     </div>
 

@@ -7,7 +7,7 @@ Hello there!
 I currently work at Canonical, the company behind Ubuntu. I work on the Public
 Cloud team, which is responsible for creating and publishing all Ubuntu cloud
 images across Amazon Web Services, Microsoft Azure, Google Cloud and many other
-clouds. Previously, I worked and managed on the Ubuntu Server team.
+clouds. Previously, I worked on and managed the Ubuntu Server team.
 
 In 2016, I completed my master's degree in Computer Science at the Georgia
 Institute of Technology with a focus in Interactive Intelligence. My first

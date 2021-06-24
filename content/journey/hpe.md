@@ -7,14 +7,18 @@ date_end: Jun 2016
 image: img/hpe/hpe.png
 ---
 
-### Linux Distribution Lead
+### Senior Engineer
 
-Enhanced product security and reduce duplicated efforts across the company, by driving the architecture of a Debian derivative distribution. Coordinated efforts between development, support, security, and QA teams and on-boarded additional products and teams for the adoption of the distribution. Distribution was adopted across both shipping and experimental products throughout the company.
+Enhanced product security and reduced duplicate efforts across the
+company, through the development of HP's own Debian-derivative
+operating system
 
-### Software Quality and Test Development Lead
+### Software Engineer
 
-To reduce development delays and meet quality goals designed and implemented automated smoke, integration, and scale tests to run against a product API .
+Initiated performance characterization testing methodology and
+qualified the latest I/O technologies to ensure performance across
+HP’s next-generation mission-critical and enterprise servers
 
-### Linux I/O Triage Engineer
-
-Qualified the latest I/O technologies and ensure performance across scale, developed performance characterization testing methodology, which measures how network and storage I/O performed on HP’s next-generation mission-critical and enterprise servers, storage, and networking technologies.
+Conceived automated smoke, integration, and scale tests to run
+against new product API to reduce development delays and meet
+quality goals
