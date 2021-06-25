@@ -4,10 +4,8 @@
 {{ define "content" }}
 <section class="container list">
     <h1 class="title">
-      <a class="title-link" href="{{ .Permalink | safeURL }}"> Journey</a>
+      <a class="title-link" href="{{ .Permalink | safeURL }}">Journey</a>
     </h1>
-
-    {{ .Content }}
 
     <p>
         Click here for my <a href="{{ "resume.pdf" | absURL }}"><i class="mdi mdi-file-pdf-outline"></i> resume
