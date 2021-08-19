@@ -14,19 +14,16 @@
 
     <div class="journey">
     {{ range sort (where (where .Site.Pages ".Section" "journey") "Kind" "page") ".Weight" }}
+        <hr />
         <br />
         <div class="journey-entry">
             <div class="journey-img">
-                <img src="{{ .Params.Image | absURL }}" >
-            </div>
-            <div class="journey-date">
-                <p><strong>{{ .Params.Date_Start }}</strong> - <strong>{{ .Params.Date_End }}</strong></p>
+                <img src="{{ .Params.Image | relURL }}" >
             </div>
             <div class="journey-content">
                 {{ .Content }}
             </div>
         </div>
-        <hr />
     {{ end }}
     </div>
 

@@ -165,6 +165,22 @@ body.colorscheme-dark a {
     color: #858b93;
 }
 
+/* Journey */
+.journey-entry {
+    display: flex;
+}
+
+.journey-img {
+    float: left;
+    width: 30%;
+}
+
+.journey-content {
+    float: right;
+    margin: 0 5em;
+    width: 70%;
+}
+
 @media screen and (max-width: 768px) {
     h1 {
         line-height: 5rem;
