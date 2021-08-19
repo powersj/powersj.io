@@ -1,7 +1,7 @@
 ---
 title: Colorado State University
 subtitle:
-weight: 4
+weight: 5
 date_start: Aug 2005
 date_end: Dec 2009
 image: img/bachelors/csu.png

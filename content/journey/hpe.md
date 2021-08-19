@@ -1,7 +1,7 @@
 ---
 title: Hewlett Packard Enterprise
 subtitle:
-weight: 3
+weight: 4
 date_start: Jul 2007
 date_end: Jun 2016
 image: img/hpe/hpe.png

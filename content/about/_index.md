@@ -4,15 +4,19 @@ title: About
 
 Hello there!
 
-I currently work at Canonical, the company behind Ubuntu. I work on the Public
-Cloud team, which is responsible for creating and publishing all Ubuntu cloud
-images across Amazon Web Services, Microsoft Azure, Google Cloud and many other
-clouds. Previously, I worked on and managed the Ubuntu Server team.
+I currently work at [InfluxData](https://www.influxdata.com/) on the
+[Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) project.
 
-In 2016, I completed my master's degree in Computer Science at the Georgia
-Institute of Technology with a focus in Interactive Intelligence. My first
-Machine Learning course opened my eyes to the field of AI and continued to
-take course work in big data, machine learning, and knowledge-based AI.
+Previously I spent five years at [Canonical](https://canonical.com/), the
+company behind [Ubuntu](https://ubuntu.com/). There I spent most of my time as
+the QA engineering and then Engineering Manager for Ubuntu Server. I spent my
+last year working on the Public Cloud team, which is responsible for creating
+and publishing all Ubuntu cloud images across Amazon Web Services, Microsoft
+Azure, Google Cloud and many other clouds.
+
+I have a master's degree in Computer Science from
+[Georgia Institute of Technology](https://www.gatech.edu/) with a focus in
+Interactive Intelligence.
 
 Previous to Canonical, I spent nine years at Hewlett Packard. There I worked on
 producing HP's own Debian derivative, system deployment and configuration,

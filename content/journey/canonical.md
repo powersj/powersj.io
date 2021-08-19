@@ -1,9 +1,9 @@
 ---
 title: Canonical Ltd.
 subtitle:
-weight: 1
+weight: 2
 date_start: Jul 2016
-date_end: Current
+date_end: Aug 2021
 image: img/ubuntu/canonical.png
 ---
 

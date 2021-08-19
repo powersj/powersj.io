@@ -1,7 +1,7 @@
 ---
 title: Georgia Institute of Technology
 subtitle:
-weight: 2
+weight: 3
 date_start: Jan 2014
 date_end: May 2016
 image: img/masters/gt.png
