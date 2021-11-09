@@ -19,7 +19,7 @@ info = "Seek out, explore, and build things"
 
 #gravatar = ""
 #avatarURL = "images/avatar.jpg"
-footerContent = "<a href='https://github.com/powersj/powersj.github.io/issues/new'>Report a bug on this site</a>"
+footerContent = "<a href='https://github.com/powersj/powersj.io/issues/new'>Report a bug on this site</a>"
 dateFormat = "January 2, 2006"
 hideFooter = false
 hideCopyright = false
