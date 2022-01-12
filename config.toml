@@ -6,7 +6,7 @@ defaultContentLanguage = "en"
 
 paginate = 20
 
-pygmentsStyle = "solarized-dark"
+pygmentsStyle = "solarized-dark256"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
 enableEmoji = true
