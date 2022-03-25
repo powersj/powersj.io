@@ -70,6 +70,6 @@ this value will also switch to using the new parser.
 
 ## Try it out
 
-Whether you have one of these exciting new architectures or not, head over to
+Whether you are parsing Influx line protocol or not, head over to
 the [GitHub release page](https://github.com/influxdata/telegraf/releases) for
 Telegraf, and let Telegraf help you collect metrics today!
