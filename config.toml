@@ -6,7 +6,7 @@ defaultContentLanguage = "en"
 
 paginate = 20
 
-pygmentsStyle = "solarized-dark256"
+pygmentStyle = "monokai"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
 enableEmoji = true
