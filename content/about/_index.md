@@ -4,8 +4,9 @@ title: About
 
 Hello there!
 
-I currently work at [InfluxData](https://www.influxdata.com/) on the
-[Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) project.
+I currently work at [InfluxData](https://www.influxdata.com/) as a maintainer
+of the open source [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)
+project.
 
 Previously I spent five years at [Canonical](https://canonical.com/), the
 company behind [Ubuntu](https://ubuntu.com/). There I spent most of my time as
