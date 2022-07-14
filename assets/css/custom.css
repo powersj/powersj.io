@@ -79,6 +79,10 @@ body.colorscheme-dark a {
     color: #dadada;
 }
 
+.navigation-title {
+    line-height: 42px;
+}
+
 .navigation-link {
     border-bottom: none;
 }
