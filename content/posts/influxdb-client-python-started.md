@@ -2,7 +2,7 @@
 title: "Getting started with the InfluxDB Python Client Library"
 date: 2022-07-17
 tags: ["influxdata"]
-draft: false
+draft: true
 aliases:
   - /post/influxdb-client-library-python-getting-started/
 ---
@@ -12,62 +12,71 @@ TODO: intro
 * get the library
 * API structure
 * creating a client
-* data
 * writing
+* data
 
 ## Getting Started
 
-The InfluxDB Python client library supports InfluxDB 2.x and newer as well as
-InfluxDB 1.8 and newer. It is built and tested to support Python 3.6 and newer.
+The InfluxDB Python client library supports InfluxDB 2.x, InfluxDB Cloud,
+as well as InfluxDB 1.8 and newer versions. It is built and tested to support
+Python 3.6 and newer.
+
+Note that the support of InfluxDB 1.8 is limited to a subset of APIs and
+requires a few differences creating the client connection. These are called
+out further in this post.
 
 ### Download
 
 The InfluxDB Python client library is available directly from [PyPI][1] for
-easy installs with pip or as a dependency in a project:
+easy installs directly with pip or as a dependency in a project:
 
 ```bash
 pip install influxdb-client
 ```
 
-This installs the library with the basic set of dependencies.
+[1]: https://pypi.org/project/influxdb-client/
 
 ### API & Documentation
 
-The client library API and documentation is available on [Read the Docs][3].
+The client library API and documentation is available on [Read the Docs][2].
 
-[3]: https://influxdb-client.readthedocs.io/en/stable/
+[2]: https://influxdb-client.readthedocs.io/en/stable/
 
 ### Package Extras
 
-There are three package extras available as well that will pull in additional
-dependencies:
+The library is kept small, however, there are three package extras available
+that users can use to pull in additional dependencies:
 
-* `influxdb-client[ciso]`: includes a date package that utilizes
-  C-bindings. The benefit of this package is faster handling of dates at the
-  cost of requiring the use of C-bindings.
+* `influxdb-client[ciso]`: makes use of the [ciso8601][3] date time parser. It
+  utilizes C-bindings, which result in faster handling of date time objects at
+  the cost of requiring the use of C-bindings.
 * `influxdb-client[async]`: as the name implies, this allows for the use of
   asynchronous requests with the client library if the user's tools make use of
   the async and await Python commands.
-* `influxdb-client[extras]`: adds special support for pandas and data frames.
+* `influxdb-client[extras]`: adds special support to make use of [Pandas][4]
+  [data frames][5]. The Pandas library is a commonly used data analysis tool.
   These additional dependencies are large and not always needed, therefore it
   was included as a separate extra package.
+
+[3]: https://github.com/closeio/ciso8601
+[4]: https://pandas.pydata.org/
+[5]: https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html#dataframe
 
 ### Source
 
 If a user wants to build or use the library from the source it is available on
-[Github][2]:
+[GitHub][6]:
 
 ```bash
 git clone https://github.com/influxdata/influxdb-client-python
 ```
 
-[1]: https://pypi.org/project/influxdb-client/
-[2]: https://github.com/influxdata/influxdb-client-python
+[6]: https://github.com/influxdata/influxdb-client-python
 
 ## API
 
-At a high-level the API consists of a client and which then provides access
-to various APIs exposed by InfluxDB.
+At a high-level the API consists of a client, which then provides access to
+various APIs exposed by InfluxDB for a specific instance.
 
 The [InfluxDBClient][10] is used to handle authentication parameters and
 connect to InfluxDB. There are a number of different ways to specify the
@@ -115,19 +124,22 @@ APIs:
 ## InfluxDBClient
 
 To use the client library at a minimum, users need to specify connection
-information and import and create the client to gain access to the various
-APIs.
+information and create a client to gain access to the various APIs.
 
 The connection information specifies the following information:
 
-1) **URL**: The URL of the InfluxDB instance (e.g. `http://192.168.100.10:8086`) with
-  the hostname or IP address and port. Also note that if certificates are
-  setup, then the user will need to also use `https://`.
-2) **Access Token**: the access token TODO what is this in 2.0?
-3) **Org**: the org the token has access to
+1) **URL**: The URL of the InfluxDB instance (e.g.
+  `http://192.168.100.10:8086`) with the hostname or IP address and port. Also
+  note that if certificates are setup, then the user will need to also use
+  `https://`.
+2) **Access Token**: the access token. If using InfluxDB 1.8, username and
+  passwords are used instead of tokens. Set the token parameter using the
+  format `username:password`.
+3) **Org**: the org the token has access to. In InfluxDB 1.8, there is no
+  concept of organization. The org parameter is ignored and can be left empty.
 
 This information can be specified via file, the environment, or directly in
-code:
+code.
 
 ### Via Configuration File
 
@@ -175,20 +187,13 @@ with InfluxDBClient.from_config_file("config.toml") as client:
 Users can export or set any of the following environment variables:
 
 ```s
-INFLUXDB_V2_URL
-INFLUXDB_V2_ORG
-INFLUXDB_V2_TOKEN
-INFLUXDB_V2_TIMEOUT
-INFLUXDB_V2_VERIFY_SSL
-INFLUXDB_V2_SSL_CA_CERT
-INFLUXDB_V2_CONNECTION_POOL_MAXSIZE
-INFLUXDB_V2_AUTH_BASIC
-INFLUXDB_V2_PROFILERS
+INFLUXDB_V2_URL="http://localhost:8086"
+INFLUXDB_V2_ORG="my-org"
+INFLUXDB_V2_TOKEN="my-token"
 ```
 
-Users can also set default tags to all data creating environment variables
-using the prefix `INFLUXDB_V2_TAG_<name>`. For example to set a tag called
-"ID", users can set `INFLUXDB_V2_TAG_ID=<id>`.
+See the docs for a full list of [recognized environment variables][22]
+including setting default tags for new data.
 
 Then in code the user can create a client as follows:
 
@@ -201,6 +206,8 @@ with InfluxDBClient.from_env_properties() as client:
     with client.write_api() as writer:
         writer.write(bucket="testing", record="sensor temp=23.3")
 ```
+
+[22]: https://influxdb-client.readthedocs.io/en/stable/api.html#influxdb_client.InfluxDBClient.from_env_properties
 
 ### Via Code
 
@@ -228,9 +235,16 @@ organization. That organization is used as the default for the query, write,
 and delete APIs. A user can always specify a different organization to override
 a set value.
 
+The docs list out the additional [possible parameters][23] when creating the
+client.
+
+[23]: https://influxdb-client.readthedocs.io/en/stable/api.html#influxdb_client.InfluxDBClient
+
 ## WriteApi
 
-Users can create a client and write the data API with only three lines of code:
+Once a client is created users can start to make use of the various APIs. The
+following will demonstrate the write query API to send data to InfluxDB. This
+is accomplished with only a few lines of code:
 
 ```python
 from influxdb_client import InfluxDBClient
@@ -240,37 +254,45 @@ with InfluxDBClient.from_config_file("config.toml") as client:
         write_api.write(bucket="testing", record="sensor temp=23.3")
 ```
 
+TODO: check this paragraph
+
 By default, the client will attempt to send data in batches of 1,000 every
 second. If an error is hit the client retries after five seconds and uses
-exponential backoff for additional errors up to 125 seconds between retries.
+exponential back-off for additional errors up to 125 seconds between retries.
 Retries are attempted five times or up to 180 seconds of waiting.
 
-Users are free to modify any of these settings by setting the write_options
-value when creating a write_api object. The time-based options are in
-milliseconds.
+Users are free to modify any of these settings by setting the
+[write_options][30] value when creating a write_api object. The time-based
+options are in milliseconds.
 
 ```python
-with client.write_api(
-    write_options=WriteOptions(
-        batch_size=500,
-        flush_interval=10_000,
-        jitter_interval=2_000,
-        retry_interval=5_000,
-        max_retries=5,
-        max_retry_delay=30_000,
-        exponential_base=2
-    )
-) as write_client:
+from influxdb_client import InfluxDBClient
+
+options = WriteOptions(
+    batch_size=500,
+    flush_interval=10_000,
+    jitter_interval=2_000,
+    retry_interval=5_000,
+    max_retries=5,
+    max_retry_delay=30_000,
+    exponential_base=2
+)
+
+with InfluxDBClient.from_config_file("config.toml") as client:
+    with client.write_api(write_options=options) as writer:
+        write_api.write(bucket="testing", record="sensor temp=23.3")
 ```
+
+[30]: https://influxdb-client.readthedocs.io/en/stable/usage.html?highlight=max_retry_delay#batching
 
 ## Preparing Data
 
-InfluxDB uses [line protocol format][31], which is made up for a measurement
+InfluxDB uses [line protocol format][40], which is made up for a measurement
 name and fields, as well as optional tags and timestamps. The client libraries
 allow for specifying data in several different ways and users are free to
 use which ever option works best for the data format getting imported!
 
-[31]: https://docs.influxdata.com/influxdb/cloud/reference/syntax/line-protocol/
+[40]: https://docs.influxdata.com/influxdb/cloud/reference/syntax/line-protocol/
 
 ### String
 
@@ -316,7 +338,7 @@ records = [
 
 ### Point Helper Class
 
-The client library comes with a [`Point`][32] class that allows users to easily
+The client library comes with a [`Point`][41] class that allows users to easily
 build measurements.
 
 ```python
@@ -329,11 +351,17 @@ records = [
 ]
 ```
 
-[32]: https://influxdb-client.readthedocs.io/en/stable/api.html#influxdb_client.client.write.point.Point
+[41]: https://influxdb-client.readthedocs.io/en/stable/api.html#influxdb_client.client.write.point.Point
 
 ### Data Class
 
+Users who take advantage of Python's [Data Classes][42] and specify which
+attributes to use for the tags, fields, and timestamp when passing data. Data
+classes were added in [PEP 557][43] in Python 3.7.
+
 ```python
+from influxdb_client import InfluxDBClient
+
 @dataclass
 class CPU:
     core: str
@@ -341,26 +369,36 @@ class CPU:
     timestamp: int
 
 records = [
-  CPU("0", 25.3, 1657729063),
-  CPU("0", 25.4, 1657729078),
-  CPU("0", 25.2, 1657729093),
+    CPU("0", 25.3, 1657729063),
+    CPU("0", 25.4, 1657729078),
+    CPU("0", 25.2, 1657729093),
 ]
 
-    write_api.write(
-      bucket="testing",
-      record=records,
-      record_measurement_name="cpu",
-      record_tag_keys=["core"],
-      record_field_keys=["temp"],
-      record_time_key="timestamp",
-    )
-
+with InfluxDBClient.from_config_file("config.toml") as client:
+    with client.write_api() as writer:
+        write_api.write(
+            bucket="testing",
+            record=records,
+            record_measurement_name="cpu",
+            record_tag_keys=["core"],
+            record_field_keys=["temp"],
+            record_time_key="timestamp",
+        )
 ```
+
+[42]: https://docs.python.org/3/library/dataclasses.html
+[43]: https://peps.python.org/pep-0557/
 
 ### Named Tuple
 
+[Named Tuples][44] assign meaning to each position in a tuple and allow for
+more readable, self-documenting code. Users can specify which tuple field name
+should be used as tags, fields, and timestamp.
+
 ```python
 from collections import namedtuple
+
+from influxdb_client import InfluxDBClient
 
 class CPU:
     def __init__(self, core, temp, timestamp):
@@ -371,51 +409,63 @@ class CPU:
 record = namedtuple("CPU", [core, temp, timestamp])
 
 records = [
-  record("0", 25.3, 1657729063),
-  record("0", 25.4, 1657729078),
-  record("0", 25.2, 1657729093),
+    record("0", 25.3, 1657729063),
+    record("0", 25.4, 1657729078),
+    record("0", 25.2, 1657729093),
 ]
 
-    write_api.write(
-      bucket="testing",
-      record=records,
-      record_measurement_key="cpu",
-      record_tag_keys=["core"],
-      record_field_keys=["temp"]
-      record_time_key="timestamp",
-    )
+with InfluxDBClient.from_config_file("config.toml") as client:
+    with client.write_api() as writer:
+        write_api.write(
+            bucket="testing",
+            record=records,
+            record_measurement_key="cpu",
+            record_tag_keys=["core"],
+            record_field_keys=["temp"]
+            record_time_key="timestamp",
+        )
 ```
+
+[44]: https://docs.python.org/library/collections.html#collections.namedtuple
 
 ### Panda's Data Frame
 
-Finally, users can use Panda’s Data frames.
+Finally, users can pass [Panda’s Data frames][44] directly in when the
+`influxdb-client-python[extras]` extras package is installed. Users can
+specify the data frame's columns as tags, fields, and timestamp.
 
 ```python
 import pandas as pd
 
+from influxdb_client import InfluxDBClient
 
 records = pd.DataFrame(
-  data=[
-    ["0", 25.3, 1657729063],
-    ["0", 25.4, 1657729078],
-    ["0", 25.2, 1657729093],
-  ],
-  columns=["core", "temp", "timestmap"]
+    data=[
+        ["0", 25.3, 1657729063],
+        ["0", 25.4, 1657729078],
+        ["0", 25.2, 1657729093],
+    ],
+    columns=["core", "temp", "timestmap"]
 )
 
-    write_api.write(
-      bucket="testing",
-      record=records,
-      record_measurement_key="cpu",
-      record_tag_keys=["core"],
-      record_field_keys=["temp"]
-      record_time_key="timestamp",
-    )
+with InfluxDBClient.from_config_file("config.toml") as client:
+    with client.write_api() as writer:
+        write_api.write(
+            bucket="testing",
+            record=records,
+            record_measurement_key="cpu",
+            record_tag_keys=["core"],
+            record_field_keys=["temp"]
+            record_time_key="timestamp",
+        )
 ```
 
-Mote there are many, many ways to create Panda's DataFrames and this is only
-one example. Consult the Panda's docs for more examples.
+Note there are many, many ways to create Panda's DataFrames and this is only
+one example. Consult the Panda's [DataFrame docs][45] for more examples.
 
-## Use the Python Client Library Today!
+[44]: https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html#dataframe
+[45]: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html
+
+## Use the Python Client Library Today
 
 TODO
