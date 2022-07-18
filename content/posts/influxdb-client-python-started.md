@@ -103,7 +103,7 @@ labels:
   then analyze, modify, and act on the data accordingly
 * [InvokableScriptsApi][15]: Create custom InfluxDB API endpoints that
   query, process, and shape data.
-* [LablesApi][16]: Add visual metadata to dashboards, tasks, and other items in
+* [LabelsApi][16]: Add visual metadata to dashboards, tasks, and other items in
   the InfluxDB UI
 
 [14]: https://influxdb-client.readthedocs.io/en/stable/api.html#tasksapi
@@ -114,7 +114,7 @@ Finally, users can directly administer their instance via the final set of
 APIs:
 
 * [BucketsApi][17]: Create, manage, and delete buckets
-* [OrganizaitonApi][18]: Create, manage, and delete organizations
+* [OrganizationApi][18]: Create, manage, and delete organizations
 * [UsersApi][19]: Create, manage, and delete users
 
 [17]: https://influxdb-client.readthedocs.io/en/stable/api.html#bucketsapi
@@ -445,7 +445,7 @@ records = pd.DataFrame(
         ["0", 25.4, 1657729078],
         ["0", 25.2, 1657729093],
     ],
-    columns=["core", "temp", "timestmap"]
+    columns=["core", "temp", "timestamp"]
 )
 
 with InfluxDBClient.from_config_file("config.toml") as client:
