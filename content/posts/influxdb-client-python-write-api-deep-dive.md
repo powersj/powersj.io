@@ -7,6 +7,8 @@ aliases:
   - /post/influxdb-client-library-python-write-api-deep-dive/
 ---
 
+***This is a copy of a [blog post][9] I wrote originally posted on [InfluxData.com][1]***
+
 [InfluxDB][1] is an open-source time series database. Built to handle enormous
 volumes of time-stamped data produced from IoT devices to enterprise
 applications. As data sources for InfluxDB can exist in many different
@@ -34,6 +36,7 @@ learning and use.
 [6]: https://docs.influxdata.com/influxdb/cloud/api-guide/client-libraries/go/
 [7]: https://github.com/influxdata/influxdb-client-csharp
 [8]: https://github.com/influxdata/influxdb-client-java
+[9]: https://www.influxdata.com/blog/influxdb-python-client-library-deep-dive-writeapi/
 
 ## Getting Started
 
