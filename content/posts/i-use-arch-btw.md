@@ -1,11 +1,13 @@
 ---
 title: "I use Arch btw"
 date: 2022-12-23
-tags: ["arch"]
+tags: ["linux"]
 draft: false
 aliases:
   - /post/i-use-arch-btw/
 ---
+
+![Banner](/img/arch.png)
 
 While at Canonical, I did dozens of interviews with candidates to join us in
 various roles. I noticed that a surprisingly large number of excellent
