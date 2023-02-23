@@ -18,17 +18,29 @@ https://github.com/influxdata/telegraf-internal/issues/279
 
 ## gotestsum
 
+[gotestsum]() is a go test runner with human readable output. It also makes it
+easy to quickly gather timing information.
+
+To get started install the `gotestsum` binary:
+
 ```s
 go install gotest.tools/gotestsum@latest
 ```
 
-To collect a baseline of the 10 slowest tests:
+Then to collect the timings of a fresh run of all tests:
 
 ```s
 $ go clean -cache
-$ gotestsum --jsonfile timings.json -- -short ./...
+$ gotestsum --jsonfile timings.json -- ./...
 ...
 DONE 5869 tests, 208 skipped in 57.745s
+```
+
+This will create the `timings.json` file which includes timings broken out by
+each unit test. To find the longest ten tests we can sort by the slowest tests
+and print out only the first 10 lines:
+
+```s
 ❯ gotestsum tool slowest < timings.json  | head -n 10
 github.com/influxdata/telegraf/plugins/inputs/prometheus TestPrometheusGeneratesMetricsSlowEndpointHitTheTimeout 6s
 github.com/influxdata/telegraf/plugins/inputs/influxdb_v2_listener TestWriteHighTraffic 5.73s
@@ -42,25 +54,42 @@ github.com/influxdata/telegraf/config TestReadBinaryFile 980ms
 github.com/influxdata/telegraf/plugins/inputs/socket_listener TestSocketListener 940ms
 ```
 
+With this data in hand users have an actionable list of tests to target for
+possible improvements.
+
 ## Solutions
 
+Below are some of the changes I have seen done to deal with slow tests. There
+is no clear direct solution in many cases, but this are some of the common
+changes I have had to make:
+
+### Mock servers
+
+Tests that require networking to external services often end up leading to
+flaky tests or tests that do not run on developers systems. In fact, depending
+on remote services is not something that should happen in unit tests in general.
+Instead, users should mock out a test service for testing.
+
+The way I look for these is to disable networking on my system and see what
+tests fail. Then build out the mock service and migrate the test to spin up
+and expect that.
+
+### Random ports
+
+TODO
+
 ### require.Eventually
+
+
+```go
+time.Sleep(interval)
+```
 
 ```go
 check := func() bool {
     return acc.NMetrics() == uint64(len(expected))
 }
 require.Eventually(t, check, 1*time.Second, 100*time.Millisecond)
-```
-
-### Mock Servers
-
-Tests that require networking to external services
-
-### Sleep
-
-```
-time.Sleep(interval)
 ```
 
 ### Skip long test
