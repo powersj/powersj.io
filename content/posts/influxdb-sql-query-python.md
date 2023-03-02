@@ -153,7 +153,7 @@ available. To find that information when working with InfluxDB Cloud, users can
 use the following scripts to gather the tables:
 
 ```python
-info = client.tables()
+info = client.get_tables()
 tables = client.do_get(info.endpoints[0].ticket).read_all()
 ```
 
