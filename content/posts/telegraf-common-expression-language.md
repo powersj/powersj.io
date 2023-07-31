@@ -1,5 +1,5 @@
 ---
-title: "Using the Common Expression Language for Metric Filtering with Telegraf"
+title: "Common Expression Language for Metric Filtering with Telegraf"
 date: 2023-06-22
 tags: ["telegraf"]
 draft: false
