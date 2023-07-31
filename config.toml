@@ -82,13 +82,28 @@ languageName = "American English"
 name = "Blog"
 weight = 1
 url = "posts/"
+pre = "fa-pencil"
 
 [[languages.en.menu.main]]
 name = "Journey"
 weight = 2
 url = "journey/"
+pre = "fa-plane"
+
+[[languages.en.menu.main]]
+name = "Uses"
+weight = 3
+url = "uses/"
+pre = "fa-briefcase"
+
+[[languages.en.menu.main]]
+name = "Afterhours"
+weight = 4
+url = "afterhours/"
+pre = "fa-moon"
 
 [[languages.en.menu.main]]
 name = "About"
-weight = 3
+weight = 5
 url = "about/"
+pre = "fa-info-circle"
