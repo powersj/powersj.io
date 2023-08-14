@@ -1,0 +1,24 @@
+{{ define "title" }}
+  {{ title (i18n (lower .Title)) | default .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+<section class="container list">
+    <h1 class="title">
+      <a class="title-link" href="{{ .Permalink | safeURL }}">Afterhours</a>
+    </h1>
+
+    {{ range .Site.Home.Sections }}
+        {{ if eq .Title "Afterhours" }}
+            {{ range .Sections }}
+                <h2>{{ .Title }}</h2>
+                {{ range .Pages }}
+                    <li>
+                        <a href="{{.Permalink}}">{{.Title}}</a>
+                    </li>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+</section>
+{{ end }}
