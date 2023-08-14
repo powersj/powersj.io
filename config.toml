@@ -3,71 +3,55 @@ title = "Joshua Powers"
 theme = "hugo-coder"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-
 paginate = 20
 
-[markup]
-  [markup.highlight]
-    style = "monokai"
-    lineNos = true
+[markup.highlight]
+style = "monokai"
+lineNos = true
 
 [params]
 author = "Joshua Powers"
-description = "The personal blog of Joshua Powers (powersj). Musings about Ubuntu, Python, Go, the Cloud, and other things I come across."
-keywords = "ubuntu,blog,developer,personal"
+description = "The personal blog of Joshua Powers (powersj)"
+keywords = "blog,developer,personal"
 info = "Seek out, explore, and build things"
-
-#gravatar = ""
-#avatarURL = "images/avatar.jpg"
 footerContent = "<a href='https://github.com/powersj/powersj.io/issues/new'>Report a bug on this site</a>"
 dateFormat = "January 2, 2006"
 hideFooter = false
 hideCopyright = false
 hideCredits = true
-
-# Right To Left, shift content direction for languagues such as Arabic
 rtl = false
-
-# Specify light/dark colorscheme
-# Supported values:
-# "auto" (use preference set by browser)
-# "dark" (dark background, light foreground)
-# "light" (light background, dark foreground) (default)
 colorScheme = "auto"
-# Hide the toggle button, along with the associated vertical divider
 hideColorSchemeToggle = false
-
-# Series see also post count
 maxSeeAlsoItems = 5
-# Enable Twemoji
 enableTwemoji = false
-# Enable Inline Shortcodes
 enableInlineShortcodes = true
-# Custom CSS
-customCSS = ["css/custom.css"]
-# Custom SCSS
-customSCSS = []
-# Custom JS
-customJS = []
+customCSS = [ "css/custom.css" ]
+customSCSS = [ ]
+customJS = [ ]
 
-# If you want to implement a Content-Security-Policy, add this section
-[params.csp]
-childsrc = ["'self'"]
-fontsrc = ["'self'", "https://fonts.gstatic.com", "https://cdn.jsdelivr.net/"]
-formaction = ["'self'"]
-framesrc = ["'self'"]
-imgsrc = ["'self'", "https://www.gravatar.com"]
-objectsrc = ["'none'"]
-stylesrc = [
+  [params.csp]
+  childsrc = [ "'self'" ]
+  fontsrc = [
   "'self'",
-  "'unsafe-inline'",
-  "https://fonts.googleapis.com/",
+  "https://fonts.gstatic.com",
   "https://cdn.jsdelivr.net/"
-]
-scriptsrc = ["'self'", "'unsafe-inline'", "https://www.google-analytics.com"]
-prefetchsrc = ["'self'"]
-# connect-src directive – defines valid targets for to XMLHttpRequest (AJAX), WebSockets or EventSource
-connectsrc = ["'self'", "https://www.google-analytics.com"]
+  ]
+  formaction = [ "'self'" ]
+  framesrc = [ "'self'" ]
+  imgsrc = [ "'self'" ]
+  objectsrc = [ "'none'" ]
+  stylesrc = [
+    "'self'",
+    "'unsafe-inline'",
+    "https://fonts.googleapis.com/",
+    "https://cdn.jsdelivr.net/"
+  ]
+  scriptsrc = [
+    "'self'",
+    "'unsafe-inline'",
+  ]
+  prefetchsrc = [ "'self'" ]
+  connectsrc = [ "'self'" ]
 
 [taxonomies]
 category = "categories"
