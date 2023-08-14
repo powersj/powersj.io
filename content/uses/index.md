@@ -4,10 +4,10 @@ title: Uses
 
 ## Software
 
-* Arch Linux + GNOME
-* Visual Studio Code
-   * Solarized Light or Monokai
-   * Fantasque Sans Mono
+* [Arch Linux + GNOME](https://archlinux.org/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+   * [Solarized Light](https://ethanschoonover.com/solarized/) or [Monokai Pro](https://monokai.pro/vscode)
+   * [Fantasque Sans Mono](https://github.com/belluzj/fantasque-sans)
 * Edge for work, Firefox for personal
 
 ## Hardware
@@ -21,7 +21,7 @@ title: Uses
 * Sabrent 2TB NVMe PCIe 3.1
 * 2x LG 27" 4K LCDs
 * Logitech G MX518
-* KBD75v2 keyboard with Zealio V2 62g switches
+* [KBD75v2 keyboard](https://kbdfans.com/collections/kbd75-v2/products/kbd75-v2-hot-swap-mechancial-keyboard-diy-kit) with [Zealio V2 62g switches](https://zealpc.net/products/zealio?variant=6502846147)
 
 #### Laptops
 
