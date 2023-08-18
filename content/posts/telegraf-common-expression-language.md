@@ -72,7 +72,7 @@ metric:
 | Component   |	CEL Reference |	Example |
 |-------------|---------------|---------|
 | Metric name |	name 	| `name == "example"` |
-| Tags 	      | tags 	| `tags.host = "a"` |
+| Tags 	      | tags 	| `tags.host == "a"` |
 | Fields 	  | fields 	| `fields.value > 0` |
 | Timestamp   |	time 	| `time >= now() - duration("24h")` |
 
