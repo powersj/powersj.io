@@ -10,7 +10,7 @@ style = "monokai"
 lineNos = true
 
 [params]
-author = "Joshua Powers"
+author.name = "Joshua Powers"
 description = "The personal blog of Joshua Powers (powersj)"
 keywords = "blog,developer,personal"
 info = "Seek out, explore, and build things"

@@ -23,7 +23,7 @@
                 {{ if not (eq .Title "Posts") }}
                     <div class="post-link">
                         <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">
-                            <div class="post-content">
+                            <div class="post-list">
                               <time>{{ .Date.Format ("Jan 02") }}</time>
                               <h3>{{ .Title }}</h3>
                             </div>

@@ -9,7 +9,7 @@
         <div class="avatar centered"><img src="https://www.gravatar.com/avatar/{{md5 .}}?s=240&d=mp" alt="gravatar"></div>
       {{ end }}
 
-      <h1 class="centered">{{ .Site.Params.author }}</h1>
+      <h1 class="centered">{{ .Site.Params.author.name }}</h1>
       <h3 class="centered">{{ .Site.Params.info }}</h3>
     </div>
 
@@ -19,7 +19,7 @@
       {{ range first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "posts" ) }}
       <div class="post-link">
         <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">
-          <div class="post-content">
+          <div class="post-list">
             <time>{{ .Date.Format ("Jan 02") }}</time>
             <h3>{{ .Title }}</h3>
           </div>
