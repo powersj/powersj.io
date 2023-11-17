@@ -1,3 +1,9 @@
+---
+title: "pacman"
+date: 2024-01-01
+tags: ["linux"]
+draft: true
+---
 
 
 # CRUD commands
