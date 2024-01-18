@@ -1,7 +1,7 @@
 ---
 title: "cloudhw.info - cloud instance decoder ring"
 date: 2020-11-03
-tags: ["clouds"]
+tags: ["blog"]
 draft: false
 aliases:
   - /post/cloudhw-info/

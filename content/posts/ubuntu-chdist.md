@@ -1,7 +1,7 @@
 ---
 title: "Using chdist for Distro Package Info"
 date: 2017-10-19
-tags: ["ubuntu", "debian"]
+tags: ["ubuntu", "linux"]
 draft: false
 aliases:
   - /post/ubuntu-chdist/

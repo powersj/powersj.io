@@ -1,7 +1,7 @@
 ---
 title: "Attending DebConf17 in Montreal, Canada"
 date: 2017-08-14
-tags: ["debian"]
+tags: ["linux"]
 draft: false
 aliases:
   - /post/debconf17/
