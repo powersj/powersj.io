@@ -6,7 +6,7 @@ defaultContentLanguage = "en"
 paginate = 20
 
 [markup.highlight]
-style = "monokai"
+style = "gruvbox"
 lineNos = true
 
 [params]
