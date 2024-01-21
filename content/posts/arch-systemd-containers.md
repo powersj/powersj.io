@@ -1,5 +1,5 @@
 ---
-title: "systemd-nspawn containers with Arch"
+title: "systemd-nspawn Containers with Arch Linux"
 date: 2024-01-16
 tags: ["linux"]
 draft: false
