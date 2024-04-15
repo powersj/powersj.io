@@ -4,25 +4,30 @@ title: About
 
 Hello there!
 
-I currently work at [InfluxData](https://www.influxdata.com/) as a maintainer
-of the open source [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)
-project.
+I currently work at [InfluxData][] as the engineering manager and maintainer of
+[telegraf][], [influxctl][], and InfluxDB client libraries.
 
-Previously I spent five years at [Canonical](https://canonical.com/), the
-company behind [Ubuntu](https://ubuntu.com/). There I spent most of my time as
-the QA engineering and then Engineering Manager for Ubuntu Server. I spent my
-last year working on the Public Cloud team, which is responsible for creating
-and publishing all Ubuntu cloud images across Amazon Web Services, Microsoft
-Azure, Google Cloud and many other clouds.
+Previously I spent five years at [Canonical][], the company behind [Ubuntu][].
+There I spent most of my time as the Engineering Manager and QA engineer for
+Ubuntu Server as well as publishing Ubuntu images to various cloud providers.
 
 I have a master's degree in Computer Science from
-[Georgia Institute of Technology](https://www.gatech.edu/) with a focus in
-Interactive Intelligence.
+[Georgia Institute of Technology][gatech] with a focus in Interactive
+Intelligence.
 
 Previous to Canonical, I spent nine years at Hewlett Packard. There I worked on
-producing HP's own Debian derivative, system deployment and configuration,
-system bring up of large scale-up systems with Linux, and Linux enablement and
-performance of networking and storage devices on new hardware platforms.
+building HP's own Debian derivative, system bring up of large scale-up x86 and
+IA64 systems with Linux, and performance of networking and storage devices.
 
-Click here for my [resume](/resume.pdf) or connect with me on
-[LinkedIn](https://www.linkedin.com/in/powersj/).
+Click here for my [resume][] or connect with me on [LinkedIn][].
+
+[InfluxData]: https://www.influxdata.com/
+[telegraf]: https://github.com/influxdata/telegraf
+[influxctl]: https://docs.influxdata.com/influxdb/cloud-dedicated/reference/cli/influxctl/
+
+[Canonical]: https://canonical.com/
+[Ubuntu]: https://ubuntu.com/
+[gatech]: https://www.gatech.edu/
+
+[resume]: /resume.pdf
+[LinkedIn]: https://www.linkedin.com/in/powersj/
