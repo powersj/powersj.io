@@ -14,12 +14,10 @@ cloud vendors. Specifically, responsible for all engineering
 interaction and deliverables with Google Cloud including Google
 Compute Engine (GCE), Google Kubernetes Engine (GKE), and Anthos.
 
-### Engineering Manager
+### Engineering Manager & QA Engineer
 
 Led and grew the worldwide remote team delivering Ubuntu Server,
 the number one cloud operating system
-
-### QA Engineer
 
 Implemented automated CI and merge review system, setup daily
 software builds, and wrote integration test framework and test

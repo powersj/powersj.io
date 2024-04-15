@@ -1,5 +1,5 @@
 ---
-title: CloudHW.info
+title: cloudhw.info
 icon: ⛅
 description: A cloud instance decoder ring
 link: https://cloudhw.info

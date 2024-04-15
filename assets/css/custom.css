@@ -68,6 +68,10 @@ body.colorscheme-dark a {
     color: #dadada;
 }
 
+.navigation .navigation-title {
+    letter-spacing: normal;
+}
+
 .navigation-title {
     line-height: 42px;
 }

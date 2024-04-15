@@ -1,3 +1,3 @@
 ---
-title: Drinks
+title: 🍹 Drinks
 ---
