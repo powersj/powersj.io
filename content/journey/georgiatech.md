@@ -7,7 +7,9 @@ date_end: May 2016
 image: img/masters/gt.png
 ---
 
-Completed my Master in Computer Science in Computer Science. Graduated with a
+### Masters in Computer Science
+
+Completed my Masters in Computer Science in Computer Science. Graduated with a
 3.90/4.00.
 
 Coursework included in Artificial Intelligence included:

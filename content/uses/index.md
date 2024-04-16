@@ -21,7 +21,7 @@ title: Uses
 * Sabrent Rocket 2TB Gen3 NVMe (Windows 11)
 * 2x LG 27GN950-B 27" 4K 144hz HDR 600
 * Logitech G MX518
-* [KBD75v2 keyboard](https://kbdfans.com/collections/kbd75-v2/products/kbd75-v2-hot-swap-mechancial-keyboard-diy-kit) with [Zealio V2 62g switches](https://zealpc.net/products/zealio?variant=6502846147)
+* KBD75v2 keyboard with Zealio V2 62g switches
 
 ### 💻 Laptop
 

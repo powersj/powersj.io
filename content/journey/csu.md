@@ -7,5 +7,7 @@ date_end: Dec 2009
 image: img/bachelors/csu.png
 ---
 
-Received my in Bachelor of Arts and Science in Economics and Applied Computing
+### Bachelors of Arts and Sciences
+
+Received my in Bachelor of Arts and Sciences in Economics and Applied Computing
 Technology. Graduated with a 3.55/4.00.

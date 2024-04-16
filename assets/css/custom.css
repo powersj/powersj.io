@@ -169,6 +169,7 @@ body.colorscheme-dark a {
 .journey-img {
     float: left;
     width: 30%;
+    margin: 4rem 0 2.5rem 0;
 }
 
 .journey-content {
