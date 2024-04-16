@@ -6,88 +6,105 @@ defaultContentLanguage = "en"
 paginate = 20
 
 [markup.highlight]
-style = "gruvbox"
-lineNos = true
+  style = "gruvbox"
+  lineNos = true
 
 [params]
-author.name = "Joshua Powers"
-description = "The personal blog of Joshua Powers (powersj)"
-keywords = "blog,developer,personal"
-info = "Seek out, explore, and build things"
-footerContent = "<a href='https://github.com/powersj/powersj.io/issues/new'>Report a bug on this site</a>"
-dateFormat = "January 2, 2006"
-hideFooter = false
-hideCopyright = false
-hideCredits = true
-rtl = false
-colorScheme = "auto"
-hideColorSchemeToggle = false
-maxSeeAlsoItems = 5
-enableTwemoji = false
-enableInlineShortcodes = true
-customCSS = [ "css/custom.css" ]
-customSCSS = [ ]
-customJS = [ ]
+  author.name = "Joshua Powers"
+  description = "The personal blog of Joshua Powers (powersj)"
+  info = "Seek out, explore, and build things"
+  keywords = "blog,developer,personal"
+  footerContent = "<a href='https://github.com/powersj/powersj.io/issues/new'>Report a bug on this site</a>"
+  dateFormat = "January 2, 2006"
+
+  hideFooter = false
+  hideCopyright = false
+  hideCredits = true
+
+  rtl = false
+  colorScheme = "auto"
+  hideColorSchemeToggle = false
+  maxSeeAlsoItems = 5
+  enableTwemoji = false
+  enableInlineShortcodes = true
+
+  customCSS = [ "css/custom.css" ]
+  customSCSS = [ ]
+  customJS = [ ]
 
   [params.csp]
-  childsrc = [ "'self'" ]
-  fontsrc = [
-  "'self'",
-  "https://fonts.gstatic.com",
-  "https://cdn.jsdelivr.net/"
-  ]
-  formaction = [ "'self'" ]
-  framesrc = [ "'self'" ]
-  imgsrc = [ "'self'" ]
-  objectsrc = [ "'none'" ]
-  stylesrc = [
-    "'self'",
-    "'unsafe-inline'",
-    "https://fonts.googleapis.com/",
-    "https://cdn.jsdelivr.net/"
-  ]
-  scriptsrc = [
-    "'self'",
-    "'unsafe-inline'",
-  ]
-  prefetchsrc = [ "'self'" ]
-  connectsrc = [ "'self'" ]
+    connectsrc = [
+      "'self'"
+    ]
+    childsrc = [
+      "'self'"
+    ]
+    fontsrc = [
+      "'self'",
+      "https://fonts.gstatic.com",
+      "https://cdn.jsdelivr.net/",
+    ]
+    formaction = [
+      "'self'"
+    ]
+    framesrc = [
+      "'self'"
+    ]
+    imgsrc = [
+      "'self'"
+    ]
+    objectsrc = [
+      "'none'"
+    ]
+    prefetchsrc = [
+      "'self'"
+    ]
+    scriptsrc = [
+      "'self'",
+      "'unsafe-inline'",
+    ]
+    stylesrc = [
+      "'self'",
+      "'unsafe-inline'",
+      "https://fonts.googleapis.com/",
+      "https://cdn.jsdelivr.net/"
+    ]
 
 [taxonomies]
-category = "categories"
-series = "series"
-tag = "tags"
-author = "authors"
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
 
 [languages.en]
-languageName = "American English"
+  languageName = "American English"
 
-[[languages.en.menu.main]]
-name = "Blog"
-weight = 1
-url = "posts/"
-pre = "fa-pencil"
+  [[languages.en.menu.main]]
+    name = "Blog"
+    weight = 1
+    url = "posts/"
+    pre = "fa-pencil"
 
-[[languages.en.menu.main]]
-name = "Journey"
-weight = 2
-url = "journey/"
-pre = "fa-plane"
+  [[languages.en.menu.main]]
+    name = "Journey"
+    weight = 2
+    url = "journey/"
+    pre = "fa-plane"
 
-[[languages.en.menu.main]]
-name = "Uses"
-weight = 3
-url = "uses/"
-pre = "fa-briefcase"
+  [[languages.en.menu.main]]
+    name = "Uses"
+    weight = 3
+    url = "uses/"
+    pre = "fa-briefcase"
 
-[[languages.en.menu.main]]
-name = "Afterhours"
-weight = 4
-url = "afterhours/"
-pre = "fa-moon"
+  [[languages.en.menu.main]]
+    name = "Afterhours"
+    weight = 4
+    url = "afterhours/"
+    pre = "fa-moon"
 
-[[languages.en.menu.main]]
-name = "About"
-weight = 5
-url = "about/"
-pre = "fa-info-circle"
+  [[languages.en.menu.main]]
+    name = "About"
+    weight = 5
+    url = "about/"
+    pre = "fa-info-circle"
