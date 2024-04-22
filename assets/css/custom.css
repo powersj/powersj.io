@@ -1,11 +1,32 @@
 @import url(https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap);
 
+@font-face{
+    font-family:rubik;
+    src:url(/fonts/rubik-regular.woff2)format("woff2");
+    font-weight:400;
+    font-style:normal;
+    font-display:swap
+}
+
+@font-face{
+    font-family:agave;
+    src:url(/fonts/agave-regular.woff2)format("woff2");
+    font-weight:400;
+    font-style:normal;
+    font-display:swap
+}
+
 html {
     scroll-behavior: smooth;
 }
 
+body, h1, h2, h3, h4, h5, h6, .navigation a {
+    font-family: 'rubik', sans-serif;
+}
+
 code, kbd, pre {
-    font-family: 'DM Mono', monospace;
+    font-family: 'agave', monospace;
+    font-size: 1.9rem;
 }
 
 h1 {
@@ -20,7 +41,7 @@ h2 {
     border-bottom: 0.33rem solid;
     color: #1b1d25;
     letter-spacing: -0.1rem;
-    font-family: 'DM Mono', monospace;
+    font-family: 'agave', monospace;
 }
 
 h3 {
@@ -35,7 +56,7 @@ img[src$='#center'] {
 }
 
 time {
-    font-family: 'DM Mono', monospace;
+    font-family: 'agave', monospace;
     font-size: 1.6rem;
     color: #858b93;
 }
@@ -48,7 +69,7 @@ code {
 /* Links */
 
 .title-link {
-    font-family: 'DM Mono', monospace;
+    font-family: 'agave', monospace;
 }
 
 p a, li a {
