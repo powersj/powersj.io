@@ -101,15 +101,6 @@ body.colorscheme-dark a {
     border-bottom: none;
 }
 
-.navigation-link:hover {
-    border-radius: none;
-    background: none;
-}
-
-.navigation-title:hover {
-    text-decoration: none;
-}
-
 .tags.a {
     padding: 5px;
     border-radius: .35rem;
