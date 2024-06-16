@@ -90,6 +90,10 @@ body.colorscheme-dark a {
     border-radius: .35rem;
 }
 
+.highlight div {
+    padding: 0em;
+}
+
 /* Posts */
 
 .post-list {
