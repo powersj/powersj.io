@@ -1,32 +1,20 @@
-@import url(https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap);
-
-@font-face{
-    font-family:rubik;
-    src:url(/fonts/rubik-regular.woff2)format("woff2");
-    font-weight:400;
-    font-style:normal;
-    font-display:swap
-}
-
-@font-face{
-    font-family:agave;
-    src:url(/fonts/agave-regular.woff2)format("woff2");
-    font-weight:400;
-    font-style:normal;
-    font-display:swap
-}
+@import url(https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap);
 
 html {
     scroll-behavior: smooth;
 }
 
 body, h1, h2, h3, h4, h5, h6, .navigation a {
-    font-family: 'rubik', sans-serif;
+    font-family: 'Crimson Pro', sans-serif;
+    font-size: 2.3rem;
+    line-height: 1.5em;
 }
 
 code, kbd, pre {
-    font-family: 'agave', monospace;
-    font-size: 1.9rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 1.8rem;
+    line-height: 1.5em;
 }
 
 h1 {
@@ -35,13 +23,10 @@ h1 {
 
 h2 {
     font-size: 3.2rem;
-    font-weight: 700;
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
     border-bottom: 0.33rem solid;
     color: #1b1d25;
     letter-spacing: -0.1rem;
-    font-family: 'agave', monospace;
+    font-family: 'DM Mono', monospace;
 }
 
 h3 {
@@ -56,7 +41,7 @@ img[src$='#center'] {
 }
 
 time {
-    font-family: 'agave', monospace;
+    font-family: 'DM Mono', monospace;
     font-size: 1.6rem;
     color: #858b93;
 }
@@ -69,12 +54,11 @@ code {
 /* Links */
 
 .title-link {
-    font-family: 'agave', monospace;
+    font-family: 'DM Mono', monospace;
 }
 
 p a, li a {
     color: #212121;
-    font-weight: 700;
     text-decoration: none;
     border-bottom: 3px solid #42a5f5;
 }
