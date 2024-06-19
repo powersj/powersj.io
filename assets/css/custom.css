@@ -7,14 +7,14 @@ html {
 
 body, h1, h2, h3, h4, h5, h6, .navigation a {
     font-family: 'Crimson Pro', sans-serif;
-    font-size: 2.3rem;
-    line-height: 1.5em;
+    font-size: 2rem;
+    line-height: 1.3em;
 }
 
 code, kbd, pre {
     font-family: 'DM Mono', monospace;
-    font-size: 1.8rem;
-    line-height: 1.5em;
+    font-size: 1.5rem;
+    line-height: 1.3em;
 }
 
 h1 {

@@ -14,9 +14,9 @@ Completed my Masters in Computer Science in Computer Science. Graduated with a
 
 Coursework included in Artificial Intelligence included:
 
-    * Knowledge-Based AI: Cognitive Systems
-    * Machine Learning
-    * Machine Learning for Trading
-    * Big Data for Health Informatics
-    * Artificial Intelligence for Robotics
-    * Intro to Health Informatics
+1. Knowledge-Based AI: Cognitive Systems
+1. Machine Learning
+1. Machine Learning for Trading
+1. Big Data for Health Informatics
+1. Artificial Intelligence for Robotics
+1. Intro to Health Informatics
