@@ -1,18 +1,18 @@
-@import url(https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Hack:wght@400&display=swap);
 
 html {
     scroll-behavior: smooth;
 }
 
 body, h1, h2, h3, h4, h5, h6, .navigation a {
-    font-family: 'Crimson Pro', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
     line-height: 1.3em;
 }
 
 code, kbd, pre {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Hack', monospace;
     font-size: 1.5rem;
     line-height: 1.3em;
 }
@@ -26,7 +26,7 @@ h2 {
     border-bottom: 0.33rem solid;
     color: #1b1d25;
     letter-spacing: -0.1rem;
-    font-family: 'DM Mono', monospace;
+    font-family: 'Hack', monospace;
 }
 
 h3 {
@@ -41,7 +41,7 @@ img[src$='#center'] {
 }
 
 time {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Hack', monospace;
     font-size: 1.6rem;
     color: #858b93;
 }
@@ -54,7 +54,7 @@ code {
 /* Links */
 
 .title-link {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Hack', monospace;
 }
 
 p a, li a {
