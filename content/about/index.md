@@ -29,5 +29,5 @@ Click here for my [resume][] or connect with me on [LinkedIn][].
 [Ubuntu]: https://ubuntu.com/
 [gatech]: https://www.gatech.edu/
 
-[resume]: /resume.pdf
+[resume]: /resume_powers_joshua.pdf
 [LinkedIn]: https://www.linkedin.com/in/powersj/
