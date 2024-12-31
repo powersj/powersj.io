@@ -3,7 +3,7 @@ title = "Joshua Powers"
 theme = "hugo-coder"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-paginate = 20
+pagination.pagerSize = 20
 
 [markup.highlight]
   style = "monokai"
