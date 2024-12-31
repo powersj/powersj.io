@@ -1,24 +1,24 @@
 ---
 title: Hewlett Packard Enterprise
 subtitle:
-weight: 4
+weight: 5
 date_start: Jul 2007
 date_end: Jun 2016
 image: img/hpe/hpe.png
 ---
 
-### Senior Engineer
+### HPE
 
-Enhanced product security and reduced duplicate efforts across the
-company, through the development of HP's own Debian-derivative
-operating system
+#### Senior Engineer
 
-### Software Engineer
+Enhanced product security and reduced duplicate efforts across the company,
+through the development of HP's own Debian-derivative operating system
 
-Initiated performance characterization testing methodology and
-qualified the latest I/O technologies to ensure performance across
-HP’s next-generation mission-critical and enterprise servers
+#### Software Engineer
 
-Conceived automated smoke, integration, and scale tests to run
-against new product API to reduce development delays and meet
-quality goals
+Initiated performance characterization testing methodology and qualified the
+latest I/O technologies to ensure performance across HP’s next-generation
+mission-critical and enterprise servers
+
+Conceived automated smoke, integration, and scale tests to run against new
+product API to reduce development delays and meet quality goals

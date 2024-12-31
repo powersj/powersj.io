@@ -1,13 +1,15 @@
 ---
 title: Georgia Institute of Technology
 subtitle:
-weight: 3
+weight: 4
 date_start: Jan 2014
 date_end: May 2016
 image: img/masters/gt.png
 ---
 
-### Masters in Computer Science
+### Georgia Institute of Technology
+
+#### Masters in Computer Science
 
 Completed my Masters in Computer Science in Computer Science. Graduated with a
 3.90/4.00.
